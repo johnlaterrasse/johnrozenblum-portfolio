@@ -1,0 +1,164 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+i18n:
+  structure: single_file
+  locales: [fr, en]
+  default_locale: fr
+
+collections:
+  - name: home
+    label: Accueil
+    label_singular: Accueil
+    files:
+      - name: content
+        file: data/content.json
+        label: Contenu
+        i18n: true
+        fields:
+          - name: hero
+            label: Hero
+            widget: object
+            i18n: true
+            fields:
+              - name: tagline
+                label: Tagline
+                widget: string
+                i18n: true
+              - name: name
+                label: Nom
+                widget: text
+                i18n: true
+              - name: subtitle
+                label: Sous-titre
+                widget: string
+                i18n: true
+              - name: cta
+                label: Bouton CTA
+                widget: string
+                i18n: true
+          - name: intro
+            label: Introduction
+            widget: object
+            i18n: true
+            fields:
+              - name: title
+                label: Titre
+                widget: text
+                i18n: true
+              - name: p1
+                label: Paragraphe 1
+                widget: text
+                i18n: true
+              - name: p2
+                label: Paragraphe 2
+                widget: text
+                i18n: true
+          - name: decoration
+            label: Décoration
+            widget: object
+            i18n: true
+            fields:
+              - name: title
+                label: Titre
+                widget: string
+                i18n: true
+              - name: subtitle
+                label: Sous-titre
+                widget: string
+                i18n: true
+          - name: design
+            label: Design
+            widget: object
+            i18n: true
+            fields:
+              - name: title
+                label: Titre
+                widget: string
+                i18n: true
+              - name: subtitle
+                label: Sous-titre
+                widget: string
+                i18n: true
+          - name: dj
+            label: DJ
+            widget: object
+            i18n: true
+            fields:
+              - name: title
+                label: Titre
+                widget: string
+                i18n: true
+              - name: upcomingTitle
+                label: Titre "Prochain événement"
+                widget: string
+                i18n: true
+              - name: actionTitle
+                label: Titre "En action"
+                widget: string
+                i18n: true
+          - name: event
+            label: Événement
+            widget: object
+            i18n: true
+            fields:
+              - name: date
+                label: Date
+                widget: string
+                i18n: true
+              - name: place
+                label: Lieu
+                widget: string
+                i18n: true
+              - name: time
+                label: Heure
+                widget: string
+                i18n: true
+          - name: contact
+            label: Contact
+            widget: object
+            i18n: true
+            fields:
+              - name: title
+                label: Titre
+                widget: string
+                i18n: true
+              - name: intro
+                label: Introduction
+                widget: text
+                i18n: true
+              - name: nameLabel
+                label: Label "Nom"
+                widget: string
+                i18n: true
+              - name: emailLabel
+                label: Label "Email"
+                widget: string
+                i18n: true
+              - name: subjectLabel
+                label: Label "Sujet"
+                widget: string
+                i18n: true
+              - name: messageLabel
+                label: Label "Message"
+                widget: string
+                i18n: true
+              - name: submit
+                label: Bouton Envoyer
+                widget: string
+                i18n: true
+              - name: email
+                label: Email de contact
+                widget: string
+              - name: instagram
+                label: Instagram
+                widget: string
+                i18n: true
+              - name: linkedin
+                label: LinkedIn
+                widget: string
+                i18n: true

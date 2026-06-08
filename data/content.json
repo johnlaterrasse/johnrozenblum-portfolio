@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "tagline": {
+      "fr": "Créatif",
+      "en": "Creative"
+    },
+    "name": {
+      "fr": "John\nRozenblum",
+      "en": "John\nRozenblum"
+    },
+    "subtitle": {
+      "fr": "Décoration • Design • DJ",
+      "en": "Decoration • Design • DJ"
+    },
+    "cta": {
+      "fr": "Explorer",
+      "en": "Explore"
+    }
+  },
+  "intro": {
+    "title": {
+      "fr": "Une vision\noriginale",
+      "en": "An original\nvision"
+    },
+    "p1": {
+      "fr": "Je crée des espaces uniques. Ma passion : transformer l'ordinaire en extraordinaire. Décoration, design d'objets, musique — chaque projet est une opportunité de raconter une histoire.",
+      "en": "I create unique spaces. My passion: transforming the ordinary into the extraordinary. Decoration, object design, music — each project is an opportunity to tell a story."
+    },
+    "p2": {
+      "fr": "J'ai travaillé sur des projets résidentiels et commerciaux. Mon approche est simple : écouter, comprendre, créer quelque chose d'authentique.",
+      "en": "I've worked on residential and commercial projects. My approach is simple: listen, understand, create something authentic."
+    }
+  },
+  "decoration": {
+    "title": {
+      "fr": "Décoration",
+      "en": "Decoration"
+    },
+    "subtitle": {
+      "fr": "Projets réalisés • Espaces transformés",
+      "en": "Completed projects • Transformed spaces"
+    }
+  },
+  "design": {
+    "title": {
+      "fr": "Design",
+      "en": "Design"
+    },
+    "subtitle": {
+      "fr": "Objets & Concepts",
+      "en": "Objects & Concepts"
+    }
+  },
+  "dj": {
+    "title": {
+      "fr": "DJ Mix",
+      "en": "DJ Mix"
+    },
+    "upcomingTitle": {
+      "fr": "Prochain événement",
+      "en": "Upcoming event"
+    },
+    "actionTitle": {
+      "fr": "En action",
+      "en": "In action"
+    }
+  },
+  "event": {
+    "date": {
+      "fr": "21 Juin",
+      "en": "June 21st"
+    },
+    "place": {
+      "fr": "Au Progrès",
+      "en": "Au Progrès"
+    },
+    "time": {
+      "fr": "Soirée Musique",
+      "en": "Music Night"
+    }
+  },
+  "contact": {
+    "title": {
+      "fr": "Contact",
+      "en": "Contact"
+    },
+    "intro": {
+      "fr": "Un projet ? Une collaboration ? Parlons.",
+      "en": "Got a project? A collaboration? Let's talk."
+    },
+    "nameLabel": {
+      "fr": "Nom",
+      "en": "Name"
+    },
+    "emailLabel": {
+      "fr": "Email",
+      "en": "Email"
+    },
+    "subjectLabel": {
+      "fr": "Sujet",
+      "en": "Subject"
+    },
+    "messageLabel": {
+      "fr": "Message",
+      "en": "Message"
+    },
+    "submit": {
+      "fr": "Envoyer",
+      "en": "Send"
+    },
+    "email": "john@rozenblum.com",
+    "instagram": {
+      "fr": "Instagram",
+      "en": "Instagram"
+    },
+    "linkedin": {
+      "fr": "LinkedIn",
+      "en": "LinkedIn"
+    }
+  }
+}

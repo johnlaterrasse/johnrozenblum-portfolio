@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - John Rozenblum Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-box h1 {
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-group input[type="password"],
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-group input[type="password"]:focus,
+        .form-group input[type="text"]:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        .error {
+            color: #e74c3c;
+            padding: 12px;
+            background: #fadbd8;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .admin-screen {
+            display: none;
+        }
+
+        .admin-header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .admin-header h1 {
+            font-size: 20px;
+        }
+
+        .logout-btn {
+            background: #e74c3c;
+            padding: 8px 15px;
+            font-size: 14px;
+            width: auto;
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+        }
+
+        .admin-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .language-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .lang-tab {
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #999;
+            transition: all 0.3s;
+        }
+
+        .lang-tab.active {
+            color: #333;
+            border-bottom-color: #667eea;
+        }
+
+        .lang-tab:hover {
+            background: #f9f9f9;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .section-field {
+            margin-bottom: 20px;
+        }
+
+        .section-field label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .section-field input[type="text"],
+        .section-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .section-field textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .section-field input:focus,
+        .section-field textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .save-btn {
+            background: #27ae60;
+            padding: 12px 30px;
+            width: auto;
+            margin-top: 20px;
+        }
+
+        .save-btn:hover {
+            background: #229954;
+        }
+
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .success.show {
+            display: block;
+        }
+
+        .status {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div class="login-screen" id="loginScreen">
+    <div class="login-box">
+        <h1>Admin Panel</h1>
+        <div class="error" id="loginError"></div>
+        <div class="form-group">
+            <label for="passwordInput">Mot de passe</label>
+            <input type="password" id="passwordInput" placeholder="Entrez le mot de passe">
+        </div>
+        <button onclick="login()">Se connecter</button>
+    </div>
+</div>
+
+<!-- ADMIN SCREEN -->
+<div class="admin-screen" id="adminScreen">
+    <div class="admin-header">
+        <h1>Édition du site</h1>
+        <button class="logout-btn" onclick="logout()">Déconnexion</button>
+    </div>
+
+    <div class="admin-content">
+        <div class="language-tabs">
+            <button class="lang-tab active" onclick="switchLanguage('fr')">Français</button>
+            <button class="lang-tab" onclick="switchLanguage('en')">English</button>
+        </div>
+
+        <div class="success" id="successMsg">✓ Sauvegardé avec succès!</div>
+
+        <!-- HERO SECTION -->
+        <div class="section">
+            <h2>Hero (Accueil)</h2>
+            <div class="section-field">
+                <label>Tagline</label>
+                <input type="text" class="field" data-lang="hero" data-key="tagline">
+            </div>
+            <div class="section-field">
+                <label>Nom (utilise \n pour une nouvelle ligne)</label>
+                <textarea class="field" data-lang="hero" data-key="name"></textarea>
+            </div>
+            <div class="section-field">
+                <label>Sous-titre</label>
+                <input type="text" class="field" data-lang="hero" data-key="subtitle">
+            </div>
+            <div class="section-field">
+                <label>Bouton CTA</label>
+                <input type="text" class="field" data-lang="hero" data-key="cta">
+            </div>
+        </div>
+
+        <!-- INTRO SECTION -->
+        <div class="section">
+            <h2>Introduction</h2>
+            <div class="section-field">
+                <label>Titre (utilise \n pour une nouvelle ligne)</label>
+                <textarea class="field" data-lang="intro" data-key="title"></textarea>
+            </div>
+            <div class="section-field">
+                <label>Paragraphe 1</label>
+                <textarea class="field" data-lang="intro" data-key="p1"></textarea>
+            </div>
+            <div class="section-field">
+                <label>Paragraphe 2</label>
+                <textarea class="field" data-lang="intro" data-key="p2"></textarea>
+            </div>
+        </div>
+
+        <!-- DECORATION SECTION -->
+        <div class="section">
+            <h2>Décoration</h2>
+            <div class="section-field">
+                <label>Titre</label>
+                <input type="text" class="field" data-lang="decoration" data-key="title">
+            </div>
+            <div class="section-field">
+                <label>Sous-titre</label>
+                <input type="text" class="field" data-lang="decoration" data-key="subtitle">
+            </div>
+        </div>
+
+        <!-- DESIGN SECTION -->
+        <div class="section">
+            <h2>Design</h2>
+            <div class="section-field">
+                <label>Titre</label>
+                <input type="text" class="field" data-lang="design" data-key="title">
+            </div>
+            <div class="section-field">
+                <label>Sous-titre</label>
+                <input type="text" class="field" data-lang="design" data-key="subtitle">
+            </div>
+        </div>
+
+        <!-- DJ SECTION -->
+        <div class="section">
+            <h2>DJ</h2>
+            <div class="section-field">
+                <label>Titre</label>
+                <input type="text" class="field" data-lang="dj" data-key="title">
+            </div>
+            <div class="section-field">
+                <label>Titre "Prochain événement"</label>
+                <input type="text" class="field" data-lang="dj" data-key="upcomingTitle">
+            </div>
+            <div class="section-field">
+                <label>Titre "En action"</label>
+                <input type="text" class="field" data-lang="dj" data-key="actionTitle">
+            </div>
+        </div>
+
+        <!-- EVENT SECTION -->
+        <div class="section">
+            <h2>Événement</h2>
+            <div class="section-field">
+                <label>Date</label>
+                <input type="text" class="field" data-lang="event" data-key="date">
+            </div>
+            <div class="section-field">
+                <label>Lieu</label>
+                <input type="text" class="field" data-lang="event" data-key="place">
+            </div>
+            <div class="section-field">
+                <label>Heure</label>
+                <input type="text" class="field" data-lang="event" data-key="time">
+            </div>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="section">
+            <h2>Contact</h2>
+            <div class="section-field">
+                <label>Titre</label>
+                <input type="text" class="field" data-lang="contact" data-key="title">
+            </div>
+            <div class="section-field">
+                <label>Introduction</label>
+                <textarea class="field" data-lang="contact" data-key="intro"></textarea>
+            </div>
+            <div class="section-field">
+                <label>Email</label>
+                <input type="text" class="field" data-lang="contact" data-key="email">
+            </div>
+            <div class="section-field">
+                <label>Instagram</label>
+                <input type="text" class="field" data-lang="contact" data-key="instagram">
+            </div>
+            <div class="section-field">
+                <label>LinkedIn</label>
+                <input type="text" class="field" data-lang="contact" data-key="linkedin">
+            </div>
+        </div>
+
+        <button class="save-btn" onclick="saveChanges()">💾 Sauvegarder tous les changements</button>
+        <div class="status" id="status"></div>
+    </div>
+</div>
+
+<script>
+    const ADMIN_PASSWORD = 'JR2026!Design';
+    let contentData = null;
+    let currentLang = 'fr';
+
+    // Load content on startup
+    async function loadContent() {
+        try {
+            const response = await fetch('/data/content.json');
+            contentData = await response.json();
+            populateFields();
+        } catch (e) {
+            console.error('Error loading content:', e);
+        }
+    }
+
+    function login() {
+        const password = document.getElementById('passwordInput').value;
+        if (password === ADMIN_PASSWORD) {
+            document.getElementById('loginScreen').style.display = 'none';
+            document.getElementById('adminScreen').style.display = 'block';
+            loadContent();
+        } else {
+            const error = document.getElementById('loginError');
+            error.textContent = 'Mot de passe incorrect';
+            error.classList.add('show');
+            setTimeout(() => error.classList.remove('show'), 3000);
+        }
+    }
+
+    function logout() {
+        document.getElementById('adminScreen').style.display = 'none';
+        document.getElementById('loginScreen').style.display = 'flex';
+        document.getElementById('passwordInput').value = '';
+    }
+
+    function switchLanguage(lang) {
+        currentLang = lang;
+        document.querySelectorAll('.lang-tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.lang-content').forEach(content => content.classList.remove('active'));
+
+        event.target.classList.add('active');
+        populateFields();
+    }
+
+    function populateFields() {
+        const fields = document.querySelectorAll('.field');
+        fields.forEach(field => {
+            const section = field.getAttribute('data-lang');
+            const key = field.getAttribute('data-key');
+            if (contentData[currentLang][section] && contentData[currentLang][section][key]) {
+                field.value = contentData[currentLang][section][key];
+            }
+        });
+    }
+
+    async function saveChanges() {
+        // Collect changes
+        const fields = document.querySelectorAll('.field');
+        fields.forEach(field => {
+            const section = field.getAttribute('data-lang');
+            const key = field.getAttribute('data-key');
+            contentData[currentLang][section][key] = field.value;
+        });
+
+        // Save to localStorage
+        localStorage.setItem('jrContent', JSON.stringify(contentData));
+
+        // Save to GitHub via Netlify Function
+        try {
+            document.getElementById('status').textContent = 'Sauvegarde en cours...';
+
+            const response = await fetch('/.netlify/functions/save-content', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ contentData })
+            });
+
+            if (!response.ok) {
+                throw new Error('Erreur lors de la sauvegarde');
+            }
+
+            document.getElementById('status').textContent = '';
+            const success = document.getElementById('successMsg');
+            success.classList.add('show');
+            setTimeout(() => success.classList.remove('show'), 3000);
+        } catch (e) {
+            document.getElementById('status').textContent = 'Erreur: ' + e.message;
+        }
+    }
+
+    // Login on Enter key
+    window.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && document.getElementById('loginScreen').style.display !== 'none') {
+            login();
+        }
+    });
+</script>
+
+</body>
+</html>

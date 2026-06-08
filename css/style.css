@@ -1,0 +1,414 @@
+/* ===========================
+   VARIABLES & RESET
+   =========================== */
+:root {
+    --bg: #0a0a0a;
+    --cream: #f0ece4;
+    --lime: #c5f542;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--font-body);
+    cursor: none;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===========================
+   CUSTOM CURSOR
+   =========================== */
+.cursor {
+    width: 10px;
+    height: 10px;
+    background: var(--lime);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, background 0.2s ease;
+    will-change: left, top;
+}
+
+.cursor-follower {
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid var(--lime);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
+    will-change: left, top;
+}
+
+.cursor.hover {
+    transform: translate(-50%, -50%) scale(2.5);
+}
+
+.cursor-follower.hover {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0.25;
+}
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    z-index: 500;
+}
+
+.nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--cream);
+    text-decoration: none;
+    letter-spacing: 0.12em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--cream);
+    text-decoration: none;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    cursor: none;
+}
+
+.nav-links a:hover {
+    color: var(--lime);
+}
+
+.nav-links a.nav-cta {
+    border-bottom: 1px solid var(--lime);
+    padding-bottom: 3px;
+    color: var(--lime);
+}
+
+.nav-links a.nav-cta:hover {
+    opacity: 0.7;
+}
+
+/* ===========================
+   HERO
+   =========================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    line-height: 1;
+}
+
+.hero-john {
+    font-family: var(--font-display);
+    font-size: clamp(7rem, 18vw, 20rem);
+    color: var(--cream);
+    letter-spacing: -0.01em;
+    line-height: 0.88;
+    display: block;
+}
+
+.hero-rozenblum {
+    font-family: var(--font-display);
+    font-size: clamp(4.5rem, 11.5vw, 13rem);
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--cream);
+    text-stroke: 1.5px var(--cream);
+    letter-spacing: 0.02em;
+    line-height: 0.9;
+    padding-left: clamp(2rem, 7vw, 10rem);
+    display: block;
+}
+
+.hero-services {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.45;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: var(--lime);
+    font-size: 1.4rem;
+    text-decoration: none;
+    animation: bounce 2.5s ease-in-out infinite;
+    line-height: 1;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* ===========================
+   MARQUEE
+   =========================== */
+.marquee-wrap {
+    overflow: hidden;
+    border-top: 1px solid rgba(240, 236, 228, 0.12);
+    border-bottom: 1px solid rgba(240, 236, 228, 0.12);
+    padding: 1.1rem 0;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.marquee-track {
+    display: inline-flex;
+    align-items: center;
+    animation: marquee-fwd 22s linear infinite;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    color: var(--cream);
+}
+
+.marquee-wrap.marquee-reverse .marquee-track {
+    animation-name: marquee-rev;
+    animation-duration: 28s;
+}
+
+.marquee-track span {
+    padding: 0 1.8rem;
+}
+
+.marquee-track .dot {
+    color: var(--lime);
+    padding: 0 0.4rem;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@keyframes marquee-fwd {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-rev {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* ===========================
+   SECTION PROJET (commun)
+   =========================== */
+.projet {
+    padding: 8rem 3rem;
+}
+
+.projet + .projet {
+    padding-top: 2rem;
+}
+
+.projet-header {
+    margin-bottom: 4rem;
+}
+
+.projet-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 9vw, 8rem);
+    color: var(--cream);
+    line-height: 0.9;
+    margin-bottom: 1.2rem;
+}
+
+.projet-header p {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lime);
+}
+
+/* ===========================
+   GRILLE MADELEINE (12 photos)
+   =========================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 6px;
+}
+
+.project-item {
+    overflow: hidden;
+    background: #111;
+    position: relative;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Layout asymétrique — Madeleine */
+.grid-madeleine .project-item:nth-child(1)  { grid-column: span 7;  aspect-ratio: 16/9; }
+.grid-madeleine .project-item:nth-child(2)  { grid-column: span 5;  aspect-ratio: 3/4;  }
+.grid-madeleine .project-item:nth-child(3)  { grid-column: span 4;  aspect-ratio: 4/3;  }
+.grid-madeleine .project-item:nth-child(4)  { grid-column: span 5;  aspect-ratio: 4/3;  }
+.grid-madeleine .project-item:nth-child(5)  { grid-column: span 3;  aspect-ratio: 1/1;  }
+.grid-madeleine .project-item:nth-child(6)  { grid-column: span 5;  aspect-ratio: 3/4;  }
+.grid-madeleine .project-item:nth-child(7)  { grid-column: span 7;  aspect-ratio: 16/9; }
+.grid-madeleine .project-item:nth-child(8)  { grid-column: span 3;  aspect-ratio: 1/1;  }
+.grid-madeleine .project-item:nth-child(9)  { grid-column: span 5;  aspect-ratio: 4/3;  }
+.grid-madeleine .project-item:nth-child(10) { grid-column: span 4;  aspect-ratio: 4/3;  }
+.grid-madeleine .project-item:nth-child(11) { grid-column: span 6;  aspect-ratio: 16/9; }
+.grid-madeleine .project-item:nth-child(12) { grid-column: span 6;  aspect-ratio: 16/9; }
+
+/* Layout asymétrique — Rivoli (20 photos) */
+.grid-rivoli .project-item:nth-child(1)  { grid-column: span 5;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(2)  { grid-column: span 4;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(3)  { grid-column: span 3;  aspect-ratio: 1/1;  }
+.grid-rivoli .project-item:nth-child(4)  { grid-column: span 7;  aspect-ratio: 16/9; }
+.grid-rivoli .project-item:nth-child(5)  { grid-column: span 5;  aspect-ratio: 3/4;  }
+.grid-rivoli .project-item:nth-child(6)  { grid-column: span 3;  aspect-ratio: 1/1;  }
+.grid-rivoli .project-item:nth-child(7)  { grid-column: span 5;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(8)  { grid-column: span 4;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(9)  { grid-column: span 6;  aspect-ratio: 16/9; }
+.grid-rivoli .project-item:nth-child(10) { grid-column: span 6;  aspect-ratio: 16/9; }
+.grid-rivoli .project-item:nth-child(11) { grid-column: span 4;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(12) { grid-column: span 5;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(13) { grid-column: span 3;  aspect-ratio: 1/1;  }
+.grid-rivoli .project-item:nth-child(14) { grid-column: span 7;  aspect-ratio: 16/9; }
+.grid-rivoli .project-item:nth-child(15) { grid-column: span 5;  aspect-ratio: 3/4;  }
+.grid-rivoli .project-item:nth-child(16) { grid-column: span 5;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(17) { grid-column: span 7;  aspect-ratio: 16/9; }
+.grid-rivoli .project-item:nth-child(18) { grid-column: span 4;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(19) { grid-column: span 4;  aspect-ratio: 4/3;  }
+.grid-rivoli .project-item:nth-child(20) { grid-column: span 4;  aspect-ratio: 4/3;  }
+
+/* ===========================
+   BONNARD (section musique)
+   =========================== */
+.bonnard {
+    padding: 8rem 3rem;
+    border-top: 1px solid rgba(240, 236, 228, 0.12);
+}
+
+.bonnard-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.bonnard-left h2 {
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 14vw, 13rem);
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--lime);
+    text-stroke: 1.5px var(--lime);
+    line-height: 0.88;
+    margin-bottom: 2rem;
+}
+
+.bonnard-left .bonnard-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 2rem;
+}
+
+.bonnard-left p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--cream);
+    opacity: 0.75;
+    max-width: 38ch;
+}
+
+.bonnard-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 6px;
+}
+
+.bonnard-photo {
+    overflow: hidden;
+    background: #111;
+}
+
+.bonnard-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bonnard-photo:hover img {
+    transform: scale(1.05);
+}
+
+.bonnard-photo:nth-child(1) {
+    grid-column: span 2;
+    aspect-ratio: 16/7;
+}
+
+.bonnard-photo:nth-child(2) {
+    aspect-ratio: 1/1;
+}
+
+.bonnard-photo:nth-child(3) {
+    aspect-ratio: 1/1;
+}
