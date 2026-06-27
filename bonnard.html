@@ -7,80 +7,290 @@
   <meta name="description" content="Bonnard Music — collectif DJ parisien. Sets, visuels et savoir-faire musical français. SoundCloud, Instagram, TikTok.">
   <link rel="stylesheet" href="style.css?v=4">
   <style>
-    .bonnard-bio {
-      padding: 80px 48px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .bonnard-bio-text {
-      font-size: 1rem;
-      line-height: 1.9;
-      color: var(--gray);
-      font-weight: 300;
-    }
+    body { background: #fff; }
     footer { margin-top: 0; }
 
-    /* Portraits discrets — petite grille */
-    .bonnard-portraits-small {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3px;
-      max-width: 900px;
-      margin: 40px auto 0;
+    /* ============================
+       HERO
+       ============================ */
+    .bon-hero {
+      padding: 160px 60px 60px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      position: relative;
     }
-    .bonnard-portraits-small img {
-      width: 100%;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      object-position: center top;
-      filter: grayscale(30%);
-      transition: filter 0.3s;
+    .bon-hero-text {
+      flex: 1;
     }
-    .bonnard-portraits-small img:hover { filter: grayscale(0%); }
-
-    /* Visuel charte — pleine largeur */
-    .bonnard-charte-wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 48px;
+    .bon-hero-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
     }
-    .bonnard-charte-wrap img {
+    .bon-hero-title {
+      font-family: var(--serif);
+      font-size: clamp(5rem, 10vw, 11rem);
+      font-weight: 400;
+      line-height: 0.9;
+      color: var(--dark);
+      letter-spacing: -0.03em;
+    }
+    .bon-hero-title span {
+      display: block;
+      font-size: clamp(2rem, 4vw, 4.5rem);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--gray);
+      margin-top: 20px;
+    }
+    .bon-hero-img {
+      width: 340px;
+      flex-shrink: 0;
+      transform: rotate(1.5deg);
+      margin-bottom: -20px;
+    }
+    .bon-hero-img img {
       width: 100%;
       display: block;
-      border: 1px solid rgba(0,0,0,0.08);
     }
 
-    /* Player sur fond clair */
-    .bonnard-player {
-      background: #f8f7f4;
-      padding: 80px 48px;
+    /* ============================
+       SCATTER ZONE
+       ============================ */
+    .bon-scatter {
+      padding: 0 40px 120px;
+      position: relative;
     }
 
-    /* Socials sur blanc */
-    .bonnard-socials {
-      background: var(--white);
-      padding: 80px 48px;
+    /* ROW 1 : poster large + portrait offset */
+    .bon-row-1 {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      margin-bottom: 0;
+    }
+    .bon-poster {
+      width: 42%;
+      transform: rotate(-1deg);
+      position: relative;
+      z-index: 2;
+    }
+    .bon-poster img { width: 100%; display: block; }
+
+    .bon-row-1-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      padding-left: 40px;
+    }
+    .bon-bio-text {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      line-height: 1.75;
+      color: var(--gray);
+      font-weight: 300;
+      margin-bottom: 60px;
+    }
+    .bon-p2 {
+      width: 70%;
+      transform: rotate(1deg);
+      align-self: flex-end;
+    }
+    .bon-p2 img { width: 100%; display: block; }
+
+    /* ROW 2 : trois portraits staggerés */
+    .bon-row-2 {
+      display: flex;
+      align-items: flex-end;
+      gap: 24px;
+      margin-top: -60px;
+      position: relative;
+      z-index: 1;
+    }
+    .bon-row-2 .bon-p {
+      position: relative;
+    }
+    .bon-row-2 .bon-p:nth-child(1) { width: 28%; transform: rotate(2deg); margin-bottom: 40px; }
+    .bon-row-2 .bon-p:nth-child(2) { width: 38%; transform: rotate(-1deg); margin-bottom: 0; }
+    .bon-row-2 .bon-p:nth-child(3) { width: 28%; transform: rotate(1.5deg); margin-bottom: 20px; }
+    .bon-row-2 .bon-p img { width: 100%; display: block; }
+
+    /* Quote entre rows */
+    .bon-quote {
+      text-align: center;
+      padding: 80px 60px;
+    }
+    .bon-quote-text {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .bon-quote-text em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ROW 3 : deux portraits + charte */
+    .bon-row-3 {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .bon-row-3 .bon-p:nth-child(1) { width: 25%; transform: rotate(-2deg); margin-top: 60px; }
+    .bon-row-3 .bon-p:nth-child(2) { width: 35%; transform: rotate(1deg); }
+    .bon-charte {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+    }
+    .bon-charte img {
+      width: 100%;
+      max-width: 320px;
+      display: block;
+      margin: 0 auto;
+    }
+    .bon-row-3 .bon-p img { width: 100%; display: block; }
+
+    /* ============================
+       SOUNDCLOUD
+       ============================ */
+    .bon-player {
+      background: #f7f6f3;
+      padding: 80px 60px;
       text-align: center;
     }
-    .bonnard-socials-links a {
-      color: var(--dark) !important;
+    .bon-player-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
     }
-    .bonnard-socials-links a:hover { color: var(--gold) !important; }
+    .bon-player-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 40px;
+    }
+    .bon-player-embed {
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bon-player-link {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
+      transition: color 0.2s;
+    }
+    .bon-player-link:hover { color: var(--gold); }
 
-    /* Section booking blanc */
-    .bonnard-booking {
-      text-align: center;
-      padding: 80px 48px;
-      background: var(--light);
-      border-top: 1px solid rgba(201,168,76,0.2);
+    /* ============================
+       SOCIALS + BOOKING
+       ============================ */
+    .bon-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 320px;
+    }
+    .bon-socials {
+      padding: 80px 60px;
+      border-right: 1px solid rgba(0,0,0,0.08);
+    }
+    .bon-socials-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+    .bon-socials-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .bon-socials-links a {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+      color: var(--dark);
+      font-weight: 400;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .bon-socials-links a:hover { color: var(--gold); transform: translateX(8px); }
+
+    .bon-booking {
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .bon-booking-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .bon-booking-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 2vw, 2.2rem);
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    .bon-booking-sub {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 32px;
     }
 
-    @media (max-width: 768px) {
-      .bonnard-portraits-small { grid-template-columns: repeat(3, 1fr); }
-      .bonnard-charte-wrap { padding: 0 24px; }
-      .bonnard-bio { padding: 60px 24px; }
-      .bonnard-booking { padding: 60px 24px; }
+    /* ============================
+       RESPONSIVE
+       ============================ */
+    @media (max-width: 900px) {
+      .bon-hero { flex-direction: column; padding: 140px 30px 40px; }
+      .bon-hero-img { width: 60%; transform: none; margin-bottom: 0; align-self: flex-end; }
+      .bon-scatter { padding: 0 20px 80px; }
+      .bon-row-1 { flex-direction: column; }
+      .bon-poster { width: 80%; }
+      .bon-row-1-right { padding: 40px 0 0; }
+      .bon-p2 { width: 60%; }
+      .bon-row-2 { flex-wrap: wrap; margin-top: 20px; }
+      .bon-row-2 .bon-p:nth-child(1),
+      .bon-row-2 .bon-p:nth-child(2),
+      .bon-row-2 .bon-p:nth-child(3) { width: 47%; transform: none; margin-bottom: 0; }
+      .bon-row-3 { flex-wrap: wrap; }
+      .bon-row-3 .bon-p:nth-child(1),
+      .bon-row-3 .bon-p:nth-child(2) { width: 47%; transform: none; margin-top: 0; }
+      .bon-charte { padding: 20px 0; }
+      .bon-bottom { grid-template-columns: 1fr; }
+      .bon-socials { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 60px 30px; }
+      .bon-booking { padding: 60px 30px; }
+      .bon-player { padding: 60px 30px; }
+      .bon-quote { padding: 60px 30px; }
     }
   </style>
 </head>
@@ -89,7 +299,7 @@
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
 
-<!-- Navigation (défaut — fond blanc) -->
+<!-- Navigation -->
 <nav>
   <a href="index.html" class="nav-logo">JR</a>
   <div class="nav-links">
@@ -102,87 +312,95 @@
   <div class="nav-burger"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- Hero — texte seul sur blanc -->
-<div style="padding: 140px 48px 80px; text-align:center; background: var(--white);">
-  <div class="reveal">
-    <p class="section-label" style="color:var(--gold);" data-fr="Collectif DJ · Paris" data-en="DJ Collective · Paris">Collectif DJ · Paris</p>
-    <h1 style="font-family:var(--serif); font-size:clamp(3rem,7vw,6rem); font-weight:400; color:var(--dark); letter-spacing:-0.02em; margin:24px 0 16px;" data-fr="Bonnard Music." data-en="Bonnard Music.">Bonnard Music.</h1>
-    <div class="divider" style="background:var(--gold); margin:32px auto;"></div>
-    <p style="font-size:clamp(1rem,1.5vw,1.2rem); color:var(--gray); font-weight:300; letter-spacing:0.15em; text-transform:uppercase;" data-fr="Le savoir-faire français." data-en="French savoir-faire.">Le savoir-faire français.</p>
+<!-- ======= HERO ======= -->
+<div class="bon-hero reveal">
+  <div class="bon-hero-text">
+    <p class="bon-hero-eyebrow" data-fr="Collectif DJ · Paris" data-en="DJ Collective · Paris">Collectif DJ · Paris</p>
+    <h1 class="bon-hero-title">
+      Bonnard
+      <span data-fr="Le savoir-faire français" data-en="French savoir-faire">Le savoir-faire français</span>
+    </h1>
+  </div>
+  <div class="bon-hero-img">
+    <img src="img/bonnard/bonnard-charte.jpg" alt="Bonnard Music — Maison Française">
   </div>
 </div>
 
-<!-- Visuel charte — noir sur blanc -->
-<div style="padding: 0 0 80px; background:var(--white);">
-  <div class="bonnard-charte-wrap reveal">
-    <img src="img/bonnard/bonnard-charte.jpg" alt="Bonnard Music — Maison Française" loading="lazy">
+<!-- ======= ZONE ARTISTIQUE ======= -->
+<div class="bon-scatter">
+
+  <!-- ROW 1 : poster + bio + portrait -->
+  <div class="bon-row-1">
+    <div class="bon-poster reveal">
+      <img src="img/bonnard/bonnard-event.jpg" alt="Bonnard Music — Fête de la Musique 2026">
+    </div>
+    <div class="bon-row-1-right reveal reveal-delay-1">
+      <p class="bon-bio-text" data-fr="Bonnard Music est un collectif DJ parisien fondé sur une seule conviction : la musique est un art de vivre. À la croisée du house, du disco et de l'électronique française, Bonnard cultive un son à la fois raffiné et dansant. Chaque set est une narration — une atmosphère construite matière par matière, comme un espace bien designé." data-en="Bonnard Music is a Parisian DJ collective founded on one conviction: music is an art de vivre. At the crossroads of house, disco and French electronics, Bonnard cultivates a sound both refined and dancefloor-ready. Every set is a narrative — an atmosphere built material by material, like a well-designed space.">Bonnard Music est un collectif DJ parisien fondé sur une seule conviction : la musique est un art de vivre. À la croisée du house, du disco et de l'électronique française, Bonnard cultive un son à la fois raffiné et dansant. Chaque set est une narration — une atmosphère construite matière par matière, comme un espace bien designé.</p>
+      <div class="bon-p2">
+        <img src="img/bonnard/portrait-2.jpg" alt="Bonnard Music — artiste" loading="lazy">
+      </div>
+    </div>
   </div>
+
+  <!-- ROW 2 : trois portraits staggerés -->
+  <div class="bon-row-2 reveal">
+    <div class="bon-p"><img src="img/bonnard/portrait-3.jpg" alt="Bonnard Music" loading="lazy"></div>
+    <div class="bon-p"><img src="img/bonnard/portrait-4.jpg" alt="Bonnard Music" loading="lazy"></div>
+    <div class="bon-p"><img src="img/bonnard/portrait-5.jpg" alt="Bonnard Music" loading="lazy"></div>
+  </div>
+
+  <!-- Citation -->
+  <div class="bon-quote reveal">
+    <p class="bon-quote-text" data-fr="Le son comme <em>art de vivre</em>.<br>Chaque nuit, une signature." data-en="Sound as an <em>art de vivre</em>.<br>Every night, a signature.">Le son comme <em>art de vivre</em>.<br>Chaque nuit, une signature.</p>
+  </div>
+
+  <!-- ROW 3 : portraits + charte -->
+  <div class="bon-row-3 reveal">
+    <div class="bon-p"><img src="img/bonnard/portrait-6.jpg" alt="Bonnard Music" loading="lazy"></div>
+    <div class="bon-p"><img src="img/bonnard/portrait-7.jpg" alt="Bonnard Music" loading="lazy"></div>
+    <div class="bon-charte">
+      <img src="img/bonnard/bonnard-charte.jpg" alt="Bonnard — Maison Française" loading="lazy">
+    </div>
+  </div>
+
 </div>
 
-<!-- Biographie -->
-<section class="bonnard-bio reveal" style="background:var(--white);">
-  <div class="divider" style="background:var(--gold); margin: 0 auto 40px;"></div>
-  <p class="section-label" style="color:var(--gold);" data-fr="À propos" data-en="About">À propos</p>
-  <p class="bonnard-bio-text" data-fr="Bonnard Music est un collectif DJ parisien fondé sur une seule conviction : la musique est un art de vivre. À la croisée du house, du disco et de l'électronique française, Bonnard cultive un son à la fois raffiné et dansant — un savoir-faire hérité des nuits parisiennes et des soirées qui durent jusqu'à l'aube. Chaque set est une narration. Un voyage. Une atmosphère construite matière par matière, comme un espace bien designé." data-en="Bonnard Music is a Parisian DJ collective founded on one conviction: music is an art de vivre. At the crossroads of house, disco and French electronics, Bonnard cultivates a sound that is both refined and dancefloor-ready — a savoir-faire inherited from Parisian nights and parties that last until dawn. Every set is a narrative. A journey. An atmosphere built material by material, like a well-designed space.">Bonnard Music est un collectif DJ parisien fondé sur une seule conviction : la musique est un art de vivre. À la croisée du house, du disco et de l'électronique française, Bonnard cultive un son à la fois raffiné et dansant — un savoir-faire hérité des nuits parisiennes et des soirées qui durent jusqu'à l'aube. Chaque set est une narration. Un voyage. Une atmosphère construite matière par matière, comme un espace bien designé.</p>
-</section>
-
-<!-- Player SoundCloud -->
-<div class="bonnard-player">
-  <div class="reveal" style="text-align:center; margin-bottom:40px;">
-    <p class="section-label" style="color:var(--gold);" data-fr="Écouter" data-en="Listen">Écouter</p>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);color:var(--dark);font-weight:400;" data-fr="Les sons Bonnard." data-en="The Bonnard sound.">Les sons Bonnard.</h2>
+<!-- ======= SOUNDCLOUD ======= -->
+<div class="bon-player">
+  <p class="bon-player-label" data-fr="Écouter" data-en="Listen">Écouter</p>
+  <h2 class="bon-player-title reveal" data-fr="Les sons Bonnard." data-en="The Bonnard sound.">Les sons Bonnard.</h2>
+  <div class="bon-player-embed reveal">
+    <iframe
+      width="100%"
+      height="300"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bonnard-music&color=%23C9A84C&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+    </iframe>
   </div>
-  <iframe
-    class="reveal"
-    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bonnard-music&color=%23C9A84C&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-    width="100%"
-    height="450"
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay"
-    style="border-radius:4px; max-width:900px; display:block; margin:0 auto;">
-  </iframe>
+  <a href="https://soundcloud.com/bonnard-music" target="_blank" rel="noopener" class="bon-player-link" data-fr="Écouter sur SoundCloud →" data-en="Listen on SoundCloud →">Écouter sur SoundCloud →</a>
 </div>
 
-<!-- Collectif — portraits discrets -->
-<div style="padding: 80px 48px; background:var(--white);">
-  <div style="text-align:center;" class="reveal">
-    <p class="section-label" style="color:var(--gold);" data-fr="Le Collectif" data-en="The Collective">Le Collectif</p>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.5rem);color:var(--dark);font-weight:400;margin-bottom:0;" data-fr="L'univers Bonnard." data-en="The Bonnard universe.">L'univers Bonnard.</h2>
-  </div>
-  <div class="bonnard-portraits-small reveal">
-    <img src="img/bonnard/portrait-2.jpg" alt="Bonnard Music — artiste" loading="lazy">
-    <img src="img/bonnard/portrait-3.jpg" alt="Bonnard Music — artiste" loading="lazy">
-    <img src="img/bonnard/portrait-4.jpg" alt="Bonnard Music — artiste" loading="lazy">
-    <img src="img/bonnard/portrait-5.jpg" alt="Bonnard Music — artiste" loading="lazy">
-    <img src="img/bonnard/portrait-6.jpg" alt="Bonnard Music — artiste" loading="lazy">
-    <img src="img/bonnard/portrait-7.jpg" alt="Bonnard Music — artiste" loading="lazy">
-    <img src="img/bonnard/bonnard-event.jpg" alt="Bonnard Music — Fête de la Musique" loading="lazy">
-    <img src="img/bonnard/portrait-8.jpg" alt="Bonnard Music — artiste" loading="lazy">
-  </div>
-</div>
+<!-- ======= SOCIALS + BOOKING ======= -->
+<div class="bon-bottom">
 
-<!-- Réseaux sociaux -->
-<div class="bonnard-socials">
-  <div class="reveal">
-    <p class="section-label" style="color:var(--gold);" data-fr="Suivre Bonnard" data-en="Follow Bonnard">Suivre Bonnard</p>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.5rem);color:var(--dark);font-weight:400;margin-bottom:8px;" data-fr="Sur les réseaux." data-en="On the socials.">Sur les réseaux.</h2>
+  <div class="bon-socials reveal">
+    <p class="bon-socials-label" data-fr="Suivre Bonnard" data-en="Follow Bonnard">Suivre Bonnard</p>
+    <div class="bon-socials-links">
+      <a href="https://soundcloud.com/bonnard-music" target="_blank" rel="noopener">SoundCloud</a>
+      <a href="https://www.instagram.com/bonnard.music/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@cestbonnardmusic" target="_blank" rel="noopener">TikTok</a>
+    </div>
   </div>
-  <div class="bonnard-socials-links reveal">
-    <a href="https://soundcloud.com/bonnard-music" target="_blank" rel="noopener">SoundCloud</a>
-    <a href="https://www.instagram.com/bonnard.music/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.tiktok.com/@cestbonnardmusic" target="_blank" rel="noopener">TikTok</a>
-  </div>
-</div>
 
-<!-- Booking -->
-<div class="bonnard-booking">
-  <div class="reveal" style="max-width:600px; margin:0 auto;">
-    <p class="section-label" style="color:var(--gold);" data-fr="Booking" data-en="Booking">Booking</p>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.8rem);color:var(--dark);font-weight:400;margin-bottom:20px;" data-fr="Vous organisez un événement ?" data-en="Organising an event?">Vous organisez un événement ?</h2>
-    <p style="color:var(--gray);font-size:0.95rem;line-height:1.8;margin-bottom:36px;" data-fr="Cocktails, soirées privées, événements professionnels — nous construisons l'atmosphère musicale de votre moment." data-en="Cocktail parties, private evenings, corporate events — we build the musical atmosphere for your moment.">Cocktails, soirées privées, événements professionnels — nous construisons l'atmosphère musicale de votre moment.</p>
+  <div class="bon-booking reveal">
+    <p class="bon-booking-label" data-fr="Booking" data-en="Booking">Booking</p>
+    <h3 class="bon-booking-title" data-fr="Vous organisez un événement ?" data-en="Organising an event?">Vous organisez un événement ?</h3>
+    <p class="bon-booking-sub" data-fr="Cocktails, soirées privées, événements professionnels — nous construisons l'atmosphère musicale de votre moment." data-en="Cocktail parties, private evenings, corporate events — we build the musical atmosphere for your moment.">Cocktails, soirées privées, événements professionnels — nous construisons l'atmosphère musicale de votre moment.</p>
     <a href="mailto:hello@johnrozenblum.com" class="btn" data-fr="Demander une prestation" data-en="Request a booking">Demander une prestation</a>
   </div>
+
 </div>
 
 <!-- Footer -->
