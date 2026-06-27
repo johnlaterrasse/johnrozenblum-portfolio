@@ -234,3 +234,83 @@ const PROJECTS = {
   }
 
 };
+
+/* ============================================
+   OBJETS — Données & textes bilingues
+   ============================================ */
+
+const OBJECTS = {
+
+  "tables-organiques": {
+    name: "Tables Organiques",
+    fr: "Formes libres inspirées de la nature. Résine, bois massif, marbre — chaque table est une pièce unique, dessinée selon l'espace qui l'accueille.",
+    en: "Free forms inspired by nature. Resin, solid wood, marble — each table is a unique piece, drawn to the space that receives it.",
+    tag: "Sur devis",
+    images: ["img/meubles/tables-organiques-1.webp", "img/meubles/tables-organiques-2.webp"]
+  },
+
+  "bouclette-chairs": {
+    name: "Fauteuils Bouclette",
+    fr: "Structure en chêne massif, assise et dossier en tissu bouclette. Un équilibre entre forme sculptée et confort enveloppant.",
+    en: "Solid oak frame, bouclette fabric seat and back. A balance between sculptural form and enveloping comfort.",
+    tag: "Sur devis",
+    images: ["img/meubles/bouclette-chairs.webp"]
+  },
+
+  "suspension-feuilles-or": {
+    name: "Suspension Feuilles d'Or",
+    fr: "Luminaire sculptural en laiton brossé. Chaque feuille reflète la lumière différemment selon l'angle — un objet vivant.",
+    en: "Sculptural brushed brass pendant. Each leaf reflects light differently depending on the angle — a living object.",
+    tag: "Sur devis",
+    images: ["img/meubles/suspension-feuilles-or.webp"]
+  },
+
+  "tourne-disques": {
+    name: "Tourne-Disques",
+    fr: "Design rétro-futuriste. Le vinyle retrouve ses lettres de noblesse dans un objet qui est autant à regarder qu'à écouter.",
+    en: "Retro-futurist design. Vinyl reclaims its nobility in an object as beautiful to look at as to listen to.",
+    tag: "Sur devis",
+    images: ["img/meubles/tourne-disques.webp"]
+  },
+
+  "vasques-onyx": {
+    name: "Vasques en Onyx",
+    fr: "Vasques taillées dans l'onyx rose. La salle de bain devient un sanctuaire de pierre — chaque veinure est unique.",
+    en: "Basins carved in pink onyx. The bathroom becomes a stone sanctuary — every vein is unique.",
+    tag: "Sur devis",
+    images: ["img/meubles/vasque.webp"]
+  },
+
+  "appliques-onix": {
+    name: "Appliques Onix",
+    fr: "Appliques murales en onyx rétroéclairé. La pierre translucide devient lumière, diffusant une chaleur rosée et organique.",
+    en: "Backlit onyx wall lights. The translucent stone becomes a light source, diffusing a warm, organic rose glow.",
+    tag: "Sur devis",
+    images: ["img/meubles/appliques-onix.webp"]
+  },
+
+  "bougeoires": {
+    name: "Bougeoires & Accessoires",
+    fr: "Petits objets au grand pouvoir. Laiton, verre soufflé, marbre — des pièces de table qui définissent l'ambiance d'un espace.",
+    en: "Small objects with great power. Brass, blown glass, marble — table pieces that define the atmosphere of a space.",
+    tag: "Sur devis",
+    images: ["img/meubles/bougeoires.webp"]
+  },
+
+  "tabourets": {
+    name: "Tabourets & Tables d'appoint",
+    fr: "Pieds en métal laqué, assises texturées — des pièces fonctionnelles pensées comme des sculptures.",
+    en: "Lacquered metal legs, textured tops — functional pieces conceived as sculptures.",
+    tag: "Sur devis",
+    images: ["img/meubles/tabourets.webp"]
+  },
+
+  "lit-signature": {
+    name: "Lit Signature",
+    fr: "Tête de lit architecturale, rangements intégrés, finitions sur mesure. Un lit conçu comme une pièce maîtresse de la chambre.",
+    en: "Architectural headboard, integrated storage, custom finishes. A bed designed as the centrepiece of the bedroom.",
+    tag: "Sur devis",
+    images: ["img/meubles/smart-bed.webp"]
+  }
+
+};
