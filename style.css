@@ -984,7 +984,8 @@ footer {
   .cursor-dot, .cursor-ring { display: none; }
 
   /* ---- Nav mobile ---- */
-  nav { padding: 20px 24px; }
+  /* nav doit être AU-DESSUS de l'overlay .nav-links (stacking context fix) */
+  nav { padding: 20px 24px; z-index: 1002; }
   nav.scrolled { padding: 16px 24px; }
   .nav-links {
     display: none;
@@ -995,24 +996,24 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 48px;
-    z-index: 999;
+    z-index: 1000;
   }
   .nav-links.open { display: flex; }
   .nav-links a { font-size: 1.4rem; letter-spacing: 0.08em; color: var(--white); cursor: pointer; }
   .nav-links a.active { color: var(--gold); }
-  .nav-burger { display: flex; cursor: pointer; position: relative; z-index: 1001; }
-  .nav-logo { position: relative; z-index: 1001; }
-  .lang-toggle { position: relative; z-index: 1001; }
+  .nav-burger { display: flex; cursor: pointer; }
+  .nav-logo { }
+  .lang-toggle { }
   .nav-burger.open span { background: var(--white); }
   .nav-burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
   .nav-burger.open span:nth-child(2) { opacity: 0; }
   .nav-burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-  /* ---- Fix iOS : cursor: pointer requis sur les <div> interactifs ---- */
-  .project-card  { cursor: pointer; }
-  .univers-card  { cursor: pointer; }
+  /* ---- Fix iOS : cursor: pointer requis sur les <div> et leurs enfants ---- */
+  .project-card, .project-card-img, .project-card-img img { cursor: pointer; }
+  .univers-card, .univers-card-bg { cursor: pointer; }
   .filter-btn    { cursor: pointer; }
-  .object-card   { cursor: pointer; }
+  .object-card, .object-card-img, .object-card-img img { cursor: pointer; }
   .lightbox-close { cursor: pointer; }
   .btn-submit    { cursor: pointer; }
   .form-group input,
