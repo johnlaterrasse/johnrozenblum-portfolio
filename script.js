@@ -149,13 +149,44 @@ if (lightbox) {
   }
 }
 
-/* ---- OBJETS CARDS — click -> contact ---- */
-document.querySelectorAll('.object-card').forEach(card => {
-  card.style.cursor = 'pointer';
-  card.addEventListener('click', () => {
-    window.location.href = 'contact.html';
+/* ---- OBJETS CARDS — lightbox si data-object, sinon -> contact ---- */
+const lightboxObj = document.getElementById('lightbox-object');
+if (lightboxObj) {
+  document.querySelectorAll('[data-object]').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => {
+      const key  = card.dataset.object;
+      const data = OBJECTS[key];
+      if (!data) return;
+
+      const lang = currentLang;
+      lightboxObj.querySelector('.lightbox-title').textContent = data.name;
+      lightboxObj.querySelector('.lightbox-desc').textContent  = lang === 'fr' ? data.fr : data.en;
+      lightboxObj.querySelector('.lightbox-object-tag').textContent = lang === 'fr' ? data.tag : 'On request';
+
+      const gallery = lightboxObj.querySelector('.lightbox-gallery');
+      gallery.innerHTML = data.images.map(src => `<img src="${src}" alt="${data.name}" loading="lazy">`).join('');
+
+      lightboxObj.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
   });
-});
+
+  lightboxObj.querySelector('.lightbox-close').addEventListener('click', closeObjLightbox);
+  lightboxObj.addEventListener('click', e => { if (e.target === lightboxObj) closeObjLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeObjLightbox(); });
+
+  function closeObjLightbox() {
+    lightboxObj.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+} else {
+  /* Fallback pages sans lightbox-object : click -> contact */
+  document.querySelectorAll('.object-card:not([data-object])').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => { window.location.href = 'contact.html'; });
+  });
+}
 
 /* ---- NAV LOGO — scroll to top ---- */
 const navLogo = document.querySelector('.nav-logo');
