@@ -36,33 +36,34 @@ body {
 }
 
 /* ============================================
-   CURSEUR PERSONNALISÉ
+   CURSEUR PERSONNALISÉ — RÉTICULE
    ============================================ */
-.cursor-dot {
+.cursor-reticle {
   position: fixed;
   top: 0; left: 0;
-  width: 8px; height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
+  width: 20px; height: 20px;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s var(--ease);
 }
-.cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  width: 32px; height: 32px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: transform 0.08s var(--ease), width 0.2s var(--ease), height 0.2s var(--ease), opacity 0.2s;
-  opacity: 0.7;
+.cursor-reticle::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0;
+  margin-top: -0.5px;
+  width: 7px; height: 1px;
+  background: var(--gold);
+  box-shadow: 13px 0 0 var(--gold);
 }
-body.cursor-hover .cursor-dot { transform: translate(-50%, -50%) scale(0); }
-body.cursor-hover .cursor-ring { width: 56px; height: 56px; opacity: 1; }
+.cursor-reticle::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 0;
+  margin-left: -0.5px;
+  width: 1px; height: 7px;
+  background: var(--gold);
+  box-shadow: 0 13px 0 var(--gold);
+}
 
 /* ============================================
    NAVIGATION
