@@ -158,16 +158,43 @@ if (ticker) {
 /* ---- CONTACT FORM ---- */
 const form = document.querySelector('.contact-form');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.btn-submit');
     const original = btn.textContent;
-    btn.textContent = currentLang === 'fr' ? 'Message envoyé ✓' : 'Message sent ✓';
-    btn.style.background = '#4a7c59';
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.style.background = '';
-      form.reset();
-    }, 3000);
+
+    btn.textContent = currentLang === 'fr' ? 'Envoi en cours...' : 'Sending...';
+    btn.disabled = true;
+
+    const data = {
+      name:     form.nom.value,
+      email:    form.email.value,
+      type:     form.type.value,
+      surface:  form.surface.value,
+      message:  form.message.value,
+      _subject: `Nouveau projet — ${form.type.value || 'Design'} — ${form.nom.value}`
+    };
+
+    try {
+      const res  = await fetch('https://formsubmit.co/ajax/john@laterrasse.paris', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (json.success === 'true' || json.success === true) {
+        btn.textContent    = currentLang === 'fr' ? 'Message envoyé ✓' : 'Message sent ✓';
+        btn.style.background = '#4a7c59';
+        form.reset();
+        setTimeout(() => { btn.textContent = original; btn.style.background = ''; btn.disabled = false; }, 4000);
+      } else {
+        throw new Error('failed');
+      }
+    } catch {
+      btn.textContent    = currentLang === 'fr' ? 'Erreur — réessayez' : 'Error — please retry';
+      btn.style.background = '#c0392b';
+      btn.disabled = false;
+      setTimeout(() => { btn.textContent = original; btn.style.background = ''; }, 4000);
+    }
   });
 }
