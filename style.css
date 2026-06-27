@@ -982,38 +982,111 @@ footer {
 @media (max-width: 768px) {
   body { cursor: auto; }
   .cursor-dot, .cursor-ring { display: none; }
+
+  /* ---- Nav mobile ---- */
   nav { padding: 20px 24px; }
   nav.scrolled { padding: 16px 24px; }
-  .nav-links { display: none; flex-direction: column; position: fixed; inset: 0; background: var(--black); align-items: center; justify-content: center; gap: 40px; z-index: 99; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    z-index: 999;
+  }
   .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.2rem; color: var(--white); }
-  .nav-burger { display: flex; }
+  .nav-links a { font-size: 1.4rem; letter-spacing: 0.08em; color: var(--white); cursor: pointer; }
+  .nav-links a.active { color: var(--gold); }
+  .nav-burger { display: flex; cursor: pointer; position: relative; z-index: 1001; }
+  .nav-logo { position: relative; z-index: 1001; }
+  .lang-toggle { position: relative; z-index: 1001; }
+  .nav-burger.open span { background: var(--white); }
   .nav-burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
   .nav-burger.open span:nth-child(2) { opacity: 0; }
   .nav-burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  /* ---- Fix iOS : cursor: pointer requis sur les <div> interactifs ---- */
+  .project-card  { cursor: pointer; }
+  .univers-card  { cursor: pointer; }
+  .filter-btn    { cursor: pointer; }
+  .object-card   { cursor: pointer; }
+  .lightbox-close { cursor: pointer; }
+  .btn-submit    { cursor: pointer; }
+  .form-group input,
+  .form-group textarea,
+  .form-group select { cursor: text; }
+
+  /* ---- Project cards overlay toujours visible sur mobile ---- */
+  .project-card-overlay {
+    opacity: 1;
+    background: rgba(0,0,0,0.18);
+    pointer-events: none;
+  }
+  .project-card-overlay span { opacity: 0.9; }
+
+  /* ---- Hero ---- */
   .hero { padding: 40px 24px; }
   .hero-scroll { right: 24px; bottom: 32px; }
   section { padding: 60px 24px; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .project-card-img { height: 280px; }
+
+  /* ---- Grille projets ---- */
+  .projects-section { padding: 60px 20px; }
+  .projects-grid { grid-template-columns: 1fr; gap: 40px; }
+  .project-card-img { height: 260px; }
+  .project-card-name { font-size: 1.15rem; }
   .projects-filter { gap: 12px; }
+
+  /* ---- Univers ---- */
   .univers-grid { grid-template-columns: 1fr; }
-  .univers-card { height: 340px; }
+  .univers-card { height: 300px; }
+  .univers-card-title { font-size: 1.4rem; }
+
+  /* ---- Featured ---- */
   .featured-inner { grid-template-columns: 1fr; gap: 32px; }
-  .featured-img { height: 300px; }
+  .featured-img { height: 280px; }
+
+  /* ---- Objets ---- */
   .objects-intro { grid-template-columns: 1fr; padding: 80px 24px; gap: 32px; }
   .objects-grid { grid-template-columns: 1fr; }
-  .object-card-img { height: 280px; }
-  .lightbox-inner { padding: 80px 24px 60px; }
-  .lightbox-header { grid-template-columns: 1fr; gap: 32px; }
+  .object-card-img { height: 260px; }
+
+  /* ---- Lightbox ---- */
+  .lightbox-inner { padding: 72px 20px 48px; }
+  .lightbox-header { grid-template-columns: 1fr; gap: 24px; }
   .lightbox-gallery { columns: 1; }
+  .lightbox-close {
+    top: 16px;
+    right: 20px;
+    font-size: 0.75rem;
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.08);
+    cursor: pointer;
+  }
+  .lightbox-title { font-size: 1.8rem; }
+  .lightbox-meta { gap: 20px; }
+
+  /* ---- Bonnard ---- */
+  .bonnard-hero { padding: 100px 24px 80px; }
+  .bonnard-player { padding: 60px 20px; }
+  .bonnard-visuals { padding: 60px 20px; }
+  .bonnard-socials { padding: 60px 20px; }
   .bonnard-grid { grid-template-columns: 1fr; }
-  .bonnard-grid img { height: 260px; }
+  .bonnard-grid img { height: 240px; }
   .bonnard-socials-links { flex-wrap: wrap; gap: 24px; }
+
+  /* ---- Contact ---- */
   .contact-section { grid-template-columns: 1fr; }
   .contact-left { padding: 100px 24px 48px; }
   .contact-right { padding: 48px 24px 60px; }
+
+  /* ---- Footer ---- */
   footer { grid-template-columns: 1fr; gap: 32px; padding: 48px 24px; }
   .footer-copy { text-align: left; }
+
+  /* ---- CTA ---- */
   .cta-section { padding: 80px 24px; }
+  .cta-email { font-size: 1.2rem; word-break: break-all; }
 }
