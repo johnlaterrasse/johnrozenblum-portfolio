@@ -14,6 +14,7 @@ const PROJECTS = {
     en: "A duplex conceived as a house within the city. A light-filled through-living room, an enveloping modular sofa, golden details — Parisian art de vivre in all its splendour.",
     cover: "img/id/duplex-madeleine.jpg",
     images: ["img/id/duplex-madeleine.jpg"]
+    // Note : 1 seule photo disponible pour ce projet
   },
 
   "marbeuf": {
@@ -25,7 +26,7 @@ const PROJECTS = {
     fr: "Un grand appartement haussmannien au cœur du 8e arrondissement. Moulures restaurées, luminaire sculptural sur mesure, mobilier conçu pièce par pièce — un résultat intemporel et résolument contemporain.",
     en: "A grand Haussmann apartment in the heart of the 8th arrondissement. Restored mouldings, custom sculptural lighting, furniture designed piece by piece — a result both timeless and resolutely contemporary.",
     cover: "img/id/marbeuf.jpg",
-    images: ["img/id/marbeuf.jpg"]
+    images: ["img/id/marbeuf.jpg", "img/id/marbeuf-2.jpg", "img/id/marbeuf-3.jpg", "img/id/marbeuf-4.jpg", "img/id/marbeuf-5.jpg", "img/id/marbeuf-6.jpg"]
   },
 
   "triplex-spa": {
@@ -37,7 +38,7 @@ const PROJECTS = {
     fr: "Trois niveaux, une ambiance unique. Le marbre sélectionné veine par veine, la robinetterie dorée posée au millimètre — ce triplex est une déclaration de raffinement absolu.",
     en: "Three levels, one unique atmosphere. Marble selected vein by vein, golden fixtures positioned to the millimetre — this triplex is a declaration of absolute refinement.",
     cover: "img/id/triplex-spa.jpg",
-    images: ["img/id/triplex-spa.jpg"]
+    images: ["img/id/triplex-spa.jpg", "img/id/triplex-spa-2.jpg", "img/id/triplex-spa-3.jpg", "img/id/triplex-spa-4.jpg", "img/id/triplex-spa-5.jpg", "img/id/triplex-spa-6.jpg"]
   },
 
   "arcade": {
@@ -49,7 +50,7 @@ const PROJECTS = {
     fr: "Un appartement de caractère réinventé autour d'une palette de matières nobles — marbre gris, chêne clair, laiton brossé. Chaque pièce dialogue avec l'histoire du lieu.",
     en: "A character apartment reinvented around a palette of noble materials — grey marble, light oak, brushed brass. Every room in dialogue with the history of the place.",
     cover: "img/id/arcade.jpg",
-    images: ["img/id/arcade.jpg"]
+    images: ["img/id/arcade.jpg", "img/id/arcade-2.jpg", "img/id/arcade-3.jpg", "img/id/arcade-4.jpg", "img/id/arcade-5.jpg", "img/id/arcade-6.jpg"]
   },
 
   "sous-les-toits": {
@@ -61,7 +62,7 @@ const PROJECTS = {
     fr: "Sous les poutres centenaires, une chambre d'exception. Le bois ancien dialogue avec un mobilier sur mesure dans une palette de lin, de noyer et de blanc.",
     en: "Beneath centuries-old beams, an exceptional suite. Ancient wood in dialogue with bespoke furniture in a palette of linen, walnut and white.",
     cover: "img/id/sous-les-toits.jpg",
-    images: ["img/id/sous-les-toits.jpg"]
+    images: ["img/id/sous-les-toits.jpg", "img/id/sous-les-toits-p2.jpg", "img/id/sous-les-toits-p3.jpg", "img/id/sous-les-toits-p4.jpg", "img/id/sous-les-toits-p5.jpg", "img/id/sous-les-toits-p6.jpg"]
   },
 
   "patio": {
@@ -73,7 +74,7 @@ const PROJECTS = {
     fr: "Un appartement conçu autour de la lumière et du silence. Matières douces, volumes généreux, finitions hôtelières — un intérieur pensé pour être vécu.",
     en: "An apartment conceived around light and silence. Soft materials, generous volumes, hotel-grade finishes — an interior designed to be lived in.",
     cover: "img/id/patio.jpg",
-    images: ["img/id/patio.jpg"]
+    images: ["img/id/patio.jpg", "img/id/patio-2.jpg", "img/id/patio-3.jpg", "img/id/patio-4.jpg", "img/id/patio-5.jpg", "img/id/patio-6.jpg"]
   },
 
   "louvres": {
@@ -85,7 +86,7 @@ const PROJECTS = {
     fr: "Les lignes contemporaines du noyer et les tons ambrés — un équilibre entre exigence et confort, à deux pas du Louvre.",
     en: "The contemporary lines of walnut and amber tones — a balance between high standards and comfort, steps from the Louvre.",
     cover: "img/id/louvres.jpg",
-    images: ["img/id/louvres.jpg"]
+    images: ["img/id/louvres.jpg", "img/id/louvres-2.jpg", "img/id/louvres-3.jpg", "img/id/louvres-4.jpg", "img/id/louvres-5.jpg", "img/id/louvres-6.jpg"]
   },
 
   "champs-elysees": {
@@ -97,7 +98,7 @@ const PROJECTS = {
     fr: "Adresse de prestige, ambition maximale. Le vocabulaire classique de l'architecture haussmannienne rencontre une écriture intérieure résolument contemporaine.",
     en: "A prestigious address, maximum ambition. The classical vocabulary of Haussmann architecture meets a resolutely contemporary interior design language.",
     cover: "img/id/champs-elysees.jpg",
-    images: ["img/id/champs-elysees.jpg"]
+    images: ["img/id/champs-elysees.jpg", "img/id/champs-elysees-2.jpg", "img/id/champs-elysees-3.jpg", "img/id/champs-elysees-4.jpg", "img/id/champs-elysees-5.jpg", "img/id/champs-elysees-6.jpg"]
   },
 
   "rivoli": {
@@ -109,7 +110,7 @@ const PROJECTS = {
     fr: "Un ensemble locatif repensé rue de Rivoli. Chaque appartement conçu comme un objet singulier — même ambition, expressions différentes.",
     en: "A rental property reinvented on rue de Rivoli. Each apartment conceived as a singular object — the same ambition, different expressions.",
     cover: "img/id/rivoli.jpg",
-    images: ["img/id/rivoli.jpg"]
+    images: ["img/id/rivoli.jpg", "img/id/rivoli-2.jpg", "img/id/rivoli-3.jpg", "img/id/rivoli-4.jpg", "img/id/rivoli-5.jpg", "img/id/rivoli-6.jpg"]
   },
 
   "dechargeurs": {
@@ -121,7 +122,7 @@ const PROJECTS = {
     fr: "Restructuration complète d'un bien de caractère aux Halles. De la conception au suivi de chantier, un projet mené de A à Z avec une exigence absolue.",
     en: "Complete restructuring of a character property at Les Halles. From conception to construction supervision, a project led from A to Z with absolute rigour.",
     cover: "img/id/dechargeurs.jpg",
-    images: ["img/id/dechargeurs.jpg"]
+    images: ["img/id/dechargeurs.jpg", "img/id/dechargeurs-2.jpg", "img/id/dechargeurs-3.jpg", "img/id/dechargeurs-4.jpg", "img/id/dechargeurs-5.jpg", "img/id/dechargeurs-6.jpg"]
   },
 
   "madeleine": {
@@ -133,7 +134,7 @@ const PROJECTS = {
     fr: "À deux pas de la Madeleine, un appartement réinventé dans une palette de beiges dorés et de bois chaleureux. L'épure au service de l'élégance.",
     en: "Steps from La Madeleine, an apartment reinvented in a palette of golden beiges and warm woods. Simplicity in the service of elegance.",
     cover: "img/id/madeleine.jpg",
-    images: ["img/id/madeleine.jpg"]
+    images: ["img/id/madeleine.jpg", "img/id/madeleine-2.jpg", "img/id/madeleine-3.jpg", "img/id/madeleine-4.jpg", "img/id/madeleine-5.jpg", "img/id/madeleine-6.jpg"]
   },
 
   "malesherbes": {
@@ -145,7 +146,7 @@ const PROJECTS = {
     fr: "Un appartement familial aux volumes redéfinis. Les cloisons bougent, la lumière circule — l'espace prend enfin tout son sens.",
     en: "A family apartment with redefined volumes. Walls move, light flows — the space finally realises its full potential.",
     cover: "img/id/malesherbes.jpg",
-    images: ["img/id/malesherbes.jpg"]
+    images: ["img/id/malesherbes.jpg", "img/id/malesherbes-2.jpg", "img/id/malesherbes-3.jpg", "img/id/malesherbes-4.jpg", "img/id/malesherbes-5.jpg", "img/id/malesherbes-6.jpg"]
   },
 
   "chatelet": {
@@ -157,7 +158,7 @@ const PROJECTS = {
     fr: "Proximité du centre, intimité préservée. Cet appartement du Châtelet démontre qu'élégance et praticité ne s'opposent jamais.",
     en: "Central location, preserved intimacy. This Châtelet apartment demonstrates that elegance and practicality need never oppose each other.",
     cover: "img/id/chatelet.jpg",
-    images: ["img/id/chatelet.jpg"]
+    images: ["img/id/chatelet.jpg", "img/id/chatelet-2.jpg", "img/id/chatelet-3.jpg", "img/id/chatelet-4.jpg", "img/id/chatelet-5.jpg", "img/id/chatelet-6.jpg"]
   },
 
   "deux-pieces": {
@@ -169,7 +170,7 @@ const PROJECTS = {
     fr: "Preuve que les petits espaces peuvent être grands. Ce deux-pièces repensé de A à Z dégage une générosité de volume inattendue.",
     en: "Proof that small spaces can feel grand. This two-room apartment, redesigned from scratch, exudes an unexpected generosity of volume.",
     cover: "img/id/deux-pieces.jpg",
-    images: ["img/id/deux-pieces.jpg"]
+    images: ["img/id/deux-pieces.jpg", "img/id/deux-pieces-2.jpg", "img/id/deux-pieces-3.jpg", "img/id/deux-pieces-4.jpg", "img/id/deux-pieces-5.jpg", "img/id/deux-pieces-6.jpg"]
   },
 
   "cannes": {
@@ -181,7 +182,7 @@ const PROJECTS = {
     fr: "Un intérieur conçu pour la lumière du Sud. Palettes claires, matières naturelles, ouverture maximale sur l'extérieur.",
     en: "An interior conceived for southern light. Light palettes, natural materials, maximum openness to the outside.",
     cover: "img/id/cannes.webp",
-    images: ["img/id/cannes.webp"]
+    images: ["img/id/cannes.webp", "img/id/cannes-2.webp", "img/id/cannes-3.webp", "img/id/cannes-4.webp", "img/id/cannes-5.webp", "img/id/cannes-6.webp"]
   },
 
   "iena": {
@@ -193,7 +194,7 @@ const PROJECTS = {
     fr: "Dans le 16e arrondissement, un appartement qui réinterprète le classicisme parisien avec des matières contemporaines et une lumière maîtrisée.",
     en: "In the 16th arrondissement, an apartment that reinterprets Parisian classicism with contemporary materials and controlled light.",
     cover: "img/id/iena.webp",
-    images: ["img/id/iena.webp"]
+    images: ["img/id/iena.webp", "img/id/iena-2.webp", "img/id/iena-3.webp", "img/id/iena-4.webp", "img/id/iena-5.webp", "img/id/iena-6.webp"]
   },
 
   "toits-2": {
@@ -205,7 +206,7 @@ const PROJECTS = {
     fr: "Second chapitre sous les toits parisiens. Une suite qui joue sur les rythmes du bois, la douceur des tissus et la chaleur tamisée d'une lumière travaillée.",
     en: "A second chapter beneath the Parisian rooftops. A suite that plays on the rhythms of wood, the softness of fabrics and the filtered warmth of considered light.",
     cover: "img/id/sous-les-toits-2.jpg",
-    images: ["img/id/sous-les-toits-2.jpg"]
+    images: ["img/id/sous-les-toits-2.jpg", "img/id/toits-2-2.jpg", "img/id/toits-2-3.jpg", "img/id/toits-2-4.jpg", "img/id/toits-2-5.jpg", "img/id/toits-2-6.jpg"]
   },
 
   "toits-3": {
@@ -217,7 +218,7 @@ const PROJECTS = {
     fr: "Troisième variation sur le thème des combles parisiens. Même géographie, autre personnalité — chaque appartement est un portrait singulier.",
     en: "A third variation on the theme of Parisian attics. Same geography, another personality — each apartment is its own singular portrait.",
     cover: "img/id/sous-les-toits-3.jpg",
-    images: ["img/id/sous-les-toits-3.jpg"]
+    images: ["img/id/sous-les-toits-3.jpg", "img/id/toits-3-2.jpg", "img/id/toits-3-3.jpg", "img/id/toits-3-4.jpg", "img/id/toits-3-5.jpg", "img/id/toits-3-6.jpg"]
   },
 
   "workspace": {
@@ -229,7 +230,7 @@ const PROJECTS = {
     fr: "Concevoir un lieu de travail qui inspire autant qu'il protège l'image. Un espace de réception pensé pour la marque autant que pour le confort.",
     en: "Designing a workspace that inspires as much as it protects brand image. A reception space conceived for the brand as much as for comfort.",
     cover: "img/id/workspace.webp",
-    images: ["img/id/workspace.webp"]
+    images: ["img/id/workspace.webp", "img/id/workspace-2.webp", "img/id/workspace-3.webp", "img/id/workspace-4.webp"]
   }
 
 };
