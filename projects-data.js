@@ -12,10 +12,8 @@ const PROJECTS = {
     style: "Contemporain haussmannien",
     fr: "Un duplex pensé comme une maison dans la ville. Séjour traversant baigné de lumière, canapé modulaire enveloppant, détails dorés — l'art de vivre à la parisienne dans toute sa splendeur.",
     en: "A duplex conceived as a house within the city. A light-filled through-living room, an enveloping modular sofa, golden details — Parisian art de vivre in all its splendour.",
-    cover: "1 - Interior Design/Duplex Madeleine/duplex madeleine - photo du séjour.jpg",
-    images: [
-      "1 - Interior Design/Duplex Madeleine/duplex madeleine - photo du séjour.jpg"
-    ]
+    cover: "img/id/duplex-madeleine.jpg",
+    images: ["img/id/duplex-madeleine.jpg"]
   },
 
   "marbeuf": {
@@ -26,11 +24,8 @@ const PROJECTS = {
     style: "Haussmannien contemporain",
     fr: "Un grand appartement haussmannien au cœur du 8e arrondissement. Moulures restaurées, luminaire sculptural sur mesure, mobilier conçu pièce par pièce — un résultat intemporel et résolument contemporain.",
     en: "A grand Haussmann apartment in the heart of the 8th arrondissement. Restored mouldings, custom sculptural lighting, furniture designed piece by piece — a result both timeless and resolutely contemporary.",
-    cover: "1 - Interior Design/Marbeuf/684ae9ed05cfd25582b47ed6_Marbeuf1-v2-07-min.jpg",
-    images: [
-      "1 - Interior Design/Marbeuf/684ae9ed05cfd25582b47ed6_Marbeuf1-v2-07-min.jpg",
-      "1 - Interior Design/Marbeuf/684ae9ed05cfd25582b47ed6_Marbeuf1-v2-07-min.jpg"
-    ]
+    cover: "img/id/marbeuf.jpg",
+    images: ["img/id/marbeuf.jpg"]
   },
 
   "triplex-spa": {
@@ -41,10 +36,8 @@ const PROJECTS = {
     style: "Contemporain raffiné",
     fr: "Trois niveaux, une ambiance unique. Le marbre sélectionné veine par veine, la robinetterie dorée posée au millimètre — ce triplex est une déclaration de raffinement absolu.",
     en: "Three levels, one unique atmosphere. Marble selected vein by vein, golden fixtures positioned to the millimetre — this triplex is a declaration of absolute refinement.",
-    cover: "1 - Interior Design/Triplex avec spa/6846b2f712f4980053b4ed3f_dechargeursR01-29.jpg",
-    images: [
-      "1 - Interior Design/Triplex avec spa/6846b2f712f4980053b4ed3f_dechargeursR01-29.jpg"
-    ]
+    cover: "img/id/triplex-spa.jpg",
+    images: ["img/id/triplex-spa.jpg"]
   },
 
   "arcade": {
@@ -55,10 +48,8 @@ const PROJECTS = {
     style: "Contemporain raffiné",
     fr: "Un appartement de caractère réinventé autour d'une palette de matières nobles — marbre gris, chêne clair, laiton brossé. Chaque pièce dialogue avec l'histoire du lieu.",
     en: "A character apartment reinvented around a palette of noble materials — grey marble, light oak, brushed brass. Every room in dialogue with the history of the place.",
-    cover: "1 - Interior Design/Arcade/69c2ae9243ef6b5725252818_IMG_6776.jpg",
-    images: [
-      "1 - Interior Design/Arcade/69c2ae9243ef6b5725252818_IMG_6776.jpg"
-    ]
+    cover: "img/id/arcade.jpg",
+    images: ["img/id/arcade.jpg"]
   },
 
   "sous-les-toits": {
@@ -69,10 +60,8 @@ const PROJECTS = {
     style: "Contemporain poétique",
     fr: "Sous les poutres centenaires, une chambre d'exception. Le bois ancien dialogue avec un mobilier sur mesure dans une palette de lin, de noyer et de blanc.",
     en: "Beneath centuries-old beams, an exceptional suite. Ancient wood in dialogue with bespoke furniture in a palette of linen, walnut and white.",
-    cover: "1 - Interior Design/Sous les toits de Paris/685e60908e35d8be488321d3_dechargeurs501-02.jpg",
-    images: [
-      "1 - Interior Design/Sous les toits de Paris/685e60908e35d8be488321d3_dechargeurs501-02.jpg"
-    ]
+    cover: "img/id/sous-les-toits.jpg",
+    images: ["img/id/sous-les-toits.jpg"]
   },
 
   "patio": {
@@ -83,10 +72,8 @@ const PROJECTS = {
     style: "Minimaliste luxueux",
     fr: "Un appartement conçu autour de la lumière et du silence. Matières douces, volumes généreux, finitions hôtelières — un intérieur pensé pour être vécu.",
     en: "An apartment conceived around light and silence. Soft materials, generous volumes, hotel-grade finishes — an interior designed to be lived in.",
-    cover: "1 - Interior Design/Patio/6846b5e21013a7b5a9606277_dechargeurs114-19.jpg",
-    images: [
-      "1 - Interior Design/Patio/6846b5e21013a7b5a9606277_dechargeurs114-19.jpg"
-    ]
+    cover: "img/id/patio.jpg",
+    images: ["img/id/patio.jpg"]
   },
 
   "louvres": {
@@ -97,10 +84,8 @@ const PROJECTS = {
     style: "Contemporain chaleureux",
     fr: "Les lignes contemporaines du noyer et les tons ambrés — un équilibre entre exigence et confort, à deux pas du Louvre.",
     en: "The contemporary lines of walnut and amber tones — a balance between high standards and comfort, steps from the Louvre.",
-    cover: "1 - Interior Design/Louvres/6846b16f0f8bfcfce772d55c_dechargeurs211-27.jpg",
-    images: [
-      "1 - Interior Design/Louvres/6846b16f0f8bfcfce772d55c_dechargeurs211-27.jpg"
-    ]
+    cover: "img/id/louvres.jpg",
+    images: ["img/id/louvres.jpg"]
   },
 
   "champs-elysees": {
@@ -111,10 +96,8 @@ const PROJECTS = {
     style: "Haussmannien contemporain",
     fr: "Adresse de prestige, ambition maximale. Le vocabulaire classique de l'architecture haussmannienne rencontre une écriture intérieure résolument contemporaine.",
     en: "A prestigious address, maximum ambition. The classical vocabulary of Haussmann architecture meets a resolutely contemporary interior design language.",
-    cover: "1 - Interior Design/Champs Elysées/6846c512f4ae1fb81382c923_Marbeuf2-v2-04.jpg",
-    images: [
-      "1 - Interior Design/Champs Elysées/6846c512f4ae1fb81382c923_Marbeuf2-v2-04.jpg"
-    ]
+    cover: "img/id/champs-elysees.jpg",
+    images: ["img/id/champs-elysees.jpg"]
   },
 
   "rivoli": {
@@ -125,10 +108,8 @@ const PROJECTS = {
     style: "Contemporain parisien",
     fr: "Un ensemble locatif repensé rue de Rivoli. Chaque appartement conçu comme un objet singulier — même ambition, expressions différentes.",
     en: "A rental property reinvented on rue de Rivoli. Each apartment conceived as a singular object — the same ambition, different expressions.",
-    cover: "1 - Interior Design/Rivoli/6846b4378c1020615ebc44d0_dechargeurs112-06.jpg",
-    images: [
-      "1 - Interior Design/Rivoli/6846b4378c1020615ebc44d0_dechargeurs112-06.jpg"
-    ]
+    cover: "img/id/rivoli.jpg",
+    images: ["img/id/rivoli.jpg"]
   },
 
   "dechargeurs": {
@@ -139,10 +120,8 @@ const PROJECTS = {
     style: "Contemporain raffiné",
     fr: "Restructuration complète d'un bien de caractère aux Halles. De la conception au suivi de chantier, un projet mené de A à Z avec une exigence absolue.",
     en: "Complete restructuring of a character property at Les Halles. From conception to construction supervision, a project led from A to Z with absolute rigour.",
-    cover: "1 - Interior Design/Dechargeurs/6846b911484243f47e4a71a5_dechargeurs201-08.jpg",
-    images: [
-      "1 - Interior Design/Dechargeurs/6846b911484243f47e4a71a5_dechargeurs201-08.jpg"
-    ]
+    cover: "img/id/dechargeurs.jpg",
+    images: ["img/id/dechargeurs.jpg"]
   },
 
   "madeleine": {
@@ -153,10 +132,8 @@ const PROJECTS = {
     style: "Contemporain élégant",
     fr: "À deux pas de la Madeleine, un appartement réinventé dans une palette de beiges dorés et de bois chaleureux. L'épure au service de l'élégance.",
     en: "Steps from La Madeleine, an apartment reinvented in a palette of golden beiges and warm woods. Simplicity in the service of elegance.",
-    cover: "1 - Interior Design/Madeleine/68c41e5f29fbf5700828adbd_sd (23).jpg",
-    images: [
-      "1 - Interior Design/Madeleine/68c41e5f29fbf5700828adbd_sd (23).jpg"
-    ]
+    cover: "img/id/madeleine.jpg",
+    images: ["img/id/madeleine.jpg"]
   },
 
   "malesherbes": {
@@ -167,10 +144,8 @@ const PROJECTS = {
     style: "Contemporain familial",
     fr: "Un appartement familial aux volumes redéfinis. Les cloisons bougent, la lumière circule — l'espace prend enfin tout son sens.",
     en: "A family apartment with redefined volumes. Walls move, light flows — the space finally realises its full potential.",
-    cover: "1 - Interior Design/Malesherbes/68c427861c722985f610b725_sd (3).jpg",
-    images: [
-      "1 - Interior Design/Malesherbes/68c427861c722985f610b725_sd (3).jpg"
-    ]
+    cover: "img/id/malesherbes.jpg",
+    images: ["img/id/malesherbes.jpg"]
   },
 
   "chatelet": {
@@ -181,10 +156,8 @@ const PROJECTS = {
     style: "Contemporain parisien",
     fr: "Proximité du centre, intimité préservée. Cet appartement du Châtelet démontre qu'élégance et praticité ne s'opposent jamais.",
     en: "Central location, preserved intimacy. This Châtelet apartment demonstrates that elegance and practicality need never oppose each other.",
-    cover: "1 - Interior Design/Chatelet/695fdc0b2679813ed15e1a93_dechargeursR02-11.jpg",
-    images: [
-      "1 - Interior Design/Chatelet/695fdc0b2679813ed15e1a93_dechargeursR02-11.jpg"
-    ]
+    cover: "img/id/chatelet.jpg",
+    images: ["img/id/chatelet.jpg"]
   },
 
   "deux-pieces": {
@@ -195,10 +168,8 @@ const PROJECTS = {
     style: "Minimaliste chic",
     fr: "Preuve que les petits espaces peuvent être grands. Ce deux-pièces repensé de A à Z dégage une générosité de volume inattendue.",
     en: "Proof that small spaces can feel grand. This two-room apartment, redesigned from scratch, exudes an unexpected generosity of volume.",
-    cover: "1 - Interior Design/Deux pièces chic/6846bcc04cb371e6b52ebab1_PAF-Arcade42-15.jpg",
-    images: [
-      "1 - Interior Design/Deux pièces chic/6846bcc04cb371e6b52ebab1_PAF-Arcade42-15.jpg"
-    ]
+    cover: "img/id/deux-pieces.jpg",
+    images: ["img/id/deux-pieces.jpg"]
   },
 
   "cannes": {
@@ -209,10 +180,8 @@ const PROJECTS = {
     style: "Méditerranéen contemporain",
     fr: "Un intérieur conçu pour la lumière du Sud. Palettes claires, matières naturelles, ouverture maximale sur l'extérieur.",
     en: "An interior conceived for southern light. Light palettes, natural materials, maximum openness to the outside.",
-    cover: "1 - Interior Design/Cannes/johnmagueule_A_modern_bedroom_with_white_and_yellow_bedding_sho_2455b18c-a9da-4f7d-bd7a-b31bf25d95e1.webp",
-    images: [
-      "1 - Interior Design/Cannes/johnmagueule_A_modern_bedroom_with_white_and_yellow_bedding_sho_2455b18c-a9da-4f7d-bd7a-b31bf25d95e1.webp"
-    ]
+    cover: "img/id/cannes.webp",
+    images: ["img/id/cannes.webp"]
   },
 
   "iena": {
@@ -223,10 +192,8 @@ const PROJECTS = {
     style: "Classique contemporain",
     fr: "Dans le 16e arrondissement, un appartement qui réinterprète le classicisme parisien avec des matières contemporaines et une lumière maîtrisée.",
     en: "In the 16th arrondissement, an apartment that reinterprets Parisian classicism with contemporary materials and controlled light.",
-    cover: "1 - Interior Design/Iena/johnmagueule_A_bedroom_with_an_oak_headboard_woven_wall_panels__7be7c7ed-1b39-49e1-b572-9ff1640615b9.webp",
-    images: [
-      "1 - Interior Design/Iena/johnmagueule_A_bedroom_with_an_oak_headboard_woven_wall_panels__7be7c7ed-1b39-49e1-b572-9ff1640615b9.webp"
-    ]
+    cover: "img/id/iena.webp",
+    images: ["img/id/iena.webp"]
   },
 
   "toits-2": {
@@ -237,10 +204,8 @@ const PROJECTS = {
     style: "Contemporain poétique",
     fr: "Second chapitre sous les toits parisiens. Une suite qui joue sur les rythmes du bois, la douceur des tissus et la chaleur tamisée d'une lumière travaillée.",
     en: "A second chapter beneath the Parisian rooftops. A suite that plays on the rhythms of wood, the softness of fabrics and the filtered warmth of considered light.",
-    cover: "1 - Interior Design/Sous les toits de Paris 2/695fc621acd5693fa4f09986_dechargeurs-411-01.jpg",
-    images: [
-      "1 - Interior Design/Sous les toits de Paris 2/695fc621acd5693fa4f09986_dechargeurs-411-01.jpg"
-    ]
+    cover: "img/id/sous-les-toits-2.jpg",
+    images: ["img/id/sous-les-toits-2.jpg"]
   },
 
   "toits-3": {
@@ -251,10 +216,8 @@ const PROJECTS = {
     style: "Contemporain singulier",
     fr: "Troisième variation sur le thème des combles parisiens. Même géographie, autre personnalité — chaque appartement est un portrait singulier.",
     en: "A third variation on the theme of Parisian attics. Same geography, another personality — each apartment is its own singular portrait.",
-    cover: "1 - Interior Design/Sous les toits de paris 3/6996e0bccac5e26eca2d6f91_sd (12).jpg",
-    images: [
-      "1 - Interior Design/Sous les toits de paris 3/6996e0bccac5e26eca2d6f91_sd (12).jpg"
-    ]
+    cover: "img/id/sous-les-toits-3.jpg",
+    images: ["img/id/sous-les-toits-3.jpg"]
   },
 
   "workspace": {
@@ -265,10 +228,8 @@ const PROJECTS = {
     style: "Contemporain professionnel",
     fr: "Concevoir un lieu de travail qui inspire autant qu'il protège l'image. Un espace de réception pensé pour la marque autant que pour le confort.",
     en: "Designing a workspace that inspires as much as it protects brand image. A reception space conceived for the brand as much as for comfort.",
-    cover: "1 - Interior Design/Work space/johnmagueule_espacio_de_trabajo_comodo_y_relejado_para_jovenes._24e90040-cc4d-4b48-a4ef-40f47582eaae.webp",
-    images: [
-      "1 - Interior Design/Work space/johnmagueule_espacio_de_trabajo_comodo_y_relejado_para_jovenes._24e90040-cc4d-4b48-a4ef-40f47582eaae.webp"
-    ]
+    cover: "img/id/workspace.webp",
+    images: ["img/id/workspace.webp"]
   }
 
 };
