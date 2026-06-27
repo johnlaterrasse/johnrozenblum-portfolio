@@ -7,12 +7,8 @@
   <meta name="description" content="Bonnard Music — collectif DJ parisien. Sets, visuels et savoir-faire musical français. SoundCloud, Instagram, TikTok.">
   <link rel="stylesheet" href="style.css?v=4">
   <style>
-    body { background: var(--black); }
-    nav { mix-blend-mode: normal; }
-    .nav-logo, .nav-links a, .lang-toggle { color: rgba(255,255,255,0.8); }
     .bonnard-bio {
-      background: var(--black);
-      padding: 100px 48px;
+      padding: 80px 48px;
       max-width: 800px;
       margin: 0 auto;
       text-align: center;
@@ -20,12 +16,72 @@
     .bonnard-bio-text {
       font-size: 1rem;
       line-height: 1.9;
-      color: rgba(255,255,255,0.65);
+      color: var(--gray);
       font-weight: 300;
     }
-    .nav-links a { color: rgba(255,255,255,0.7); }
-    .nav-links a.active { color: var(--white); }
     footer { margin-top: 0; }
+
+    /* Portraits discrets — petite grille */
+    .bonnard-portraits-small {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+    .bonnard-portraits-small img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center top;
+      filter: grayscale(30%);
+      transition: filter 0.3s;
+    }
+    .bonnard-portraits-small img:hover { filter: grayscale(0%); }
+
+    /* Visuel charte — pleine largeur */
+    .bonnard-charte-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    .bonnard-charte-wrap img {
+      width: 100%;
+      display: block;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* Player sur fond clair */
+    .bonnard-player {
+      background: #f8f7f4;
+      padding: 80px 48px;
+    }
+
+    /* Socials sur blanc */
+    .bonnard-socials {
+      background: var(--white);
+      padding: 80px 48px;
+      text-align: center;
+    }
+    .bonnard-socials-links a {
+      color: var(--dark) !important;
+    }
+    .bonnard-socials-links a:hover { color: var(--gold) !important; }
+
+    /* Section booking blanc */
+    .bonnard-booking {
+      text-align: center;
+      padding: 80px 48px;
+      background: var(--light);
+      border-top: 1px solid rgba(201,168,76,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .bonnard-portraits-small { grid-template-columns: repeat(3, 1fr); }
+      .bonnard-charte-wrap { padding: 0 24px; }
+      .bonnard-bio { padding: 60px 24px; }
+      .bonnard-booking { padding: 60px 24px; }
+    }
   </style>
 </head>
 <body>
@@ -33,8 +89,8 @@
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
 
-<!-- Navigation -->
-<nav class="dark">
+<!-- Navigation (défaut — fond blanc) -->
+<nav>
   <a href="index.html" class="nav-logo">JR</a>
   <div class="nav-links">
     <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
@@ -46,19 +102,35 @@
   <div class="nav-burger"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- Hero Bonnard — logo seul -->
-<div class="bonnard-hero bonnard-hero-logo">
+<!-- Hero — texte seul sur blanc -->
+<div style="padding: 140px 48px 80px; text-align:center; background: var(--white);">
   <div class="reveal">
-    <p class="bonnard-tagline" data-fr="Bonnard Music." data-en="Bonnard Music.">Bonnard Music.</p>
-    <p class="bonnard-sub" data-fr="Le savoir-faire français." data-en="French savoir-faire.">Le savoir-faire français.</p>
+    <p class="section-label" style="color:var(--gold);" data-fr="Collectif DJ · Paris" data-en="DJ Collective · Paris">Collectif DJ · Paris</p>
+    <h1 style="font-family:var(--serif); font-size:clamp(3rem,7vw,6rem); font-weight:400; color:var(--dark); letter-spacing:-0.02em; margin:24px 0 16px;" data-fr="Bonnard Music." data-en="Bonnard Music.">Bonnard Music.</h1>
+    <div class="divider" style="background:var(--gold); margin:32px auto;"></div>
+    <p style="font-size:clamp(1rem,1.5vw,1.2rem); color:var(--gray); font-weight:300; letter-spacing:0.15em; text-transform:uppercase;" data-fr="Le savoir-faire français." data-en="French savoir-faire.">Le savoir-faire français.</p>
   </div>
 </div>
+
+<!-- Visuel charte — noir sur blanc -->
+<div style="padding: 0 0 80px; background:var(--white);">
+  <div class="bonnard-charte-wrap reveal">
+    <img src="img/bonnard/bonnard-charte.jpg" alt="Bonnard Music — Maison Française" loading="lazy">
+  </div>
+</div>
+
+<!-- Biographie -->
+<section class="bonnard-bio reveal" style="background:var(--white);">
+  <div class="divider" style="background:var(--gold); margin: 0 auto 40px;"></div>
+  <p class="section-label" style="color:var(--gold);" data-fr="À propos" data-en="About">À propos</p>
+  <p class="bonnard-bio-text" data-fr="Bonnard Music est un collectif DJ parisien fondé sur une seule conviction : la musique est un art de vivre. À la croisée du house, du disco et de l'électronique française, Bonnard cultive un son à la fois raffiné et dansant — un savoir-faire hérité des nuits parisiennes et des soirées qui durent jusqu'à l'aube. Chaque set est une narration. Un voyage. Une atmosphère construite matière par matière, comme un espace bien designé." data-en="Bonnard Music is a Parisian DJ collective founded on one conviction: music is an art de vivre. At the crossroads of house, disco and French electronics, Bonnard cultivates a sound that is both refined and dancefloor-ready — a savoir-faire inherited from Parisian nights and parties that last until dawn. Every set is a narrative. A journey. An atmosphere built material by material, like a well-designed space.">Bonnard Music est un collectif DJ parisien fondé sur une seule conviction : la musique est un art de vivre. À la croisée du house, du disco et de l'électronique française, Bonnard cultive un son à la fois raffiné et dansant — un savoir-faire hérité des nuits parisiennes et des soirées qui durent jusqu'à l'aube. Chaque set est une narration. Un voyage. Une atmosphère construite matière par matière, comme un espace bien designé.</p>
+</section>
 
 <!-- Player SoundCloud -->
 <div class="bonnard-player">
   <div class="reveal" style="text-align:center; margin-bottom:40px;">
     <p class="section-label" style="color:var(--gold);" data-fr="Écouter" data-en="Listen">Écouter</p>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);color:var(--white);font-weight:400;" data-fr="Les sons Bonnard." data-en="The Bonnard sound.">Les sons Bonnard.</h2>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);color:var(--dark);font-weight:400;" data-fr="Les sons Bonnard." data-en="The Bonnard sound.">Les sons Bonnard.</h2>
   </div>
   <iframe
     class="reveal"
@@ -72,30 +144,21 @@
   </iframe>
 </div>
 
-<!-- Biographie -->
-<section class="bonnard-bio">
-  <div class="reveal">
-    <div class="divider" style="background:var(--gold); margin: 0 auto 40px;"></div>
-    <p class="section-label" style="color:var(--gold);" data-fr="À propos" data-en="About">À propos</p>
-    <p class="bonnard-bio-text" data-fr="Bonnard Music est un collectif DJ parisien fondé sur une seule conviction : la musique est un art de vivre. À la croisée du house, du disco et de l'électronique française, Bonnard cultive un son à la fois raffiné et dansant — un savoir-faire hérité des nuits parisiennes et des soirées qui durent jusqu'à l'aube. Chaque set est une narration. Un voyage. Une atmosphère construite matière par matière, comme un espace bien designé." data-en="Bonnard Music is a Parisian DJ collective founded on one conviction: music is an art de vivre. At the crossroads of house, disco and French electronics, Bonnard cultivates a sound that is both refined and dancefloor-ready — a savoir-faire inherited from Parisian nights and parties that last until dawn. Every set is a narrative. A journey. An atmosphere built material by material, like a well-designed space.">Bonnard Music est un collectif DJ parisien fondé sur une seule conviction : la musique est un art de vivre. À la croisée du house, du disco et de l'électronique française, Bonnard cultive un son à la fois raffiné et dansant — un savoir-faire hérité des nuits parisiennes et des soirées qui durent jusqu'à l'aube. Chaque set est une narration. Un voyage. Une atmosphère construite matière par matière, comme un espace bien designé.</p>
-  </div>
-</section>
-
-<!-- Collectif — portraits DJs -->
-<div class="bonnard-visuals">
+<!-- Collectif — portraits discrets -->
+<div style="padding: 80px 48px; background:var(--white);">
   <div style="text-align:center;" class="reveal">
     <p class="section-label" style="color:var(--gold);" data-fr="Le Collectif" data-en="The Collective">Le Collectif</p>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.5rem);color:var(--white);font-weight:400;margin-bottom:48px;" data-fr="L'univers Bonnard." data-en="The Bonnard universe.">L'univers Bonnard.</h2>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.5rem);color:var(--dark);font-weight:400;margin-bottom:0;" data-fr="L'univers Bonnard." data-en="The Bonnard universe.">L'univers Bonnard.</h2>
   </div>
-  <div class="bonnard-portraits-grid reveal">
-    <img src="img/bonnard/bonnard-event.jpg" alt="Bonnard Music — Fête de la Musique" loading="lazy">
+  <div class="bonnard-portraits-small reveal">
     <img src="img/bonnard/portrait-2.jpg" alt="Bonnard Music — artiste" loading="lazy">
     <img src="img/bonnard/portrait-3.jpg" alt="Bonnard Music — artiste" loading="lazy">
     <img src="img/bonnard/portrait-4.jpg" alt="Bonnard Music — artiste" loading="lazy">
     <img src="img/bonnard/portrait-5.jpg" alt="Bonnard Music — artiste" loading="lazy">
     <img src="img/bonnard/portrait-6.jpg" alt="Bonnard Music — artiste" loading="lazy">
     <img src="img/bonnard/portrait-7.jpg" alt="Bonnard Music — artiste" loading="lazy">
-    <img src="img/bonnard/bonnard-charte.jpg" alt="Bonnard Music — Maison Française" loading="lazy" style="object-fit:contain; background:#f5f3ef;">
+    <img src="img/bonnard/bonnard-event.jpg" alt="Bonnard Music — Fête de la Musique" loading="lazy">
+    <img src="img/bonnard/portrait-8.jpg" alt="Bonnard Music — artiste" loading="lazy">
   </div>
 </div>
 
@@ -103,7 +166,7 @@
 <div class="bonnard-socials">
   <div class="reveal">
     <p class="section-label" style="color:var(--gold);" data-fr="Suivre Bonnard" data-en="Follow Bonnard">Suivre Bonnard</p>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.5rem);color:var(--white);font-weight:400;margin-bottom:8px;" data-fr="Sur les réseaux." data-en="On the socials.">Sur les réseaux.</h2>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.5rem);color:var(--dark);font-weight:400;margin-bottom:8px;" data-fr="Sur les réseaux." data-en="On the socials.">Sur les réseaux.</h2>
   </div>
   <div class="bonnard-socials-links reveal">
     <a href="https://soundcloud.com/bonnard-music" target="_blank" rel="noopener">SoundCloud</a>
@@ -113,12 +176,12 @@
 </div>
 
 <!-- Booking -->
-<div style="text-align:center; padding:80px 48px; background:var(--black); border-top: 1px solid rgba(201,168,76,0.2);">
+<div class="bonnard-booking">
   <div class="reveal" style="max-width:600px; margin:0 auto;">
     <p class="section-label" style="color:var(--gold);" data-fr="Booking" data-en="Booking">Booking</p>
-    <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.8rem);color:var(--white);font-weight:400;margin-bottom:20px;" data-fr="Vous organisez un événement ?" data-en="Organising an event?">Vous organisez un événement ?</h2>
-    <p style="color:rgba(255,255,255,0.60);font-size:0.95rem;line-height:1.8;margin-bottom:36px;" data-fr="Cocktails, soirées privées, événements professionnels — nous construisons l'atmosphère musicale de votre moment." data-en="Cocktail parties, private evenings, corporate events — we build the musical atmosphere for your moment.">Cocktails, soirées privées, événements professionnels — nous construisons l'atmosphère musicale de votre moment.</p>
-    <a href="mailto:hello@johnrozenblum.com" class="btn" style="background:var(--gold);color:var(--black);border-color:var(--gold);" data-fr="Demander une prestation" data-en="Request a booking">Demander une prestation</a>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.8rem);color:var(--dark);font-weight:400;margin-bottom:20px;" data-fr="Vous organisez un événement ?" data-en="Organising an event?">Vous organisez un événement ?</h2>
+    <p style="color:var(--gray);font-size:0.95rem;line-height:1.8;margin-bottom:36px;" data-fr="Cocktails, soirées privées, événements professionnels — nous construisons l'atmosphère musicale de votre moment." data-en="Cocktail parties, private evenings, corporate events — we build the musical atmosphere for your moment.">Cocktails, soirées privées, événements professionnels — nous construisons l'atmosphère musicale de votre moment.</p>
+    <a href="mailto:hello@johnrozenblum.com" class="btn" data-fr="Demander une prestation" data-en="Request a booking">Demander une prestation</a>
   </div>
 </div>
 
