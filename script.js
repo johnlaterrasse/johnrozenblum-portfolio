@@ -176,7 +176,7 @@ if (form) {
     };
 
     try {
-      const res  = await fetch('https://formsubmit.co/ajax/john@laterrasse.paris', {
+      const res  = await fetch('https://formsubmit.co/ajax/hello@johnrozenblum.com', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body:    JSON.stringify(data)
