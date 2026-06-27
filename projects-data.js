@@ -13,8 +13,21 @@ const PROJECTS = {
     fr: "Un duplex pensé comme une maison dans la ville. Séjour traversant baigné de lumière, canapé modulaire enveloppant, détails dorés — l'art de vivre à la parisienne dans toute sa splendeur.",
     en: "A duplex conceived as a house within the city. A light-filled through-living room, an enveloping modular sofa, golden details — Parisian art de vivre in all its splendour.",
     cover: "img/id/duplex-madeleine.jpg",
-    images: ["img/id/duplex-madeleine.jpg"]
-    // Note : 1 seule photo disponible pour ce projet
+    images: [
+      "img/id/duplex-madeleine.jpg",
+      "img/id/duplex-madeleine-2.jpg",
+      "img/id/duplex-madeleine-3.jpg",
+      "img/id/duplex-madeleine-4.jpg",
+      "img/id/duplex-madeleine-5.jpg",
+      "img/id/duplex-madeleine-6.jpg",
+      "img/id/duplex-madeleine-7.jpg",
+      "img/id/duplex-madeleine-8.jpg",
+      "img/id/duplex-madeleine-9.jpg",
+      "img/id/duplex-madeleine-10.jpg",
+      "img/id/duplex-madeleine-11.jpg",
+      "img/id/duplex-madeleine-12.jpg",
+      "img/id/duplex-madeleine-13.jpg"
+    ]
   },
 
   "marbeuf": {
@@ -256,7 +269,12 @@ const OBJECTS = {
     fr: "Structure en chêne massif, assise et dossier en tissu bouclette. Un équilibre entre forme sculptée et confort enveloppant.",
     en: "Solid oak frame, bouclette fabric seat and back. A balance between sculptural form and enveloping comfort.",
     tag: "Sur devis",
-    images: ["img/meubles/bouclette-chairs.webp"]
+    images: [
+      "img/meubles/bouclette-chairs.webp",
+      "img/meubles/bouclette-chairs-2.webp",
+      "img/meubles/bouclette-chairs-3.webp",
+      "img/meubles/bouclette-chairs-4.webp"
+    ]
   },
 
   "suspension-feuilles-or": {
@@ -304,7 +322,12 @@ const OBJECTS = {
     fr: "Pieds en métal laqué, assises texturées — des pièces fonctionnelles pensées comme des sculptures.",
     en: "Lacquered metal legs, textured tops — functional pieces conceived as sculptures.",
     tag: "Sur devis",
-    images: ["img/meubles/tabourets.webp"]
+    images: [
+      "img/meubles/tabourets.webp",
+      "img/meubles/tabourets-2.webp",
+      "img/meubles/tabourets-3.webp",
+      "img/meubles/tabourets-4.webp"
+    ]
   },
 
   "lit-signature": {
