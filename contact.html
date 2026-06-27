@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — John Rozenblum Design Paris</title>
+  <meta name="description" content="Contactez John Rozenblum pour votre projet de design d'intérieur à Paris. Rénovation, aménagement, direction artistique — partagez votre vision.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html" class="nav-logo">JR</a>
+  <div class="nav-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Objets" data-en="Objects">Objets</a>
+    <a href="bonnard.html">Bonnard</a>
+    <a href="contact.html" class="active" data-fr="Contact" data-en="Contact">Contact</a>
+  </div>
+  <button class="lang-toggle">EN</button>
+  <div class="nav-burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Contact Principal -->
+<div class="contact-section">
+
+  <!-- Gauche : infos -->
+  <div class="contact-left">
+    <div class="reveal">
+      <p class="section-label" style="color:var(--gold);" data-fr="Parlons." data-en="Let's talk.">Parlons.</p>
+      <h1 class="section-title" data-fr="Un projet<br>à construire ?" data-en="A project<br>to build?">Un projet<br>à construire ?</h1>
+      <div class="divider"></div>
+      <p class="section-text" data-fr="Que ce soit une rénovation complète, un aménagement, une direction artistique ou un meuble sur mesure — chaque collaboration commence par une conversation." data-en="Whether it's a full renovation, an interior fit-out, art direction or a custom piece of furniture — every collaboration begins with a conversation.">Que ce soit une rénovation complète, un aménagement, une direction artistique ou un meuble sur mesure — chaque collaboration commence par une conversation.</p>
+
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <p class="contact-info-label" data-fr="Email" data-en="Email">Email</p>
+          <p class="contact-info-value"><a href="mailto:john@laterrasse.paris" style="color:var(--white); border-bottom:1px solid var(--gold); padding-bottom:2px;">john@laterrasse.paris</a></p>
+        </div>
+        <div class="contact-info-item">
+          <p class="contact-info-label" data-fr="Basé à" data-en="Based in">Basé à</p>
+          <p class="contact-info-value">Paris, France</p>
+        </div>
+        <div class="contact-info-item">
+          <p class="contact-info-label" data-fr="Zone d'intervention" data-en="Scope">Zone d'intervention</p>
+          <p class="contact-info-value" data-fr="Paris · Île-de-France · France & International" data-en="Paris · Île-de-France · France & International">Paris · Île-de-France · France & International</p>
+        </div>
+        <div class="contact-info-item">
+          <p class="contact-info-label" data-fr="Réponse" data-en="Response time">Réponse</p>
+          <p class="contact-info-value" data-fr="Sous 48h" data-en="Within 48h">Sous 48h</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Droite : formulaire -->
+  <div class="contact-right">
+    <div class="reveal">
+      <p class="section-label" data-fr="Votre projet" data-en="Your project">Votre projet</p>
+      <form class="contact-form" name="contact">
+        <div class="form-group">
+          <label for="nom" data-fr="Nom complet" data-en="Full name">Nom complet</label>
+          <input type="text" id="nom" name="nom" required
+                 placeholder="" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required
+                 autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="type" data-fr="Type de projet" data-en="Project type">Type de projet</label>
+          <select id="type" name="type">
+            <option value="" data-fr="— Choisir —" data-en="— Select —">— Choisir —</option>
+            <option value="renovation" data-fr="Rénovation complète" data-en="Full renovation">Rénovation complète</option>
+            <option value="amenagement" data-fr="Aménagement intérieur" data-en="Interior fit-out">Aménagement intérieur</option>
+            <option value="decoration" data-fr="Décoration" data-en="Interior decoration">Décoration</option>
+            <option value="meuble" data-fr="Meuble sur mesure" data-en="Custom furniture">Meuble sur mesure</option>
+            <option value="direction" data-fr="Direction artistique" data-en="Art direction">Direction artistique</option>
+            <option value="autre" data-fr="Autre" data-en="Other">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="surface" data-fr="Surface approximative" data-en="Approximate surface area">Surface approximative</label>
+          <input type="text" id="surface" name="surface"
+                 placeholder="Ex: 80 m²">
+        </div>
+        <div class="form-group">
+          <label for="message" data-fr="Votre message" data-en="Your message">Votre message</label>
+          <textarea id="message" name="message" rows="5"
+                    data-fr-placeholder="Décrivez votre projet, vos attentes, votre calendrier..."
+                    data-en-placeholder="Describe your project, expectations, timeline..."
+                    placeholder="Décrivez votre projet, vos attentes, votre calendrier..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit" data-fr="Envoyer le message" data-en="Send message">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<!-- Section infos complémentaires -->
+<section style="background:var(--light); padding:80px 48px;">
+  <div style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px;" class="reveal">
+
+    <div>
+      <p class="section-label" data-fr="Services" data-en="Services">Services</p>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; margin-top:16px;">
+        <li style="font-size:0.85rem;color:var(--gray);" data-fr="Design d'intérieur & rénovation" data-en="Interior design & renovation">Design d'intérieur & rénovation</li>
+        <li style="font-size:0.85rem;color:var(--gray);" data-fr="Maîtrise d'œuvre décoration" data-en="Interior project management">Maîtrise d'œuvre décoration</li>
+        <li style="font-size:0.85rem;color:var(--gray);" data-fr="Meubles sur mesure" data-en="Custom furniture">Meubles sur mesure</li>
+        <li style="font-size:0.85rem;color:var(--gray);" data-fr="Direction artistique" data-en="Art direction">Direction artistique</li>
+        <li style="font-size:0.85rem;color:var(--gray);" data-fr="Identité visuelle" data-en="Visual identity">Identité visuelle</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="section-label" data-fr="Processus" data-en="Process">Processus</p>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; margin-top:16px;">
+        <li style="font-size:0.85rem;color:var(--gray); display:flex; gap:8px;"><span style="color:var(--gold);font-weight:500;">01</span> <span data-fr="Rencontre & brief" data-en="Meeting & brief">Rencontre & brief</span></li>
+        <li style="font-size:0.85rem;color:var(--gray); display:flex; gap:8px;"><span style="color:var(--gold);font-weight:500;">02</span> <span data-fr="Concept & direction artistique" data-en="Concept & art direction">Concept & direction artistique</span></li>
+        <li style="font-size:0.85rem;color:var(--gray); display:flex; gap:8px;"><span style="color:var(--gold);font-weight:500;">03</span> <span data-fr="Plans & sélections" data-en="Plans & selections">Plans & sélections</span></li>
+        <li style="font-size:0.85rem;color:var(--gray); display:flex; gap:8px;"><span style="color:var(--gold);font-weight:500;">04</span> <span data-fr="Suivi de chantier" data-en="Construction supervision">Suivi de chantier</span></li>
+        <li style="font-size:0.85rem;color:var(--gray); display:flex; gap:8px;"><span style="color:var(--gold);font-weight:500;">05</span> <span data-fr="Livraison" data-en="Handover">Livraison</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="section-label" data-fr="Références" data-en="References">Références</p>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; margin-top:16px;">
+        <li style="font-size:0.85rem;color:var(--gray);">Paris 1er · 8e · 9e · 16e · 17e</li>
+        <li style="font-size:0.85rem;color:var(--gray);">Cannes</li>
+        <li style="font-size:0.85rem;color:var(--gray);">19 projets réalisés</li>
+        <li style="font-size:0.85rem;color:var(--gray);" data-fr="Immobilier haut de gamme" data-en="Premium real estate">Immobilier haut de gamme</li>
+        <li style="font-size:0.85rem;color:var(--gold);" data-fr="Disponible pour nouveaux projets" data-en="Available for new projects">Disponible pour nouveaux projets</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <p class="footer-logo">John Rozenblum</p>
+    <p class="footer-tagline" data-fr="Design d'intérieur · Paris" data-en="Interior Design · Paris">Design d'intérieur · Paris</p>
+  </div>
+  <nav class="footer-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles & Objets" data-en="Furniture & Objects">Meubles & Objets</a>
+    <a href="bonnard.html">Bonnard Music</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </nav>
+  <div class="footer-copy">
+    <p>© 2026 John Rozenblum</p>
+    <p style="margin-top:8px"><a href="mailto:john@laterrasse.paris" style="color:var(--gray)">john@laterrasse.paris</a></p>
+  </div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
