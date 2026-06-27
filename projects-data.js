@@ -10,8 +10,8 @@ const PROJECTS = {
     type: "Rénovation complète",
     surface: "180 m²",
     style: "Contemporain haussmannien",
-    fr: "Un duplex pensé comme une maison dans la ville. Séjour traversant baigné de lumière, canapé modulaire enveloppant, détails dorés — l'art de vivre à la parisienne dans toute sa splendeur.",
-    en: "A duplex conceived as a house within the city. A light-filled through-living room, an enveloping modular sofa, golden details — Parisian art de vivre in all its splendour.",
+    fr: "Un duplex qui respire comme une maison. Le séjour s'ouvre sur deux niveaux, la lumière traverse librement — quelque chose ici ressemble à une déclaration.",
+    en: "A duplex that breathes like a house. The living room unfolds across two levels, light moves freely — something here feels like a declaration.",
     cover: "img/id/duplex-madeleine.jpg",
     images: [
       "img/id/duplex-madeleine.jpg",
@@ -36,8 +36,8 @@ const PROJECTS = {
     type: "Rénovation & aménagement",
     surface: "220 m²",
     style: "Haussmannien contemporain",
-    fr: "Un grand appartement haussmannien au cœur du 8e arrondissement. Moulures restaurées, luminaire sculptural sur mesure, mobilier conçu pièce par pièce — un résultat intemporel et résolument contemporain.",
-    en: "A grand Haussmann apartment in the heart of the 8th arrondissement. Restored mouldings, custom sculptural lighting, furniture designed piece by piece — a result both timeless and resolutely contemporary.",
+    fr: "Les moulures d'époque, le luminaire conçu pour cet espace seul, chaque meuble pensé pour ce mur précis. Marbeuf est un intérieur où rien n'aurait pu être différent.",
+    en: "Period mouldings, lighting conceived for this space alone, each piece of furniture thought for this precise wall. Marbeuf is an interior where nothing could have been otherwise.",
     cover: "img/id/marbeuf.jpg",
     images: ["img/id/marbeuf.jpg", "img/id/marbeuf-2.jpg", "img/id/marbeuf-4.jpg", "img/id/marbeuf-6.jpg", "img/id/marbeuf-5.jpg", "img/id/marbeuf-3.jpg"]
     // Ordre logique : v2-07(séjour), v2-08, v2-14, v2-15, v2-16, v2-32(fin)
@@ -49,8 +49,8 @@ const PROJECTS = {
     type: "Rénovation de prestige",
     surface: "320 m²",
     style: "Contemporain raffiné",
-    fr: "Trois niveaux, une ambiance unique. Le marbre sélectionné veine par veine, la robinetterie dorée posée au millimètre — ce triplex est une déclaration de raffinement absolu.",
-    en: "Three levels, one unique atmosphere. Marble selected vein by vein, golden fixtures positioned to the millimetre — this triplex is a declaration of absolute refinement.",
+    fr: "Trois niveaux, une seule intention. Le marbre choisi veine par veine, la lumière dosée, l'eau à la bonne température — le luxe comme discipline.",
+    en: "Three levels, one intention. Marble chosen vein by vein, light precisely measured, water at the right temperature — luxury as discipline.",
     cover: "img/id/triplex-spa.jpg",
     images: ["img/id/triplex-spa-4.jpg", "img/id/triplex-spa-6.jpg", "img/id/triplex-spa-3.jpg", "img/id/triplex-spa-2.jpg", "img/id/triplex-spa.jpg", "img/id/triplex-spa-5.jpg"]
     // Ordre logique : R01-07(séjour), R01-10, R01-14, R01-24, R01-29, R01-30
@@ -62,8 +62,8 @@ const PROJECTS = {
     type: "Rénovation complète",
     surface: "130 m²",
     style: "Contemporain raffiné",
-    fr: "Un appartement de caractère réinventé autour d'une palette de matières nobles — marbre gris, chêne clair, laiton brossé. Chaque pièce dialogue avec l'histoire du lieu.",
-    en: "A character apartment reinvented around a palette of noble materials — grey marble, light oak, brushed brass. Every room in dialogue with the history of the place.",
+    fr: "Un appartement qui portait en lui sa propre solution. Marbre gris, chêne clair, laiton brossé — la matière révélée plutôt qu'ajoutée.",
+    en: "An apartment that carried its own solution within it. Grey marble, light oak, brushed brass — material revealed rather than added.",
     cover: "img/id/arcade.jpg",
     images: ["img/id/arcade.jpg", "img/id/arcade-2.jpg", "img/id/arcade-3.jpg", "img/id/arcade-4.jpg", "img/id/arcade-5.jpg", "img/id/arcade-6.jpg"]
   },
@@ -74,8 +74,8 @@ const PROJECTS = {
     type: "Rénovation & décoration",
     surface: "90 m²",
     style: "Contemporain poétique",
-    fr: "Sous les poutres centenaires, une chambre d'exception. Le bois ancien dialogue avec un mobilier sur mesure dans une palette de lin, de noyer et de blanc.",
-    en: "Beneath centuries-old beams, an exceptional suite. Ancient wood in dialogue with bespoke furniture in a palette of linen, walnut and white.",
+    fr: "Sous les poutres centenaires, un espace réinventé sans rien effacer. Le bois ancien s'y souvient. Le mobilier sur mesure y répond, doucement.",
+    en: "Beneath centuries-old beams, a space reinvented without erasing anything. The ancient wood remembers. The bespoke furniture answers, softly.",
     cover: "img/id/sous-les-toits.jpg",
     images: ["img/id/sous-les-toits.jpg", "img/id/sous-les-toits-p2.jpg", "img/id/sous-les-toits-p3.jpg", "img/id/sous-les-toits-p4.jpg", "img/id/sous-les-toits-p5.jpg", "img/id/sous-les-toits-p6.jpg"]
   },
@@ -86,8 +86,8 @@ const PROJECTS = {
     type: "Rénovation & aménagement",
     surface: "110 m²",
     style: "Minimaliste luxueux",
-    fr: "Un appartement conçu autour de la lumière et du silence. Matières douces, volumes généreux, finitions hôtelières — un intérieur pensé pour être vécu.",
-    en: "An apartment conceived around light and silence. Soft materials, generous volumes, hotel-grade finishes — an interior designed to be lived in.",
+    fr: "Un appartement construit autour d'une seule idée : le silence comme matière première. Volumes généreux, matières douces — un intérieur que l'on ressent avant de le voir.",
+    en: "An apartment built around one idea: silence as a primary material. Generous volumes, soft surfaces — an interior felt before it is seen.",
     cover: "img/id/patio.jpg",
     images: ["img/id/patio.jpg", "img/id/patio-2.jpg", "img/id/patio-3.jpg", "img/id/patio-4.jpg", "img/id/patio-5.jpg", "img/id/patio-6.jpg"]
   },
@@ -98,8 +98,8 @@ const PROJECTS = {
     type: "Rénovation complète",
     surface: "95 m²",
     style: "Contemporain chaleureux",
-    fr: "Les lignes contemporaines du noyer et les tons ambrés — un équilibre entre exigence et confort, à deux pas du Louvre.",
-    en: "The contemporary lines of walnut and amber tones — a balance between high standards and comfort, steps from the Louvre.",
+    fr: "À deux pas du Louvre, un intérieur qui n'emprunte rien au musée voisin. Le noyer contemporain, les tons ambrés — une maison sans ostentation.",
+    en: "Steps from the Louvre, an interior that borrows nothing from its neighbour. Contemporary walnut, warm amber tones — a home without ostentation.",
     cover: "img/id/louvres.jpg",
     images: ["img/id/louvres.jpg", "img/id/louvres-2.jpg", "img/id/louvres-3.jpg", "img/id/louvres-4.jpg", "img/id/louvres-5.jpg", "img/id/louvres-6.jpg"]
   },
@@ -110,8 +110,8 @@ const PROJECTS = {
     type: "Rénovation de prestige",
     surface: "200 m²",
     style: "Haussmannien contemporain",
-    fr: "Adresse de prestige, ambition maximale. Le vocabulaire classique de l'architecture haussmannienne rencontre une écriture intérieure résolument contemporaine.",
-    en: "A prestigious address, maximum ambition. The classical vocabulary of Haussmann architecture meets a resolutely contemporary interior design language.",
+    fr: "L'architecture haussmannienne comme socle, pas comme contrainte. Ici, le classique et le contemporain se répondent sans jamais se confondre.",
+    en: "Haussmann architecture as foundation, not constraint. Here, classical and contemporary speak to each other without ever merging.",
     cover: "img/id/champs-elysees.jpg",
     images: ["img/id/champs-elysees.jpg", "img/id/champs-elysees-2.jpg", "img/id/champs-elysees-3.jpg", "img/id/champs-elysees-4.jpg", "img/id/champs-elysees-5.jpg", "img/id/champs-elysees-6.jpg"]
   },
@@ -122,8 +122,8 @@ const PROJECTS = {
     type: "Restructuration locative",
     surface: "70 m²",
     style: "Contemporain parisien",
-    fr: "Un ensemble locatif repensé rue de Rivoli. Chaque appartement conçu comme un objet singulier — même ambition, expressions différentes.",
-    en: "A rental property reinvented on rue de Rivoli. Each apartment conceived as a singular object — the same ambition, different expressions.",
+    fr: "Rue de Rivoli, un même immeuble, des appartements radicalement distincts. La contrainte comme source créative — chaque espace, son propre caractère.",
+    en: "Rue de Rivoli, one building, radically distinct apartments. Constraint as a creative source — each space, its own character.",
     cover: "img/id/rivoli.jpg",
     images: ["img/id/rivoli.jpg", "img/id/rivoli-2.jpg", "img/id/rivoli-3.jpg", "img/id/rivoli-4.jpg", "img/id/rivoli-5.jpg", "img/id/rivoli-6.jpg"]
   },
@@ -134,8 +134,8 @@ const PROJECTS = {
     type: "Restructuration complète",
     surface: "80 m²",
     style: "Contemporain raffiné",
-    fr: "Restructuration complète d'un bien de caractère aux Halles. De la conception au suivi de chantier, un projet mené de A à Z avec une exigence absolue.",
-    en: "Complete restructuring of a character property at Les Halles. From conception to construction supervision, a project led from A to Z with absolute rigour.",
+    fr: "Un bien de caractère aux Halles, repensé jusqu'à la structure. Ce qu'on a gardé est aussi précieux que ce qu'on a créé.",
+    en: "A character property at Les Halles, reconceived to its very structure. What was kept is as precious as what was created.",
     cover: "img/id/dechargeurs.jpg",
     images: ["img/id/dechargeurs.jpg", "img/id/dechargeurs-2.jpg", "img/id/dechargeurs-3.jpg", "img/id/dechargeurs-4.jpg", "img/id/dechargeurs-5.jpg", "img/id/dechargeurs-6.jpg"]
   },
@@ -146,8 +146,8 @@ const PROJECTS = {
     type: "Rénovation & décoration",
     surface: "65 m²",
     style: "Contemporain élégant",
-    fr: "À deux pas de la Madeleine, un appartement réinventé dans une palette de beiges dorés et de bois chaleureux. L'épure au service de l'élégance.",
-    en: "Steps from La Madeleine, an apartment reinvented in a palette of golden beiges and warm woods. Simplicity in the service of elegance.",
+    fr: "Beiges dorés, bois chaleureux, ligne nette — un appartement où l'élégance ne se montre pas, elle se ressent.",
+    en: "Golden beiges, warm wood, clean lines — an apartment where elegance doesn't show itself, it is felt.",
     cover: "img/id/madeleine.jpg",
     images: ["img/id/madeleine.jpg", "img/id/madeleine-2.jpg", "img/id/madeleine-3.jpg", "img/id/madeleine-4.jpg", "img/id/madeleine-5.jpg", "img/id/madeleine-6.jpg"]
   },
@@ -158,8 +158,8 @@ const PROJECTS = {
     type: "Réaménagement familial",
     surface: "120 m²",
     style: "Contemporain familial",
-    fr: "Un appartement familial aux volumes redéfinis. Les cloisons bougent, la lumière circule — l'espace prend enfin tout son sens.",
-    en: "A family apartment with redefined volumes. Walls move, light flows — the space finally realises its full potential.",
+    fr: "Les cloisons ont bougé. La lumière a suivi. Un appartement familial qui a trouvé sa vraie nature — généreux, ouvert, vivant.",
+    en: "The walls moved. The light followed. A family apartment that found its true nature — generous, open, alive.",
     cover: "img/id/malesherbes.jpg",
     images: ["img/id/malesherbes.jpg", "img/id/malesherbes-2.jpg", "img/id/malesherbes-3.jpg", "img/id/malesherbes-4.jpg", "img/id/malesherbes-5.jpg", "img/id/malesherbes-6.jpg"]
   },
@@ -170,8 +170,8 @@ const PROJECTS = {
     type: "Rénovation complète",
     surface: "85 m²",
     style: "Contemporain parisien",
-    fr: "Proximité du centre, intimité préservée. Cet appartement du Châtelet démontre qu'élégance et praticité ne s'opposent jamais.",
-    en: "Central location, preserved intimacy. This Châtelet apartment demonstrates that elegance and practicality need never oppose each other.",
+    fr: "Au cœur de Paris, une intimité préservée. Élégance et praticité ne s'excluent pas — ici, elles coexistent naturellement.",
+    en: "At the heart of Paris, an intimacy preserved. Elegance and practicality don't exclude one another — here, they coexist naturally.",
     cover: "img/id/chatelet.jpg",
     images: ["img/id/chatelet.jpg", "img/id/chatelet-2.jpg", "img/id/chatelet-3.jpg", "img/id/chatelet-4.jpg", "img/id/chatelet-5.jpg", "img/id/chatelet-6.jpg"]
   },
@@ -182,8 +182,8 @@ const PROJECTS = {
     type: "Optimisation d'espace",
     surface: "45 m²",
     style: "Minimaliste chic",
-    fr: "Preuve que les petits espaces peuvent être grands. Ce deux-pièces repensé de A à Z dégage une générosité de volume inattendue.",
-    en: "Proof that small spaces can feel grand. This two-room apartment, redesigned from scratch, exudes an unexpected generosity of volume.",
+    fr: "Quarante-cinq mètres carrés. Assez pour tout ce qui compte. Un espace repensé jusqu'au moindre centimètre — et qui donne l'impression de ne manquer de rien.",
+    en: "Forty-five square metres. Enough for everything that matters. A space rethought to the last centimetre — and one that feels like nothing is missing.",
     cover: "img/id/deux-pieces.jpg",
     images: ["img/id/deux-pieces.jpg", "img/id/deux-pieces-2.jpg", "img/id/deux-pieces-3.jpg", "img/id/deux-pieces-4.jpg", "img/id/deux-pieces-5.jpg", "img/id/deux-pieces-6.jpg"]
   },
@@ -194,8 +194,8 @@ const PROJECTS = {
     type: "Décoration & aménagement",
     surface: "100 m²",
     style: "Méditerranéen contemporain",
-    fr: "Un intérieur conçu pour la lumière du Sud. Palettes claires, matières naturelles, ouverture maximale sur l'extérieur.",
-    en: "An interior conceived for southern light. Light palettes, natural materials, maximum openness to the outside.",
+    fr: "La lumière du Sud comme architecte. Palettes claires, matières naturelles, ouvertures larges — un intérieur qui disparaît dans le paysage.",
+    en: "Southern light as architect. Light palettes, natural materials, wide openings — an interior that dissolves into the landscape.",
     cover: "img/id/cannes.webp",
     images: ["img/id/cannes.webp", "img/id/cannes-2.webp", "img/id/cannes-3.webp", "img/id/cannes-4.webp", "img/id/cannes-5.webp", "img/id/cannes-6.webp"]
   },
@@ -206,8 +206,8 @@ const PROJECTS = {
     type: "Rénovation & décoration",
     surface: "140 m²",
     style: "Classique contemporain",
-    fr: "Dans le 16e arrondissement, un appartement qui réinterprète le classicisme parisien avec des matières contemporaines et une lumière maîtrisée.",
-    en: "In the 16th arrondissement, an apartment that reinterprets Parisian classicism with contemporary materials and controlled light.",
+    fr: "Le classicisme parisien relu. Dans le 16e, un appartement qui garde la mémoire du lieu tout en vivant pleinement dans son époque.",
+    en: "Parisian classicism reread. In the 16th, an apartment that holds the memory of the place while living fully in its own time.",
     cover: "img/id/iena.webp",
     images: ["img/id/iena.webp", "img/id/iena-2.webp", "img/id/iena-3.webp", "img/id/iena-4.webp", "img/id/iena-5.webp", "img/id/iena-6.webp"]
   },
@@ -218,8 +218,8 @@ const PROJECTS = {
     type: "Rénovation & aménagement",
     surface: "75 m²",
     style: "Contemporain poétique",
-    fr: "Second chapitre sous les toits parisiens. Une suite qui joue sur les rythmes du bois, la douceur des tissus et la chaleur tamisée d'une lumière travaillée.",
-    en: "A second chapter beneath the Parisian rooftops. A suite that plays on the rhythms of wood, the softness of fabrics and the filtered warmth of considered light.",
+    fr: "Deuxième variation. Les combles, les poutres, la même géographie — et pourtant une atmosphère entièrement distincte. Le bois, les tissus, la lumière tamisée comme signature.",
+    en: "A second variation. The attic, the beams, the same geography — and yet an entirely distinct atmosphere. Wood, textiles, filtered light as signature.",
     cover: "img/id/sous-les-toits-2.jpg",
     images: ["img/id/sous-les-toits-2.jpg", "img/id/toits-2-2.jpg", "img/id/toits-2-3.jpg", "img/id/toits-2-4.jpg", "img/id/toits-2-5.jpg", "img/id/toits-2-6.jpg"]
   },
@@ -230,8 +230,8 @@ const PROJECTS = {
     type: "Rénovation & aménagement",
     surface: "70 m²",
     style: "Contemporain singulier",
-    fr: "Troisième variation sur le thème des combles parisiens. Même géographie, autre personnalité — chaque appartement est un portrait singulier.",
-    en: "A third variation on the theme of Parisian attics. Same geography, another personality — each apartment is its own singular portrait.",
+    fr: "Troisième voix. Même adresse, autre caractère. Ces appartements sous les toits de Paris ne se répètent pas — ils se répondent.",
+    en: "A third voice. Same address, another character. These Parisian rooftop apartments don't repeat — they echo one another.",
     cover: "img/id/sous-les-toits-3.jpg",
     images: ["img/id/sous-les-toits-3.jpg", "img/id/toits-3-2.jpg", "img/id/toits-3-3.jpg", "img/id/toits-3-4.jpg", "img/id/toits-3-5.jpg", "img/id/toits-3-6.jpg"]
   },
@@ -242,8 +242,8 @@ const PROJECTS = {
     type: "Aménagement professionnel",
     surface: "80 m²",
     style: "Contemporain professionnel",
-    fr: "Concevoir un lieu de travail qui inspire autant qu'il protège l'image. Un espace de réception pensé pour la marque autant que pour le confort.",
-    en: "Designing a workspace that inspires as much as it protects brand image. A reception space conceived for the brand as much as for comfort.",
+    fr: "Un espace de travail doit porter une image. Ici, la réception est un argument — sobre, précise, mémorable.",
+    en: "A workspace must carry an image. Here, the reception space is a statement — sober, precise, memorable.",
     cover: "img/id/workspace.webp",
     images: ["img/id/workspace.webp", "img/id/workspace-2.webp", "img/id/workspace-3.webp", "img/id/workspace-4.webp"]
   }
@@ -258,16 +258,16 @@ const OBJECTS = {
 
   "tables-organiques": {
     name: "Tables Organiques",
-    fr: "Formes libres inspirées de la nature. Résine, bois massif, marbre — chaque table est une pièce unique, dessinée selon l'espace qui l'accueille.",
-    en: "Free forms inspired by nature. Resin, solid wood, marble — each table is a unique piece, drawn to the space that receives it.",
+    fr: "Une forme qui cherche sa place. Chaque table naît d'un dialogue entre la matière et l'espace qui l'accueille — unique, irremplaçable.",
+    en: "A form that finds its place. Each table is born from a dialogue between material and the space that holds it — unique, irreplaceable.",
     tag: "Sur devis",
     images: ["img/meubles/tables-organiques-1.webp", "img/meubles/tables-organiques-2.webp"]
   },
 
   "bouclette-chairs": {
     name: "Fauteuils Bouclette",
-    fr: "Structure en chêne massif, assise et dossier en tissu bouclette. Un équilibre entre forme sculptée et confort enveloppant.",
-    en: "Solid oak frame, bouclette fabric seat and back. A balance between sculptural form and enveloping comfort.",
+    fr: "Le corps qui s'enfonce. La matière qui répond. Un fauteuil pensé comme un état.",
+    en: "The body sinks in. The material responds. An armchair conceived as a state of being.",
     tag: "Sur devis",
     images: [
       "img/meubles/bouclette-chairs.webp",
@@ -279,48 +279,48 @@ const OBJECTS = {
 
   "suspension-feuilles-or": {
     name: "Suspension Feuilles d'Or",
-    fr: "Luminaire sculptural en laiton brossé. Chaque feuille reflète la lumière différemment selon l'angle — un objet vivant.",
-    en: "Sculptural brushed brass pendant. Each leaf reflects light differently depending on the angle — a living object.",
+    fr: "La lumière ne tombe pas — elle se pose. Chaque feuille est une décision, un angle de silence dans la partition de l'espace.",
+    en: "Light doesn't fall — it settles. Each leaf is a decision, a note of silence in the score of the space.",
     tag: "Sur devis",
     images: ["img/meubles/suspension-feuilles-or.webp"]
   },
 
   "tourne-disques": {
     name: "Tourne-Disques",
-    fr: "Design rétro-futuriste. Le vinyle retrouve ses lettres de noblesse dans un objet qui est autant à regarder qu'à écouter.",
-    en: "Retro-futurist design. Vinyl reclaims its nobility in an object as beautiful to look at as to listen to.",
+    fr: "Un objet qui se mérite. La platine repensée comme une sculpture — autant à contempler qu'à entendre.",
+    en: "An object that earns its place. The turntable rethought as sculpture — as much to contemplate as to hear.",
     tag: "Sur devis",
     images: ["img/meubles/tourne-disques.webp"]
   },
 
   "vasques-onyx": {
     name: "Vasques en Onyx",
-    fr: "Vasques taillées dans l'onyx rose. La salle de bain devient un sanctuaire de pierre — chaque veinure est unique.",
-    en: "Basins carved in pink onyx. The bathroom becomes a stone sanctuary — every vein is unique.",
+    fr: "La salle de bain devient sanctuaire. L'onyx rose tremble sous la lumière — chaque veinure, une singularité irréductible.",
+    en: "The bathroom becomes a sanctuary. Pink onyx trembles in the light — every vein, an irreducible singularity.",
     tag: "Sur devis",
     images: ["img/meubles/vasque.webp", "img/meubles/vasque-2.webp", "img/meubles/vasque-3.webp", "img/meubles/vasque-4.webp"]
   },
 
   "appliques-onix": {
     name: "Appliques Onix",
-    fr: "Appliques murales en onyx rétroéclairé. La pierre translucide devient lumière, diffusant une chaleur rosée et organique.",
-    en: "Backlit onyx wall lights. The translucent stone becomes a light source, diffusing a warm, organic rose glow.",
+    fr: "La pierre qui devient lumière. L'onyx rétroéclairé diffuse une chaleur organique — comme si le mur respirait.",
+    en: "Stone that becomes light. Backlit onyx diffuses an organic warmth — as if the wall itself breathes.",
     tag: "Sur devis",
     images: ["img/meubles/appliques-onix.webp"]
   },
 
   "bougeoires": {
     name: "Bougeoires & Accessoires",
-    fr: "Petits objets au grand pouvoir. Laiton, verre soufflé, marbre — des pièces de table qui définissent l'ambiance d'un espace.",
-    en: "Small objects with great power. Brass, blown glass, marble — table pieces that define the atmosphere of a space.",
+    fr: "Ce sont les petits objets qui font les grandes atmosphères. Chaque pièce de table est une ponctuation dans la grammaire d'un espace.",
+    en: "It's the small objects that make great atmospheres. Each table piece is punctuation in the grammar of a space.",
     tag: "Sur devis",
     images: ["img/meubles/bougeoires.webp"]
   },
 
   "tabourets": {
     name: "Tabourets & Tables d'appoint",
-    fr: "Pieds en métal laqué, assises texturées — des pièces fonctionnelles pensées comme des sculptures.",
-    en: "Lacquered metal legs, textured tops — functional pieces conceived as sculptures.",
+    fr: "Entre le meuble et la sculpture, la ligne est fine. Ces pièces habitent l'espace autant qu'elles le servent.",
+    en: "Between furniture and sculpture, the line is thin. These pieces inhabit a space as much as they serve it.",
     tag: "Sur devis",
     images: [
       "img/meubles/tabourets.webp",
@@ -332,8 +332,8 @@ const OBJECTS = {
 
   "lit-signature": {
     name: "Lit Signature",
-    fr: "Tête de lit architecturale, rangements intégrés, finitions sur mesure. Un lit conçu comme une pièce maîtresse de la chambre.",
-    en: "Architectural headboard, integrated storage, custom finishes. A bed designed as the centrepiece of the bedroom.",
+    fr: "La chambre commence ici. Un lit pensé comme une architecture — la tête de lit comme un horizon, le reste s'ordonne autour.",
+    en: "The bedroom begins here. A bed conceived as architecture — the headboard as horizon, everything else falls into order around it.",
     tag: "Sur devis",
     images: ["img/meubles/smart-bed.webp"]
   }
