@@ -1001,9 +1001,10 @@ footer {
   .nav-links.open { display: flex; }
   .nav-links a { font-size: 1.4rem; letter-spacing: 0.08em; color: var(--white); cursor: pointer; }
   .nav-links a.active { color: var(--gold); }
-  .nav-burger { display: flex; cursor: pointer; }
-  .nav-logo { }
-  .lang-toggle { }
+  /* burger/logo/lang doivent être AU-DESSUS de l'overlay (z: 1000 local) */
+  .nav-burger { display: flex; cursor: pointer; z-index: 1001; }
+  .nav-logo { z-index: 1001; }
+  .lang-toggle { z-index: 1001; }
   .nav-burger.open span { background: var(--white); }
   .nav-burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
   .nav-burger.open span:nth-child(2) { opacity: 0; }
