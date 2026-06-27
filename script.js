@@ -1,0 +1,173 @@
+/* ============================================
+   JOHN ROZENBLUM — script.js
+   Cursor · Scroll animations · Language · Nav
+   ============================================ */
+
+/* ---- CURSEUR ---- */
+const dot  = document.querySelector('.cursor-dot');
+const ring = document.querySelector('.cursor-ring');
+
+if (dot && ring) {
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+  (function loop() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    dot.style.left  = mx + 'px';
+    dot.style.top   = my + 'px';
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(loop);
+  })();
+
+  document.querySelectorAll('a, button, .project-card, .univers-card, .object-card, .filter-btn, .lightbox-close, input, textarea, select').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+}
+
+/* ---- HERO ANIMATION ---- */
+const hero = document.querySelector('.hero');
+if (hero) {
+  setTimeout(() => hero.classList.add('loaded'), 100);
+}
+
+/* ---- SCROLL ANIMATIONS ---- */
+const reveals = document.querySelectorAll('.reveal');
+if (reveals.length) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => obs.observe(el));
+}
+
+/* ---- NAV SCROLL (fond blanc au scroll) ---- */
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  if (nav) {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }
+  // Parallax hero
+  const bg = document.querySelector('.hero-bg');
+  if (bg) bg.style.transform = `scale(1.05) translateY(${scrollY * 0.2}px)`;
+}, { passive: true });
+
+/* ---- NAVIGATION BURGER ---- */
+const burger = document.querySelector('.nav-burger');
+const navLinks = document.querySelector('.nav-links');
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    burger.classList.toggle('open');
+  });
+  // Close on link click
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+    });
+  });
+}
+
+/* ---- NAV ACTIVE STATE ---- */
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(a => {
+  const href = a.getAttribute('href');
+  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    a.classList.add('active');
+  }
+});
+
+/* ---- LANGUE FR / EN ---- */
+let currentLang = localStorage.getItem('jr_lang') || 'fr';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('jr_lang', lang);
+  // innerHTML (pas textContent) pour rendre les <br> dans les titres
+  document.querySelectorAll('[data-fr]').forEach(el => {
+    el.innerHTML = lang === 'fr' ? el.dataset.fr : el.dataset.en;
+  });
+  // Placeholders
+  document.querySelectorAll('[data-fr-placeholder]').forEach(el => {
+    el.placeholder = lang === 'fr' ? el.dataset.frPlaceholder : el.dataset.enPlaceholder;
+  });
+  // Options de select
+  document.querySelectorAll('option[data-fr]').forEach(el => {
+    el.textContent = lang === 'fr' ? el.dataset.fr : el.dataset.en;
+  });
+  const toggle = document.querySelector('.lang-toggle');
+  if (toggle) toggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+  document.documentElement.lang = lang;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  applyLang(currentLang);
+  const toggle = document.querySelector('.lang-toggle');
+  if (toggle) toggle.addEventListener('click', () => applyLang(currentLang === 'fr' ? 'en' : 'fr'));
+});
+
+/* ---- LIGHTBOX PROJETS ---- */
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+  // Open
+  document.querySelectorAll('[data-project]').forEach(card => {
+    card.addEventListener('click', () => {
+      const key = card.dataset.project;
+      const data = PROJECTS[key];
+      if (!data) return;
+
+      const lang = currentLang;
+      lightbox.querySelector('.lightbox-title').textContent = data.name;
+      lightbox.querySelector('.lightbox-desc').textContent = lang === 'fr' ? data.fr : data.en;
+
+      const metaEl = lightbox.querySelector('.lightbox-meta');
+      metaEl.innerHTML = `
+        <div class="lightbox-meta-item"><strong>Lieu</strong>${data.loc}</div>
+        <div class="lightbox-meta-item"><strong>Type</strong>${data.type}</div>
+        ${data.surface ? `<div class="lightbox-meta-item"><strong>Surface</strong>${data.surface}</div>` : ''}
+        ${data.style ? `<div class="lightbox-meta-item"><strong>Style</strong>${data.style}</div>` : ''}
+      `;
+
+      const gallery = lightbox.querySelector('.lightbox-gallery');
+      gallery.innerHTML = data.images.map(src => `<img src="${src}" alt="${data.name}" loading="lazy">`).join('');
+
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close
+  document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+/* ---- TICKER DUPLICATION ---- */
+const ticker = document.querySelector('.ticker-inner');
+if (ticker) {
+  ticker.innerHTML += ticker.innerHTML;
+}
+
+/* ---- CONTACT FORM ---- */
+const form = document.querySelector('.contact-form');
+if (form) {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-submit');
+    const original = btn.textContent;
+    btn.textContent = currentLang === 'fr' ? 'Message envoyé ✓' : 'Message sent ✓';
+    btn.style.background = '#4a7c59';
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.style.background = '';
+      form.reset();
+    }, 3000);
+  });
+}
