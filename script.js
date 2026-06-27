@@ -149,6 +149,30 @@ if (lightbox) {
   }
 }
 
+/* ---- OBJETS CARDS — click -> contact ---- */
+document.querySelectorAll('.object-card').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => {
+    window.location.href = 'contact.html';
+  });
+});
+
+/* ---- NAV LOGO — scroll to top ---- */
+const navLogo = document.querySelector('.nav-logo');
+if (navLogo) {
+  navLogo.addEventListener('click', e => {
+    // Si déjà sur index.html, juste scroll to top sans naviguer
+    const isHome = window.location.pathname === '/' ||
+                   window.location.pathname.endsWith('index.html') ||
+                   window.location.pathname === '';
+    if (isHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // Sinon laisse le href="index.html" naviguer normalement
+  });
+}
+
 /* ---- TICKER DUPLICATION ---- */
 const ticker = document.querySelector('.ticker-inner');
 if (ticker) {
