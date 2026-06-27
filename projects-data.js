@@ -26,7 +26,8 @@ const PROJECTS = {
     fr: "Un grand appartement haussmannien au cœur du 8e arrondissement. Moulures restaurées, luminaire sculptural sur mesure, mobilier conçu pièce par pièce — un résultat intemporel et résolument contemporain.",
     en: "A grand Haussmann apartment in the heart of the 8th arrondissement. Restored mouldings, custom sculptural lighting, furniture designed piece by piece — a result both timeless and resolutely contemporary.",
     cover: "img/id/marbeuf.jpg",
-    images: ["img/id/marbeuf.jpg", "img/id/marbeuf-2.jpg", "img/id/marbeuf-3.jpg", "img/id/marbeuf-4.jpg", "img/id/marbeuf-5.jpg", "img/id/marbeuf-6.jpg"]
+    images: ["img/id/marbeuf.jpg", "img/id/marbeuf-2.jpg", "img/id/marbeuf-4.jpg", "img/id/marbeuf-6.jpg", "img/id/marbeuf-5.jpg", "img/id/marbeuf-3.jpg"]
+    // Ordre logique : v2-07(séjour), v2-08, v2-14, v2-15, v2-16, v2-32(fin)
   },
 
   "triplex-spa": {
@@ -38,7 +39,8 @@ const PROJECTS = {
     fr: "Trois niveaux, une ambiance unique. Le marbre sélectionné veine par veine, la robinetterie dorée posée au millimètre — ce triplex est une déclaration de raffinement absolu.",
     en: "Three levels, one unique atmosphere. Marble selected vein by vein, golden fixtures positioned to the millimetre — this triplex is a declaration of absolute refinement.",
     cover: "img/id/triplex-spa.jpg",
-    images: ["img/id/triplex-spa.jpg", "img/id/triplex-spa-2.jpg", "img/id/triplex-spa-3.jpg", "img/id/triplex-spa-4.jpg", "img/id/triplex-spa-5.jpg", "img/id/triplex-spa-6.jpg"]
+    images: ["img/id/triplex-spa-4.jpg", "img/id/triplex-spa-6.jpg", "img/id/triplex-spa-3.jpg", "img/id/triplex-spa-2.jpg", "img/id/triplex-spa.jpg", "img/id/triplex-spa-5.jpg"]
+    // Ordre logique : R01-07(séjour), R01-10, R01-14, R01-24, R01-29, R01-30
   },
 
   "arcade": {
@@ -278,7 +280,7 @@ const OBJECTS = {
     fr: "Vasques taillées dans l'onyx rose. La salle de bain devient un sanctuaire de pierre — chaque veinure est unique.",
     en: "Basins carved in pink onyx. The bathroom becomes a stone sanctuary — every vein is unique.",
     tag: "Sur devis",
-    images: ["img/meubles/vasque.webp"]
+    images: ["img/meubles/vasque.webp", "img/meubles/vasque-2.webp", "img/meubles/vasque-3.webp", "img/meubles/vasque-4.webp"]
   },
 
   "appliques-onix": {
