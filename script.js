@@ -188,6 +188,19 @@ if (lightboxObj) {
   });
 }
 
+/* ---- HERO SCROLL — bouton Découvrir ---- */
+const heroScroll = document.querySelector('.hero-scroll');
+if (heroScroll) {
+  heroScroll.addEventListener('click', () => {
+    const nextSection = document.querySelector('section + section, .hero + section');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollBy({ top: window.innerHeight * 0.85, behavior: 'smooth' });
+    }
+  });
+}
+
 /* ---- NAV LOGO — scroll to top ---- */
 const navLogo = document.querySelector('.nav-logo');
 if (navLogo) {
