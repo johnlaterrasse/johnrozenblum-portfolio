@@ -227,6 +227,9 @@ nav.dark-page.scrolled .lang-toggle { color: var(--white); }
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 .hero-scroll::before {
   content: '';
@@ -855,6 +858,10 @@ footer {
   margin: 0 auto;
 }
 
+.bonnard-hero-logo {
+  min-height: 60vh;
+}
+
 .bonnard-visuals {
   background: var(--black);
   padding: 80px 48px;
@@ -870,6 +877,22 @@ footer {
   height: 340px;
   object-fit: cover;
 }
+.bonnard-portraits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.bonnard-portraits-grid img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(20%);
+  transition: filter 0.3s;
+}
+.bonnard-portraits-grid img:hover { filter: grayscale(0%); }
 
 .bonnard-socials {
   background: #0D0D0D;
@@ -1121,6 +1144,7 @@ footer {
   .bonnard-socials { padding: 60px 20px; }
   .bonnard-grid { grid-template-columns: 1fr; }
   .bonnard-grid img { height: 240px; }
+  .bonnard-portraits-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
   .bonnard-socials-links { flex-wrap: wrap; gap: 24px; }
 
   /* ---- Contact ---- */
