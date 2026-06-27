@@ -1,123 +1,154 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Rozenblum</title>
-    <meta name="description" content="John Rozenblum — Design, direction artistique, identite visuelle. Paris.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Rozenblum | Architecte d'intérieur & Designer Paris</title>
+  <meta name="description" content="Design d'intérieur, direction artistique et identité visuelle à Paris. Découvrez les projets de John Rozenblum — espaces haussmanniens, meubles sur mesure, univers Bonnard.">
+  <meta property="og:title" content="John Rozenblum | Architecte d'intérieur & Designer Paris">
+  <meta property="og:image" content="1 - Interior Design/Duplex Madeleine/duplex madeleine - photo du séjour.jpg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    <nav class="nav">
-        <a href="#home" class="nav-logo">JR</a>
-        <div class="nav-links">
-            <a href="#projets">Projets</a>
-            <a href="#bonnard">Bonnard</a>
-            <a href="#contact" class="nav-cta">Contact</a>
-        </div>
-    </nav>
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <span class="hero-john">JOHN</span>
-            <span class="hero-rozenblum">ROZENBLUM</span>
-        </div>
-        <div class="hero-services">
-            <span>Design</span>
-            <span>Direction artistique</span>
-            <span>Identite visuelle</span>
-        </div>
-        <a href="#projets" class="hero-scroll">&#8595;</a>
-    </section>
-    <div class="marquee-wrap">
-        <div class="marquee-track">
-            <span>DESIGN</span><span class="dot">&#183;</span><span>DIRECTION ARTISTIQUE</span><span class="dot">&#183;</span><span>IDENTITE VISUELLE</span><span class="dot">&#183;</span><span>DESIGN</span><span class="dot">&#183;</span><span>DIRECTION ARTISTIQUE</span><span class="dot">&#183;</span><span>IDENTITE VISUELLE</span><span class="dot">&#183;</span><span>DESIGN</span><span class="dot">&#183;</span><span>DIRECTION ARTISTIQUE</span><span class="dot">&#183;</span><span>IDENTITE VISUELLE</span><span class="dot">&#183;</span><span>DESIGN</span><span class="dot">&#183;</span><span>DIRECTION ARTISTIQUE</span><span class="dot">&#183;</span><span>IDENTITE VISUELLE</span><span class="dot">&#183;</span>
-        </div>
+
+<!-- Curseur -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html" class="nav-logo">JR</a>
+  <div class="nav-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Objets" data-en="Objects">Objets</a>
+    <a href="bonnard.html">Bonnard</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </div>
+  <button class="lang-toggle">EN</button>
+  <div class="nav-burger" role="button" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg" style="background-image: url('1 - Interior Design/Duplex Madeleine/duplex madeleine - photo du séjour.jpg')"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-fr="Design d'intérieur · Direction artistique · Paris" data-en="Interior Design · Art Direction · Paris">Design d'intérieur · Direction artistique · Paris</p>
+    <h1 class="hero-title">
+      <span class="line" data-fr="L'art de" data-en="The art of">L'art de</span>
+      <span class="line" data-fr="transformer" data-en="transforming">transformer</span>
+      <span class="line" data-fr="l'espace." data-en="space.">l'espace.</span>
+    </h1>
+    <p class="hero-sub" data-fr="Design · Objets · Musique" data-en="Design · Objects · Music">Design · Objets · Musique</p>
+  </div>
+  <div class="hero-scroll">
+    <span data-fr="Découvrir" data-en="Explore">Découvrir</span>
+  </div>
+</section>
+
+<!-- Univers -->
+<section>
+  <div class="reveal">
+    <p class="section-label" data-fr="Les Univers" data-en="Worlds">Les Univers</p>
+    <h2 class="section-title" data-fr="Trois disciplines,<br>une même exigence." data-en="Three disciplines,<br>one standard of excellence.">Trois disciplines,<br>une même exigence.</h2>
+  </div>
+  <div class="univers-grid">
+
+    <a href="interior-design.html" class="univers-card reveal">
+      <div class="univers-card-bg" style="background-image: url('1 - Interior Design/Marbeuf/684ae9ed05cfd25582b47ed6_Marbeuf1-v2-07-min.jpg')"></div>
+      <div class="univers-card-content">
+        <p class="univers-card-num">01</p>
+        <h3 class="univers-card-title" data-fr="Interior Design" data-en="Interior Design">Interior Design</h3>
+        <p class="univers-card-sub" data-fr="Appartements · Immobilier haut de gamme" data-en="Apartments · Premium real estate">Appartements · Immobilier haut de gamme</p>
+        <span class="univers-card-arrow" data-fr="Voir les projets" data-en="View projects">Voir les projets</span>
+      </div>
+    </a>
+
+    <a href="meubles.html" class="univers-card reveal reveal-delay-1">
+      <div class="univers-card-bg" style="background-image: url('2 - Meubles & Objets/Tables organiques/johnmagueule__00fcf94c-9f7f-4b09-9f91-d19e15c89a43.webp')"></div>
+      <div class="univers-card-content">
+        <p class="univers-card-num">02</p>
+        <h3 class="univers-card-title" data-fr="Meubles & Objets" data-en="Furniture & Objects">Meubles & Objets</h3>
+        <p class="univers-card-sub" data-fr="Design · Créations sur devis" data-en="Design · Custom orders">Design · Créations sur devis</p>
+        <span class="univers-card-arrow" data-fr="Voir les créations" data-en="View creations">Voir les créations</span>
+      </div>
+    </a>
+
+    <a href="bonnard.html" class="univers-card reveal reveal-delay-2">
+      <div class="univers-card-bg" style="background-image: url('3 - Bonnard Music/Visuels/IMG_1874.jpg'); filter: brightness(0.7)"></div>
+      <div class="univers-card-content">
+        <p class="univers-card-num">03</p>
+        <h3 class="univers-card-title">Bonnard Music</h3>
+        <p class="univers-card-sub" data-fr="Collectif DJ · Paris" data-en="DJ Collective · Paris">Collectif DJ · Paris</p>
+        <span class="univers-card-arrow" data-fr="Découvrir" data-en="Discover">Découvrir</span>
+      </div>
+    </a>
+
+    <div class="univers-card reveal reveal-delay-3" style="cursor: default;">
+      <div class="univers-card-bg" style="background-image: url('4 - Art/Golden Blue/johnmagueule_golden_azure__the_image_is_of_a_picture_in_the_sty_0166984a-666d-4819-a547-08518ec6bbc1.webp')"></div>
+      <div class="univers-card-content">
+        <p class="univers-card-num">04</p>
+        <h3 class="univers-card-title" data-fr="Direction Artistique" data-en="Art Direction">Direction Artistique</h3>
+        <p class="univers-card-sub" data-fr="Identité visuelle · Art" data-en="Visual identity · Art">Identité visuelle · Art</p>
+      </div>
     </div>
-    <div id="projets">
-        <section class="projet">
-            <div class="projet-header"><h2>Madeleine</h2><p>Restructuration d'immeuble &mdash; conception jusqu'au suivi des travaux</p></div>
-            <div class="project-grid grid-madeleine">
-                <div class="project-item"><img src="images/decoration/arcadeduplex-04.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-08.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-15.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-21.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-26.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-28.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-33.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-36.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-41.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-44.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-46.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/decoration/arcadeduplex-50.jpg" alt="" loading="lazy"></div>
-            </div>
-        </section>
-        <section class="projet">
-            <div class="projet-header"><h2>Rivoli</h2><p>Restructuration &mdash; conception et direction de travaux</p></div>
-            <div class="project-grid grid-rivoli">
-                <div class="project-item"><img src="images/rivoli/dechargeurs112-01.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs112-06.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs112-24.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs114-01.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs114-02.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs114-05.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs114-11.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs114-33.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs114-34.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs201-01.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs201-02.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs201-08.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs211-06.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs211-09.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs211-13.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs211-19.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs211-22.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs211-26.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs211-31.jpg" alt="" loading="lazy"></div>
-                <div class="project-item"><img src="images/rivoli/dechargeurs211-39.jpg" alt="" loading="lazy"></div>
-            </div>
-        </section>
+
+  </div>
+</section>
+
+<!-- Projet en avant -->
+<section class="featured">
+  <div class="featured-inner">
+    <div class="reveal">
+      <img class="featured-img"
+           src="1 - Interior Design/Sous les toits de Paris/685e60908e35d8be488321d3_dechargeurs501-02.jpg"
+           alt="Sous les toits de Paris — John Rozenblum Design">
     </div>
-    <div class="marquee-wrap marquee-reverse">
-        <div class="marquee-track">
-            <span>BONNARD</span><span class="dot">&#183;</span><span>PARIS</span><span class="dot">&#183;</span><span>BONNARD</span><span class="dot">&#183;</span><span>PARIS</span><span class="dot">&#183;</span><span>BONNARD</span><span class="dot">&#183;</span><span>PARIS</span><span class="dot">&#183;</span><span>BONNARD</span><span class="dot">&#183;</span><span>PARIS</span><span class="dot">&#183;</span><span>BONNARD</span><span class="dot">&#183;</span><span>PARIS</span><span class="dot">&#183;</span><span>BONNARD</span><span class="dot">&#183;</span><span>PARIS</span><span class="dot">&#183;</span>
-        </div>
+    <div class="reveal reveal-delay-1">
+      <div class="featured-meta">
+        <span class="featured-tag" data-fr="Projet récent" data-en="Recent project">Projet récent</span>
+        <span class="featured-tag">Paris</span>
+      </div>
+      <div class="divider"></div>
+      <p class="section-label" data-fr="Interior Design" data-en="Interior Design">Interior Design</p>
+      <h2 class="section-title" data-fr="Sous les toits de Paris" data-en="Beneath the Paris rooftops">Sous les toits de Paris</h2>
+      <p class="section-text" data-fr="Sous les poutres centenaires, une chambre d'exception. Le bois ancien dialogue avec un mobilier sur mesure dans une palette de lin, de noyer et de blanc." data-en="Beneath centuries-old beams, an exceptional suite. Ancient wood in dialogue with bespoke furniture in a palette of linen, walnut and white.">Sous les poutres centenaires, une chambre d'exception. Le bois ancien dialogue avec un mobilier sur mesure dans une palette de lin, de noyer et de blanc.</p>
+      <a href="interior-design.html" class="btn" data-fr="Voir tous les projets" data-en="View all projects">Voir tous les projets</a>
     </div>
-    <section class="bonnard" id="bonnard">
-        <div class="bonnard-inner">
-            <div class="bonnard-left">
-                <p class="bonnard-tag">Collectif &#183; Label</p>
-                <h2>BONNARD</h2>
-                <p>Un collectif DJ ne a Paris. Musique, espace, energie &mdash; une meme vision. Bonnard cree des moments, pas des evenements.</p>
-            </div>
-            <div class="bonnard-right">
-                <div class="bonnard-photo"><img src="images/bonnard/bonnard-01.jpg" alt="Bonnard" loading="lazy"></div>
-                <div class="bonnard-photo"><img src="images/bonnard/bonnard-02.png" alt="Bonnard" loading="lazy"></div>
-                <div class="bonnard-photo"><img src="images/bonnard/bonnard-03.png" alt="Bonnard" loading="lazy"></div>
-            </div>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <div class="contact-inner">
-            <div class="contact-photo"><img src="images/profile/john-contact.jpg" alt="John Rozenblum"></div>
-            <div class="contact-content">
-                <h2>Un projet ?<br>Parlons.</h2>
-                <a href="mailto:john@laterrasse.paris" class="contact-email">john@laterrasse.paris</a>
-                <div class="contact-services">
-                    <p>Design &#183; Direction artistique</p>
-                    <p>Identite visuelle</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <span>&copy; 2026 John Rozenblum</span>
-        <span>johnrozenblum.com</span>
-    </footer>
-    <script src="js/script.js"></script>
+  </div>
+</section>
+
+<!-- CTA Contact -->
+<section class="cta-section">
+  <div class="reveal">
+    <p class="section-label" data-fr="Un projet ?" data-en="A project?">Un projet ?</p>
+    <h2 class="section-title" data-fr="Parlons." data-en="Let's talk.">Parlons.</h2>
+    <p class="section-text" data-fr="Chaque projet commence par une conversation. Partagez votre vision — je m'occupe du reste." data-en="Every project begins with a conversation. Share your vision — I'll take care of the rest.">Chaque projet commence par une conversation. Partagez votre vision — je m'occupe du reste.</p>
+    <a href="mailto:john@laterrasse.paris" class="cta-email">john@laterrasse.paris</a>
+    <a href="contact.html" class="btn btn-white" data-fr="Prendre contact" data-en="Get in touch">Prendre contact</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <p class="footer-logo">John Rozenblum</p>
+    <p class="footer-tagline" data-fr="Design d'intérieur · Paris" data-en="Interior Design · Paris">Design d'intérieur · Paris</p>
+  </div>
+  <nav class="footer-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles & Objets" data-en="Furniture & Objects">Meubles & Objets</a>
+    <a href="bonnard.html">Bonnard Music</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </nav>
+  <div class="footer-copy">
+    <p>© 2026 John Rozenblum</p>
+    <p style="margin-top:8px"><a href="mailto:john@laterrasse.paris" style="color:var(--gray)">john@laterrasse.paris</a></p>
+  </div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
