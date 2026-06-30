@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 380">
+  <rect width="280" height="380" fill="#fff"/>
+  <!-- capuche -->
+  <path d="M96 90 Q96 32 140 30 Q184 32 184 90" fill="none" stroke="#111" stroke-width="2.5"/>
+  <path d="M96 90 Q102 75 140 72 Q178 75 184 90" fill="none" stroke="#111" stroke-width="2"/>
+  <!-- tête dans capuche -->
+  <ellipse cx="140" cy="88" rx="36" ry="40" fill="none" stroke="#111" stroke-width="2"/>
+  <!-- yeux vifs -->
+  <ellipse cx="126" cy="85" rx="7" ry="5" fill="none" stroke="#111" stroke-width="1.5"/>
+  <ellipse cx="154" cy="85" rx="7" ry="5" fill="none" stroke="#111" stroke-width="1.5"/>
+  <circle cx="127" cy="86" r="3" fill="#111"/>
+  <circle cx="155" cy="86" r="3" fill="#111"/>
+  <!-- corps hoodie ample -->
+  <path d="M102 128 L88 255 L192 255 L178 128 Z" fill="none" stroke="#111" stroke-width="2"/>
+  <!-- poche kangourou -->
+  <path d="M112 195 Q140 205 168 195 Q168 230 140 235 Q112 230 112 195" fill="none" stroke="#111" stroke-width="1.5"/>
+  <!-- bras G forward énergique -->
+  <path d="M88 165 Q52 180 44 210" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="40" cy="214" r="8" fill="none" stroke="#111" stroke-width="1.5"/>
+  <!-- bras D -->
+  <path d="M192 155 Q228 165 238 195" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="240" cy="200" r="8" fill="none" stroke="#111" stroke-width="1.5"/>
+  <!-- jambes larges -->
+  <path d="M110 255 Q100 305 96 345" fill="none" stroke="#111" stroke-width="2"/>
+  <path d="M170 255 Q180 305 184 345" fill="none" stroke="#111" stroke-width="2"/>
+  <path d="M96 345 L74 352" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <path d="M184 345 L206 352" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+</svg>
