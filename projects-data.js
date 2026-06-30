@@ -246,6 +246,112 @@ const PROJECTS = {
     en: "A workspace must carry an image. Here, the reception space is a statement — sober, precise, memorable.",
     cover: "img/id/workspace.webp",
     images: ["img/id/workspace.webp", "img/id/workspace-2.webp", "img/id/workspace-3.webp", "img/id/workspace-4.webp"]
+  },
+
+  "pigalle": {
+    name: "Pigalle",
+    loc: "Paris 18e",
+    type: "Rénovation complète — souplex",
+    surface: "—",
+    style: "Contemporain · lumière & matière brute",
+    fr: "Le défi était au sous-sol : salon, salle à manger, cuisine enfoncés en sous-sol, sur cour, sans lumière. La réponse : démolition, puis une mezzanine à plancher de verre, un escalier entièrement vitré — une prouesse technique qui disparaît dans sa propre légèreté. La table à manger est la tranche d'un tronc d'arbre, encastrée dans un poteau. Un amateur d'art habite ici. Ça se voit.",
+    en: "The challenge was underground: living room, dining room and kitchen buried below ground, courtyard-facing, without natural light. The answer: demolition, then a glass-floor mezzanine and a fully glazed staircase — technical mastery that dissolves into its own lightness. The dining table is a tree trunk cross-section, embedded in a structural pillar. An art lover lives here. You can tell.",
+    cover: "img/id/pigalle-1.jpg",
+    images: [
+      "img/id/pigalle-1.jpg","img/id/pigalle-2.jpg","img/id/pigalle-3.jpg",
+      "img/id/pigalle-4.jpg","img/id/pigalle-5.jpg","img/id/pigalle-6.jpg",
+      "img/id/pigalle-7.jpg","img/id/pigalle-8.jpg","img/id/pigalle-9.jpg",
+      "img/id/pigalle-10.jpg","img/id/pigalle-11.jpg","img/id/pigalle-12.jpg",
+      "img/id/pigalle-13.jpg","img/id/pigalle-14.jpg","img/id/pigalle-15.jpg"
+    ]
+  },
+
+  "bureau-cowork": {
+    name: "Étienne Marcel",
+    loc: "Paris 1er — Étienne Marcel",
+    type: "Transformation — flex office",
+    surface: "—",
+    style: "Industriel tempéré",
+    fr: "Un appartement aux ossatures style Eiffel, mandat : le transformer en open space pour une agence de communication sans perdre son âme. Les câbles disparaissent dans la structure. L'intimité existe sans murs. La chaleur tient malgré le plateau. Flex office sans place attitrée — l'espace s'adapte à chaque présence, budget serré, résultat sans compromis.",
+    en: "An apartment with Eiffel-style industrial bones, brief: turn it into an open-plan workspace for a communications agency without losing its soul. Cables disappear into the structure. Intimacy exists without walls. Warmth holds across the floor plate. Flex office, no assigned desks — the space adapts to whoever shows up. Tight budget, zero compromise.",
+    cover: "img/id/bureau-cowork-1.jpg",
+    images: [
+      "img/id/bureau-cowork-1.jpg","img/id/bureau-cowork-2.jpg","img/id/bureau-cowork-3.jpg",
+      "img/id/bureau-cowork-4.jpg","img/id/bureau-cowork-5.jpg","img/id/bureau-cowork-6.jpg",
+      "img/id/bureau-cowork-7.jpg","img/id/bureau-cowork-8.jpg","img/id/bureau-cowork-9.jpg",
+      "img/id/bureau-cowork-10.jpg","img/id/bureau-cowork-11.jpg","img/id/bureau-cowork-12.jpg"
+    ]
+  },
+
+  "st-paul": {
+    name: "St Paul",
+    loc: "Paris 4e",
+    type: "Rénovation complète",
+    surface: "—",
+    style: "Ancien ouvert · chaux & matière",
+    fr: "Cinquante ans sans travaux — cloisonné, sombre, figé dans son jus. On a tout ouvert. La chaux sur tous les murs a changé la qualité de la lumière avant même de changer la couleur. La table est sur mesure, organique, recouverte d'un enduit à l'aspect minéral. Un couple, un enfant, un bureau à la maison. Le vieil immeuble du Marais rend maintenant tout ça possible.",
+    en: "Fifty years untouched — compartmentalised, dim, frozen in time. We opened everything. Lime wash on every wall changed the quality of light before it changed the colour. The bespoke table is organic in form, coated in a mineral-effect plaster. A couple, a child, a home office. The old Marais building now makes all of this possible.",
+    cover: "img/id/st-paul-1.jpg",
+    images: [
+      "img/id/st-paul-1.jpg","img/id/st-paul-2.jpg","img/id/st-paul-3.jpg",
+      "img/id/st-paul-4.jpg","img/id/st-paul-5.jpg","img/id/st-paul-6.jpg",
+      "img/id/st-paul-7.jpg","img/id/st-paul-8.jpg","img/id/st-paul-9.jpg",
+      "img/id/st-paul-10.jpg","img/id/st-paul-11.jpg","img/id/st-paul-12.jpg",
+      "img/id/st-paul-13.jpg","img/id/st-paul-14.jpg"
+    ]
+  },
+
+  "daru": {
+    name: "Rue Daru",
+    loc: "Paris 8e",
+    type: "Rénovation & décoration",
+    surface: "—",
+    style: "Bourgeois contemporain · menuiserie invisible",
+    fr: "L'immeuble est spectaculaire — hall bourgeois, moulures, hauteur. Les nouveaux propriétaires, un couple franco-argentin avec trois enfants, avaient tout à réinventer sans toucher aux murs porteurs. Les menuiseries sur mesure ont été conçues pour disparaître : les portes se fondent dans les parois. La suite parentale est exceptionnelle. La maison a changé de vie en gardant ses os.",
+    en: "The building is spectacular — a grand bourgeois entrance hall, mouldings, height. The new owners, a Franco-Argentine couple with three children, had everything to reinvent without touching a load-bearing wall. The bespoke joinery was designed to disappear: doors that vanish into walls. The master suite is exceptional. The home changed its life while keeping its bones.",
+    cover: "img/id/daru-3.jpg",
+    images: [
+      "img/id/daru-1.jpg","img/id/daru-2.jpg","img/id/daru-3.jpg",
+      "img/id/daru-4.jpg","img/id/daru-5.jpg","img/id/daru-6.jpg",
+      "img/id/daru-7.jpg","img/id/daru-8.jpg","img/id/daru-9.jpg",
+      "img/id/daru-10.jpg","img/id/daru-11.jpg","img/id/daru-12.jpg",
+      "img/id/daru-13.jpg","img/id/daru-14.jpg","img/id/daru-15.jpg",
+      "img/id/daru-16.jpg","img/id/daru-17.jpg","img/id/daru-18.jpg",
+      "img/id/daru-19.jpg","img/id/daru-20.jpg","img/id/daru-21.jpg",
+      "img/id/daru-22.jpg"
+    ]
+  },
+
+  "showroom": {
+    name: "Showroom · Flag Store · Bureau",
+    loc: "Paris — Le Marais",
+    type: "Transformation complète — immeuble commercial",
+    surface: "—",
+    style: "Scénographie immersive",
+    fr: "Un immeuble du Marais repensé de fond en comble pour une grande marque — boutique au rez-de-chaussée, showroom et bureaux aux étages. La scénographie est entière : paysages projetés, couloirs immersifs, identité de marque incarnée dans l'architecture. La marque ne peut pas être citée. Le résultat parle pour elle.",
+    en: "A Marais building reimagined from top to bottom for a major brand — boutique on the ground floor, showroom and offices above. The scenography is entirely conceived here: projected landscapes, immersive corridors, a brand identity embedded in architecture. The brand cannot be named. The result speaks for itself.",
+    cover: "img/id/showroom-1.png",
+    images: [
+      "img/id/showroom-1.png","img/id/showroom-2.png","img/id/showroom-3.png",
+      "img/id/showroom-4.png","img/id/showroom-5.png","img/id/showroom-6.png",
+      "img/id/showroom-7.png","img/id/showroom-8.png","img/id/showroom-9.png"
+    ]
+  },
+
+  "creme": {
+    name: "La Crème de la Crème",
+    loc: "Paris",
+    type: "Conception restaurant",
+    surface: "—",
+    style: "Matière brute & chaleur organique",
+    fr: "Un projet de restaurant à l'état de conception. Le parti pris : un intérieur neutre mais profondément chaleureux, bâti sur un dialogue de matières — chaux, béton ciré, formes organiques. Le principe des tables sur mesure que je dessine appliqué à l'ensemble d'un espace : chaque surface est une décision, chaque texture porte la température du lieu. Rien n'est décoratif. Tout est matière.",
+    en: "A restaurant project at concept stage. The premise: a neutral yet deeply warm interior built on a dialogue of materials — lime plaster, polished concrete, organic forms. The same principle behind the custom organic tables I design, applied to an entire space: every surface is a decision, every texture carries the warmth of the place. Nothing is decorative. Everything is material.",
+    cover: "img/id/creme-1.png",
+    images: [
+      "img/id/creme-1.png","img/id/creme-2.png","img/id/creme-3.png",
+      "img/id/creme-4.png","img/id/creme-5.png","img/id/creme-6.png",
+      "img/id/creme-7.png","img/id/creme-8.png"
+    ]
   }
 
 };
