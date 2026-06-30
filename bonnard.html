@@ -86,6 +86,15 @@
     }
     .bc-socials a:hover { opacity: 0.4; transform: translateX(8px); }
 
+    .bc-dj-label {
+      font-family: 'Georgia', serif;
+      font-size: clamp(0.7rem, 1vw, 0.9rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #aaa;
+      white-space: nowrap;
+    }
+
     .bc-booking-label {
       font-size: 0.66rem;
       letter-spacing: 0.25em;
@@ -130,8 +139,8 @@
     }
     .bon-mobile-portraits {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
       margin-bottom: 40px;
     }
     .bon-mobile-portraits img { width: 100%; }
@@ -220,9 +229,10 @@
     Le savoir-faire français · Musique · Paris
   </div>
 
-  <!-- Portrait 4 — coin droit haut -->
-  <img class="bc-el" src="img/bonnard/portrait-4.jpg" alt=""
+  <!-- DJ Kong — coin droit haut -->
+  <img class="bc-el" src="img/bonnard/portrait-1.jpg" alt="DJ Kong"
        style="top:75px; right:4%; width:22%; transform:rotate(1.8deg);">
+  <div class="bc-el bc-text bc-dj-label" style="top:390px; right:4%;">DJ Kong</div>
 
 
   <!-- ── ZONE 2 : PLATINE (380–900px) ────────────────── -->
@@ -235,9 +245,15 @@
   <img class="bc-el" src="img/bonnard/symb-cigarette.png" alt=""
        style="top:345px; left:49%; width:9%; transform:rotate(-19deg);">
 
-  <!-- Portrait 2 — droite haut -->
-  <img class="bc-el" src="img/bonnard/portrait-2.jpg" alt=""
+  <!-- Isaac Gan — droite milieu -->
+  <img class="bc-el" src="img/bonnard/portrait-2.jpg" alt="Isaac Gan"
        style="top:510px; right:4%; width:25%; transform:rotate(-2.1deg);">
+  <div class="bc-el bc-text bc-dj-label" style="top:860px; right:4%;">Isaac Gan</div>
+
+  <!-- Michel — centre zone 3 -->
+  <img class="bc-el" src="img/bonnard/portrait-3.jpg" alt="Michel"
+       style="top:900px; left:38%; width:18%; transform:rotate(2.5deg); z-index:3;">
+  <div class="bc-el bc-text bc-dj-label" style="top:1200px; left:38%;">Michel</div>
 
   <!-- Bio — droite bas de zone 2 -->
   <div class="bc-el bc-text bc-bio" style="top:820px; right:5%; max-width:300px;">
@@ -307,9 +323,20 @@
 
   <!-- ── ZONE 5 : BOOKING (1800–2250px) ───────────────── -->
 
-  <!-- Portrait 7 — gauche -->
-  <img class="bc-el" src="img/bonnard/portrait-7.jpg" alt=""
+  <!-- JR — gauche zone booking -->
+  <img class="bc-el" src="img/bonnard/portrait-4.jpg" alt="JR"
        style="top:1820px; left:6%; width:23%; transform:rotate(1.5deg);">
+  <div class="bc-el bc-text bc-dj-label" style="top:2120px; left:6%;">JR</div>
+
+  <!-- Kim Kong — droite zone 4 -->
+  <img class="bc-el" src="img/bonnard/portrait-5.jpg" alt="Kim Kong"
+       style="top:1580px; right:6%; width:20%; transform:rotate(-2.2deg);">
+  <div class="bc-el bc-text bc-dj-label" style="top:1870px; right:6%;">Kim Kong</div>
+
+  <!-- Kaitlyn — gauche zone 3 bas -->
+  <img class="bc-el" src="img/bonnard/portrait-6.jpg" alt="Kaitlyn"
+       style="top:1180px; left:4%; width:19%; transform:rotate(1.1deg);">
+  <div class="bc-el bc-text bc-dj-label" style="top:1470px; left:4%;">Kaitlyn</div>
 
   <!-- Booking block — droite -->
   <div class="bc-el bc-text" style="top:1870px; right:6%; width:290px;">
@@ -365,8 +392,12 @@
   <img class="bon-mobile-platine" src="img/bonnard/symb-platine.png" alt="Platine Technics">
 
   <div class="bon-mobile-portraits">
-    <img src="img/bonnard/portrait-4.jpg" alt="">
-    <img src="img/bonnard/portrait-2.jpg" alt="">
+    <img src="img/bonnard/portrait-1.jpg" alt="DJ Kong">
+    <img src="img/bonnard/portrait-2.jpg" alt="Isaac Gan">
+    <img src="img/bonnard/portrait-3.jpg" alt="Michel">
+    <img src="img/bonnard/portrait-4.jpg" alt="JR">
+    <img src="img/bonnard/portrait-5.jpg" alt="Kim Kong">
+    <img src="img/bonnard/portrait-6.jpg" alt="Kaitlyn">
   </div>
 
   <p class="bon-mobile-bio"
@@ -402,6 +433,261 @@
   <img class="bon-mobile-signature" src="img/bonnard/symb-signature.png" alt="Bonnard">
 
 </div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     LE COLLECTIF — supprimé, intégré dans le canvas
+════════════════════════════════════════════════════════ -->
+<section class="bon-collectif" style="display:none;">
+
+  <div class="bon-collectif-intro">
+    <p class="section-label" data-fr="Le collectif" data-en="The collective">Le collectif</p>
+    <h2 class="bon-collectif-title"
+        data-fr="Six voix,&nbsp;un son."
+        data-en="Six voices,&nbsp;one sound.">Six voix,&nbsp;un son.</h2>
+    <p class="bon-collectif-sub"
+       data-fr="Des personnalités qui ne ressemblent à personne. Un son qu'on ne confond avec rien."
+       data-en="Personalities unlike anyone else. A sound unlike anything else.">
+      Des personnalités qui ne ressemblent à personne. Un son qu'on ne confond avec rien.
+    </p>
+  </div>
+
+  <!-- Ligne 1 — DJ Kong + Isaac Gan -->
+  <div class="bon-dj-row">
+    <div class="bon-dj-card">
+      <div class="bon-dj-portrait-wrap">
+        <img src="img/bonnard/dj-kong.jpg" alt="DJ Kong"
+             onerror="this.parentNode.classList.add('bon-dj-no-photo')">
+        <div class="bon-dj-placeholder-label">Photo</div>
+      </div>
+      <div class="bon-dj-meta">
+        <span class="bon-dj-num">01</span>
+        <h3 class="bon-dj-name">DJ Kong</h3>
+        <p class="bon-dj-style">House · Funk · Soul</p>
+      </div>
+    </div>
+    <div class="bon-dj-spacer"></div>
+    <div class="bon-dj-card bon-dj-card--right">
+      <div class="bon-dj-portrait-wrap">
+        <img src="img/bonnard/isaac-gan.jpg" alt="Isaac Gan"
+             onerror="this.parentNode.classList.add('bon-dj-no-photo')">
+        <div class="bon-dj-placeholder-label">Photo</div>
+      </div>
+      <div class="bon-dj-meta">
+        <span class="bon-dj-num">02</span>
+        <h3 class="bon-dj-name">Isaac Gan</h3>
+        <p class="bon-dj-style">Afrobeat · Electronic</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ligne 2 — Michel + JR (texte intercalé) -->
+  <div class="bon-dj-editorial">
+    <div class="bon-dj-editorial-text">
+      <blockquote class="bon-dj-quote"
+          data-fr="&ldquo;La nuit doit être belle ou elle ne mérite pas qu'on la fasse.&rdquo;"
+          data-en="&ldquo;The night must be beautiful or it's not worth making.&rdquo;">
+        &ldquo;La nuit doit être belle ou elle ne mérite pas qu'on la fasse.&rdquo;
+      </blockquote>
+    </div>
+    <div class="bon-dj-card">
+      <div class="bon-dj-portrait-wrap">
+        <img src="img/bonnard/michel.jpg" alt="Michel"
+             onerror="this.parentNode.classList.add('bon-dj-no-photo')">
+        <div class="bon-dj-placeholder-label">Photo</div>
+      </div>
+      <div class="bon-dj-meta">
+        <span class="bon-dj-num">03</span>
+        <h3 class="bon-dj-name">Michel</h3>
+        <p class="bon-dj-style">Disco · Italo · Nu-Funk</p>
+      </div>
+    </div>
+    <div class="bon-dj-card">
+      <div class="bon-dj-portrait-wrap">
+        <img src="img/bonnard/jr.jpg" alt="JR"
+             onerror="this.parentNode.classList.add('bon-dj-no-photo')">
+        <div class="bon-dj-placeholder-label">Photo</div>
+      </div>
+      <div class="bon-dj-meta">
+        <span class="bon-dj-num">04</span>
+        <h3 class="bon-dj-name">JR</h3>
+        <p class="bon-dj-style">Deep House · Minimal</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ligne 3 — Kim Kong + Kaitlyn -->
+  <div class="bon-dj-row">
+    <div class="bon-dj-card">
+      <div class="bon-dj-portrait-wrap">
+        <img src="img/bonnard/kim-kong.jpg" alt="Kim Kong"
+             onerror="this.parentNode.classList.add('bon-dj-no-photo')">
+        <div class="bon-dj-placeholder-label">Photo</div>
+      </div>
+      <div class="bon-dj-meta">
+        <span class="bon-dj-num">05</span>
+        <h3 class="bon-dj-name">Kim Kong</h3>
+        <p class="bon-dj-style">Techno · Industrial</p>
+      </div>
+    </div>
+    <div class="bon-dj-spacer"></div>
+    <div class="bon-dj-card bon-dj-card--right">
+      <div class="bon-dj-portrait-wrap">
+        <img src="img/bonnard/kaitlyn.jpg" alt="Kaitlyn"
+             onerror="this.parentNode.classList.add('bon-dj-no-photo')">
+        <div class="bon-dj-placeholder-label">Photo</div>
+      </div>
+      <div class="bon-dj-meta">
+        <span class="bon-dj-num">06</span>
+        <h3 class="bon-dj-name">Kaitlyn</h3>
+        <p class="bon-dj-style">Ambient · Electronic · Pop</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+  /* ── LE COLLECTIF ─────────────────────────────────────── */
+  .bon-collectif {
+    background: #fff;
+    padding: 120px 60px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .bon-collectif-intro {
+    max-width: 580px;
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+  .bon-collectif-title {
+    font-family: 'Georgia', serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 400;
+    color: #111;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 16px 0 24px;
+  }
+  .bon-collectif-sub {
+    font-size: 0.88rem;
+    color: #999;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Lignes de DJs ───────────────────────────────────── */
+  .bon-dj-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto 80px;
+  }
+  .bon-dj-spacer { flex: 1; }
+
+  .bon-dj-editorial {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto 80px;
+  }
+  .bon-dj-editorial-text {
+    flex: 1;
+    padding: 40px 0;
+  }
+  .bon-dj-quote {
+    font-family: 'Georgia', serif;
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: #333;
+    line-height: 1.55;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ── Card DJ ─────────────────────────────────────────── */
+  .bon-dj-card {
+    width: 300px;
+    flex-shrink: 0;
+  }
+  .bon-dj-card--right {
+    text-align: right;
+  }
+  .bon-dj-portrait-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: #f2f1ef;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .bon-dj-portrait-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    mix-blend-mode: multiply;
+  }
+  /* Quand la photo est absente */
+  .bon-dj-no-photo img { display: none; }
+  .bon-dj-placeholder-label {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #bbb;
+  }
+  .bon-dj-no-photo .bon-dj-placeholder-label {
+    display: flex;
+  }
+
+  .bon-dj-meta { padding: 0 4px; }
+  .bon-dj-num {
+    font-size: 0.6rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #bbb;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .bon-dj-name {
+    font-family: 'Georgia', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    font-weight: 400;
+    color: #111;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .bon-dj-style {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #bbb;
+  }
+
+  /* ── Mobile collectif ────────────────────────────────── */
+  @media (max-width: 900px) {
+    .bon-collectif { padding: 80px 28px; }
+    .bon-collectif-intro { margin-bottom: 60px; }
+    .bon-dj-row,
+    .bon-dj-editorial {
+      flex-direction: column;
+      gap: 48px;
+    }
+    .bon-dj-card,
+    .bon-dj-card--right { width: 100%; text-align: left; }
+    .bon-dj-spacer { display: none; }
+    .bon-dj-editorial-text { padding: 0; }
+  }
+</style>
 
 
 <!-- ═══════════════════════════════════════════════════════
