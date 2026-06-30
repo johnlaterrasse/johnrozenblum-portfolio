@@ -1,6 +1,10 @@
 {
-  "outputDirectory": ".",
-  "buildCommand": null,
-  "installCommand": null,
-  "framework": null
+  "headers": [
+    {
+      "source": "/(.*\\.html)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
 }
