@@ -442,6 +442,78 @@ const OBJECTS = {
     en: "The bedroom begins here. A bed conceived as architecture — the headboard as horizon, everything else falls into order around it.",
     tag: "Sur devis",
     images: ["img/meubles/smart-bed.webp"]
+  },
+
+  "bar-vinyl": {
+    name: "Console Bar + Vinyl",
+    fr: "Deux plaisirs dans un meuble. La console s'ouvre sur un bar dissimulé d'un côté, un espace vinyl de l'autre. En noyer, cuir et laiton — un objet de nuit autant que de jour.",
+    en: "Two pleasures in one piece. The console opens to reveal a hidden bar on one side, a vinyl setup on the other. In walnut, leather and brass — a night object as much as a day one.",
+    tag: "Sur devis",
+    images: [
+      "img/meubles/bar-vinyl-1.jpg","img/meubles/bar-vinyl-2.jpg",
+      "img/meubles/bar-vinyl-3.jpg","img/meubles/bar-vinyl-4.jpg",
+      "img/meubles/bar-vinyl-5.jpg","img/meubles/bar-vinyl-6.jpg"
+    ]
+  },
+
+  "appliques-line": {
+    name: "Appliques Line Light",
+    fr: "Une lame de lumière. L'applique disparaît dans le mur pour ne laisser que l'effet — un trait vertical de laiton d'où s'échappe une lumière chaude et directe.",
+    en: "A blade of light. The wall light disappears into the wall to leave only the effect — a vertical brass strip from which warm, direct light escapes.",
+    tag: "Sur devis",
+    images: [
+      "img/meubles/appliques-line-1.webp","img/meubles/appliques-line-2.webp",
+      "img/meubles/appliques-line-3.webp","img/meubles/appliques-line-4.webp"
+    ]
+  },
+
+  "lampe-marbre": {
+    name: "Lampe Bloc de Marbre",
+    fr: "La matière qui émet. Un bloc de marbre rétroéclairé — la lumière ne l'illumine pas, elle en sort. L'objet devient source, la veinure devient carte.",
+    en: "Matter that emits. A backlit marble block — the light doesn't illuminate it, it comes from within. The object becomes the source, the veining becomes a map.",
+    tag: "Sur devis",
+    images: [
+      "img/meubles/lampe-marbre-1.png","img/meubles/lampe-marbre-2.png",
+      "img/meubles/lampe-marbre-3.png","img/meubles/lampe-marbre-4.png",
+      "img/meubles/lampe-marbre-5.png","img/meubles/lampe-marbre-6.png"
+    ]
+  },
+
+  "skull-vaisselle": {
+    name: "Skull Vaisselle",
+    fr: "De la vaisselle qui ne ressemble à rien d'autre. Crânes floraux, monogrammes en or profond — des assiettes conçues comme des œuvres, à poser sur une table ou accrocher à un mur.",
+    en: "Tableware unlike anything else. Floral skulls, deep gold monograms — plates conceived as artworks, to place on a table or hang on a wall.",
+    tag: "Sur devis",
+    images: [
+      "img/meubles/skull-1.webp","img/meubles/skull-2.webp",
+      "img/meubles/skull-3.webp","img/meubles/skull-4.webp",
+      "img/meubles/skull-5.webp","img/meubles/skull-6.png",
+      "img/meubles/skull-7.webp","img/meubles/skull-8.webp"
+    ]
+  },
+
+  "tables-pierre": {
+    name: "Tables Blocs de Pierre",
+    fr: "La table comme geste sculptural. Des blocs de pierre brute portent un plateau de verre — la matière ne supporte pas, elle affirme. Chaque pièce naît de la veinure choisie.",
+    en: "The table as sculptural gesture. Raw stone blocks carry a glass top — the material doesn't just support, it asserts. Each piece is born from the chosen vein.",
+    tag: "Sur devis",
+    images: [
+      "img/meubles/tables-pierre-1.png","img/meubles/tables-pierre-2.png",
+      "img/meubles/tables-pierre-3.png","img/meubles/tables-pierre-4.jpg",
+      "img/meubles/tables-pierre-5.jpg","img/meubles/tables-pierre-6.jpg",
+      "img/meubles/tables-pierre-7.png","img/meubles/tables-pierre-8.webp",
+      "img/meubles/tables-pierre-9.webp"
+    ]
+  },
+
+  "tiroir-secret": {
+    name: "Tiroir Secret",
+    fr: "Le meuble qui cache. Un chevet avec compartiment dissimulé — ouverture par pression, invisible à l'œil. L'espace intime a ses propres secrets.",
+    en: "The piece that hides. A bedside table with a concealed compartment — push to open, invisible to the eye. Intimate space has its own secrets.",
+    tag: "Sur devis",
+    images: [
+      "img/meubles/tiroir-secret-1.png","img/meubles/tiroir-secret-2.png"
+    ]
   }
 
 };
