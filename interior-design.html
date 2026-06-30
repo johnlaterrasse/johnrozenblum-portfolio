@@ -6,6 +6,49 @@
   <title>Interior Design — John Rozenblum Paris</title>
   <meta name="description" content="25 projets de design d'intérieur à Paris et en France. Rénovations haussmanniennes, appartements de prestige, espaces contemporains. John Rozenblum Design.">
   <link rel="stylesheet" href="style.css?v=4">
+  <style>
+    /* ── FILTRES ────────────────────────────────────────── */
+    .projects-filter {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 52px 48px 0;
+    }
+    @media (max-width: 768px) {
+      .projects-filter { padding: 36px 24px 0; gap: 6px; }
+    }
+    .pf-btn {
+      font-family: inherit;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border: 1px solid rgba(0,0,0,0.18);
+      background: transparent;
+      color: #999;
+      cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .pf-btn:hover  { background: #f0ede8; color: #111; border-color: rgba(0,0,0,0.35); }
+    .pf-btn.active { background: #111; color: #fff; border-color: #111; }
+
+    /* Compteur de projets */
+    .pf-count {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #bbb;
+      padding: 10px 0;
+      margin-left: auto;
+      align-self: center;
+    }
+    @media (max-width: 600px) { .pf-count { display: none; } }
+
+    /* Transition masquage cards */
+    .project-card.pf-hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -34,13 +77,22 @@
   </div>
 </div>
 
+<!-- Filtres -->
+<div class="projects-filter">
+  <button class="pf-btn active" data-filter="all"      data-fr="Tous"            data-en="All">Tous</button>
+  <button class="pf-btn"        data-filter="residence"  data-fr="Résidence principale"  data-en="Primary Residence">Résidence principale</button>
+  <button class="pf-btn"        data-filter="saisonnier" data-fr="Location saisonnière" data-en="Seasonal Rental">Location saisonnière</button>
+  <button class="pf-btn"        data-filter="bureau"   data-fr="Bureau"          data-en="Office">Bureau</button>
+  <button class="pf-btn"        data-filter="magasin"  data-fr="Magasin & Resto" data-en="Shop & Restaurant">Magasin & Resto</button>
+</div>
+
 <!-- Grille projets -->
 <section class="projects-section">
 
   <div class="projects-grid">
 
     <!-- Duplex Madeleine -->
-    <div class="project-card reveal" data-project="duplex-madeleine">
+    <div class="project-card reveal" data-project="duplex-madeleine" data-category="residence">
       <div class="project-card-img">
         <img src="img/id/duplex-madeleine.jpg"
              alt="Duplex Madeleine — John Rozenblum Design" loading="lazy">
@@ -52,7 +104,7 @@
     </div>
 
     <!-- Marbeuf -->
-    <div class="project-card reveal reveal-delay-1" data-project="marbeuf">
+    <div class="project-card reveal reveal-delay-1" data-project="marbeuf" data-category="residence">
       <div class="project-card-img">
         <img src="img/id/marbeuf.jpg"
              alt="Marbeuf — John Rozenblum Design" loading="lazy">
@@ -64,7 +116,7 @@
     </div>
 
     <!-- Triplex avec spa -->
-    <div class="project-card reveal reveal-delay-2" data-project="triplex-spa">
+    <div class="project-card reveal reveal-delay-2" data-project="triplex-spa" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/triplex-spa.jpg"
              alt="Triplex avec Spa — John Rozenblum Design" loading="lazy">
@@ -76,7 +128,7 @@
     </div>
 
     <!-- Arcade -->
-    <div class="project-card reveal" data-project="arcade">
+    <div class="project-card reveal" data-project="arcade" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/arcade.jpg"
              alt="Arcade — John Rozenblum Design" loading="lazy">
@@ -88,7 +140,7 @@
     </div>
 
     <!-- Champs Élysées -->
-    <div class="project-card reveal reveal-delay-1" data-project="champs-elysees">
+    <div class="project-card reveal reveal-delay-1" data-project="champs-elysees" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/champs-elysees.jpg"
              alt="Champs Élysées — John Rozenblum Design" loading="lazy">
@@ -100,7 +152,7 @@
     </div>
 
     <!-- Sous les toits de Paris -->
-    <div class="project-card reveal reveal-delay-2" data-project="sous-les-toits">
+    <div class="project-card reveal reveal-delay-2" data-project="sous-les-toits" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/sous-les-toits.jpg"
              alt="Sous les toits de Paris — John Rozenblum Design" loading="lazy">
@@ -112,7 +164,7 @@
     </div>
 
     <!-- Patio -->
-    <div class="project-card reveal" data-project="patio">
+    <div class="project-card reveal" data-project="patio" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/patio.jpg"
              alt="Patio — John Rozenblum Design" loading="lazy">
@@ -124,7 +176,7 @@
     </div>
 
     <!-- Louvres -->
-    <div class="project-card reveal reveal-delay-1" data-project="louvres">
+    <div class="project-card reveal reveal-delay-1" data-project="louvres" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/louvres.jpg"
              alt="Louvres — John Rozenblum Design" loading="lazy">
@@ -136,7 +188,7 @@
     </div>
 
     <!-- Rivoli -->
-    <div class="project-card reveal reveal-delay-2" data-project="rivoli">
+    <div class="project-card reveal reveal-delay-2" data-project="rivoli" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/rivoli.jpg"
              alt="Rivoli — John Rozenblum Design" loading="lazy">
@@ -148,7 +200,7 @@
     </div>
 
     <!-- Déchargeurs -->
-    <div class="project-card reveal" data-project="dechargeurs">
+    <div class="project-card reveal" data-project="dechargeurs" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/dechargeurs.jpg"
              alt="Déchargeurs — John Rozenblum Design" loading="lazy">
@@ -160,7 +212,7 @@
     </div>
 
     <!-- Madeleine -->
-    <div class="project-card reveal reveal-delay-1" data-project="madeleine">
+    <div class="project-card reveal reveal-delay-1" data-project="madeleine" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/madeleine.jpg"
              alt="Madeleine — John Rozenblum Design" loading="lazy">
@@ -172,7 +224,7 @@
     </div>
 
     <!-- Malesherbes -->
-    <div class="project-card reveal reveal-delay-2" data-project="malesherbes">
+    <div class="project-card reveal reveal-delay-2" data-project="malesherbes" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/malesherbes.jpg"
              alt="Malesherbes — John Rozenblum Design" loading="lazy">
@@ -184,7 +236,7 @@
     </div>
 
     <!-- Châtelet -->
-    <div class="project-card reveal" data-project="chatelet">
+    <div class="project-card reveal" data-project="chatelet" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/chatelet.jpg"
              alt="Châtelet — John Rozenblum Design" loading="lazy">
@@ -196,7 +248,7 @@
     </div>
 
     <!-- Deux pièces chic -->
-    <div class="project-card reveal reveal-delay-1" data-project="deux-pieces">
+    <div class="project-card reveal reveal-delay-1" data-project="deux-pieces" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/deux-pieces.jpg"
              alt="Deux Pièces Chic — John Rozenblum Design" loading="lazy">
@@ -208,7 +260,7 @@
     </div>
 
     <!-- Iéna -->
-    <div class="project-card reveal reveal-delay-2" data-project="iena">
+    <div class="project-card reveal reveal-delay-2" data-project="iena" data-category="residence">
       <div class="project-card-img">
         <img src="img/id/iena.webp"
              alt="Iéna — John Rozenblum Design" loading="lazy">
@@ -220,7 +272,7 @@
     </div>
 
     <!-- Cannes -->
-    <div class="project-card reveal" data-project="cannes">
+    <div class="project-card reveal" data-project="cannes" data-category="residence">
       <div class="project-card-img">
         <img src="img/id/cannes.webp"
              alt="Cannes — John Rozenblum Design" loading="lazy">
@@ -232,7 +284,7 @@
     </div>
 
     <!-- Sous les toits II -->
-    <div class="project-card reveal reveal-delay-1" data-project="toits-2">
+    <div class="project-card reveal reveal-delay-1" data-project="toits-2" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/sous-les-toits-2.jpg"
              alt="Sous les toits II — John Rozenblum Design" loading="lazy">
@@ -244,7 +296,7 @@
     </div>
 
     <!-- Sous les toits III -->
-    <div class="project-card reveal reveal-delay-2" data-project="toits-3">
+    <div class="project-card reveal reveal-delay-2" data-project="toits-3" data-category="saisonnier">
       <div class="project-card-img">
         <img src="img/id/sous-les-toits-3.jpg"
              alt="Sous les toits III — John Rozenblum Design" loading="lazy">
@@ -256,7 +308,7 @@
     </div>
 
     <!-- Work Space -->
-    <div class="project-card reveal" data-project="workspace">
+    <div class="project-card reveal" data-project="workspace" data-category="bureau">
       <div class="project-card-img">
         <img src="img/id/workspace.webp"
              alt="Work Space — John Rozenblum Design" loading="lazy">
@@ -268,7 +320,7 @@
     </div>
 
     <!-- Pigalle -->
-    <div class="project-card reveal reveal-delay-1" data-project="pigalle">
+    <div class="project-card reveal reveal-delay-1" data-project="pigalle" data-category="residence">
       <div class="project-card-img">
         <img src="img/id/pigalle-1.jpg"
              alt="Pigalle — John Rozenblum Design" loading="lazy">
@@ -280,7 +332,7 @@
     </div>
 
     <!-- Étienne Marcel -->
-    <div class="project-card reveal reveal-delay-2" data-project="bureau-cowork">
+    <div class="project-card reveal reveal-delay-2" data-project="bureau-cowork" data-category="bureau">
       <div class="project-card-img">
         <img src="img/id/bureau-cowork-1.jpg"
              alt="Étienne Marcel — John Rozenblum Design" loading="lazy">
@@ -292,7 +344,7 @@
     </div>
 
     <!-- St Paul -->
-    <div class="project-card reveal" data-project="st-paul">
+    <div class="project-card reveal" data-project="st-paul" data-category="residence">
       <div class="project-card-img">
         <img src="img/id/st-paul-1.jpg"
              alt="St Paul — John Rozenblum Design" loading="lazy">
@@ -304,7 +356,7 @@
     </div>
 
     <!-- Rue Daru -->
-    <div class="project-card reveal reveal-delay-1" data-project="daru">
+    <div class="project-card reveal reveal-delay-1" data-project="daru" data-category="residence">
       <div class="project-card-img">
         <img src="img/id/daru-3.jpg"
              alt="Rue Daru — John Rozenblum Design" loading="lazy">
@@ -316,7 +368,7 @@
     </div>
 
     <!-- Showroom -->
-    <div class="project-card reveal reveal-delay-2" data-project="showroom">
+    <div class="project-card reveal reveal-delay-2" data-project="showroom" data-category="magasin">
       <div class="project-card-img">
         <img src="img/id/showroom-1.png"
              alt="Showroom · Flag Store · Bureau — John Rozenblum Design" loading="lazy">
@@ -328,7 +380,7 @@
     </div>
 
     <!-- La Crème de la Crème -->
-    <div class="project-card reveal" data-project="creme">
+    <div class="project-card reveal" data-project="creme" data-category="magasin">
       <div class="project-card-img">
         <img src="img/id/creme-1.png"
              alt="La Crème de la Crème — John Rozenblum Design" loading="lazy">
@@ -346,46 +398,4 @@
 <section class="cta-section">
   <div class="reveal">
     <p class="section-label" data-fr="Un projet ?" data-en="A project?">Un projet ?</p>
-    <h2 class="section-title" data-fr="Travaillons ensemble." data-en="Let's work together.">Travaillons ensemble.</h2>
-    <p class="section-text" data-fr="Chaque espace est une histoire à écrire. Partagez-moi la vôtre." data-en="Every space is a story to be written. Share yours with me.">Chaque espace est une histoire à écrire. Partagez-moi la vôtre.</p>
-    <a href="contact.html" class="btn btn-white" data-fr="Prendre contact" data-en="Get in touch">Prendre contact</a>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div>
-    <img src="img/signature-jr.png" alt="John Rozenblum" class="footer-signature">
-    <p class="footer-tagline" data-fr="Design d'intérieur · Paris" data-en="Interior Design · Paris">Design d'intérieur · Paris</p>
-  </div>
-  <nav class="footer-links">
-    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
-    <a href="meubles.html" data-fr="Meubles & Objets" data-en="Furniture & Objects">Meubles & Objets</a>
-    <a href="bonnard.html">Bonnard Music</a>
-    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
-  </nav>
-  <div class="footer-copy">
-    <p>© 2026 John Rozenblum</p>
-    <p style="margin-top:8px"><a href="mailto:hello@johnrozenblum.com" style="color:var(--gray)">hello@johnrozenblum.com</a></p>
-  </div>
-</footer>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <button class="lightbox-close" data-fr="Fermer" data-en="Close">Fermer</button>
-  <div class="lightbox-inner">
-    <div class="lightbox-header">
-      <div>
-        <h2 class="lightbox-title"></h2>
-        <div class="lightbox-meta"></div>
-      </div>
-      <p class="lightbox-desc"></p>
-    </div>
-    <div class="lightbox-gallery"></div>
-  </div>
-</div>
-
-<script src="projects-data.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+    <h2 class="section-title" data-fr
