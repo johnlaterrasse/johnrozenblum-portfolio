@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 380">
+  <rect width="280" height="380" fill="#fff"/>
+  <!-- tête légèrement penchée -->
+  <ellipse cx="148" cy="70" rx="36" ry="40" fill="none" stroke="#111" stroke-width="2" transform="rotate(-6 148 70)"/>
+  <!-- cheveux courts frisés — arc -->
+  <path d="M114 60 Q148 28 182 60" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+  <!-- torse dynamique -->
+  <path d="M118 110 Q108 180 112 250 L168 250 Q172 180 162 110 Z" fill="none" stroke="#111" stroke-width="2"/>
+  <!-- bras G levé -->
+  <path d="M118 125 Q80 90 62 58" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="58" cy="52" r="8" fill="none" stroke="#111" stroke-width="1.5"/>
+  <!-- bras D ouvert -->
+  <path d="M162 130 Q200 150 222 170" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="228" cy="174" r="7" fill="none" stroke="#111" stroke-width="1.5"/>
+  <!-- jambe G en mouvement -->
+  <path d="M124 250 Q110 300 90 340" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <path d="M90 340 L72 348" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <!-- jambe D -->
+  <path d="M156 250 Q170 295 176 340" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <path d="M176 340 L196 345" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+</svg>
