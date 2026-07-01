@@ -5,12 +5,9 @@
 
 /* ---- CURSEUR ANNEAU + POINT ---- */
 (function() {
-  const ring = document.createElement('div');
-  const dot  = document.createElement('div');
-  ring.className = 'cursor-ring';
-  dot.className  = 'cursor-dot';
-  document.body.appendChild(ring);
-  document.body.appendChild(dot);
+  const ring = document.querySelector('.cursor-ring');
+  const dot  = document.querySelector('.cursor-dot');
+  if (!ring || !dot) return;
   let rx = 0, ry = 0, mx = 0, my = 0;
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
