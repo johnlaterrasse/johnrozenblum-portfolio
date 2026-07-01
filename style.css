@@ -49,7 +49,7 @@ body {
   position: fixed;
   top: 0; left: 0;
   width: 30px; height: 30px;
-  border: 1.5px solid var(--gold);
+  border: 1.5px solid var(--black);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -60,7 +60,7 @@ body {
   position: fixed;
   top: 0; left: 0;
   width: 5px; height: 5px;
-  background: var(--gold);
+  background: var(--black);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
