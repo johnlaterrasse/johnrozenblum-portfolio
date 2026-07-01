@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Étienne Marcel — John Rozenblum Design Paris</title>
+  <meta name="description" content="Un appartement aux ossatures style Eiffel, mandat : le transformer en open space pour une agence de communication sans perdre son âme. Les câbles disparais… Design d'intérieur à Paris — John Rozenblum.">
+  <link rel="canonical" href="https://johnrozenblum.com/bureau-cowork.html">
+  <meta property="og:title" content="Étienne Marcel — John Rozenblum Design">
+  <meta property="og:description" content="Un appartement aux ossatures style Eiffel, mandat : le transformer en open space pour une agence de communication sans perdre son âme. Les câbles disparais…">
+  <meta property="og:image" content="https://johnrozenblum.com/img/id/bureau-cowork-1.jpg">
+  <meta property="og:url" content="https://johnrozenblum.com/bureau-cowork.html">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="style.css?v=4">
+  <style>
+    /* ── PAGE PROJET ───────────────────────────────────────── */
+    .proj-hero {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 64px 48px;
+    }
+    @media (max-width: 768px) {
+      .proj-hero { height: 70vh; padding: 40px 24px; }
+    }
+    .proj-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    .proj-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 55%, transparent 100%);
+    }
+    .proj-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .proj-hero-loc {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .proj-hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.05;
+    }
+
+    /* ── BACK LINK ─────────────────────────────────────────── */
+    .proj-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      padding: 32px 48px 0;
+      transition: color 0.2s;
+    }
+    .proj-back:hover { color: var(--black); }
+    .proj-back::before { content: '←'; font-size: 0.9rem; }
+    @media (max-width: 768px) { .proj-back { padding: 24px 24px 0; } }
+
+    /* ── META ROW ──────────────────────────────────────────── */
+    .proj-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      margin: 40px 48px 0;
+    }
+    @media (max-width: 768px) { .proj-meta { margin: 32px 24px 0; } }
+    .proj-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 20px 32px;
+      border-right: 1px solid rgba(0,0,0,0.08);
+      flex: 1;
+      min-width: 140px;
+    }
+    .proj-meta-item:last-child { border-right: none; }
+    @media (max-width: 600px) {
+      .proj-meta-item { padding: 16px 20px; min-width: 120px; }
+    }
+    .proj-meta-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .proj-meta-value {
+      font-size: 0.88rem;
+      color: var(--black);
+      font-weight: 400;
+    }
+
+    /* ── DESCRIPTION ───────────────────────────────────────── */
+    .proj-desc {
+      max-width: 680px;
+      margin: 52px 48px;
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      line-height: 1.75;
+      color: #2a2a2a;
+    }
+    @media (max-width: 768px) { .proj-desc { margin: 36px 24px; } }
+
+    /* ── GALLERY ───────────────────────────────────────────── */
+    .proj-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      margin: 0;
+    }
+    .proj-gallery img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s;
+    }
+    .proj-gallery img:hover { opacity: 0.92; }
+    /* First image full-width */
+    .proj-gallery img:first-child {
+      grid-column: 1 / -1;
+      aspect-ratio: 16/9;
+    }
+    @media (max-width: 600px) {
+      .proj-gallery { grid-template-columns: 1fr; gap: 2px; }
+      .proj-gallery img:first-child { aspect-ratio: 4/3; }
+    }
+
+    /* ── PREV / NEXT ───────────────────────────────────────── */
+    .proj-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 64px 48px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin-top: 80px;
+      gap: 24px;
+    }
+    @media (max-width: 768px) { .proj-nav { padding: 40px 24px; flex-direction: column; align-items: flex-start; gap: 24px; } }
+    .proj-nav-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      color: var(--black);
+      transition: opacity 0.2s;
+    }
+    .proj-nav-item:hover { opacity: 0.5; }
+    .proj-nav-next { text-align: right; margin-left: auto; }
+    @media (max-width: 768px) { .proj-nav-next { text-align: left; margin-left: 0; } }
+    .proj-nav-dir {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .proj-nav-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+    }
+    .proj-nav-prev .proj-nav-name::before { content: '← '; }
+    .proj-nav-next .proj-nav-name::after  { content: ' →'; }
+  </style>
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html" class="nav-logo">JR</a>
+  <div class="nav-links">
+    <a href="interior-design.html" class="active" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Objets" data-en="Objects">Objets</a>
+    <a href="bonnard.html">Bonnard</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </div>
+  <button class="lang-toggle">EN</button>
+  <div class="nav-burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Hero -->
+<div class="proj-hero">
+  <div class="proj-hero-bg" style="background-image: url('img/id/bureau-cowork-1.jpg')"></div>
+  <div class="proj-hero-content">
+    <p class="proj-hero-loc">Paris 1er — Étienne Marcel</p>
+    <h1 class="proj-hero-title">Étienne Marcel</h1>
+  </div>
+</div>
+
+<!-- Retour -->
+<a href="interior-design.html" class="proj-back" data-fr="Tous les projets" data-en="All projects">Tous les projets</a>
+
+<!-- Meta -->
+<div class="proj-meta">
+  <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Lieu" data-en="Location">Lieu</span><span class="proj-meta-value">Paris 1er — Étienne Marcel</span></div>
+    <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Type" data-en="Type">Type</span><span class="proj-meta-value">Transformation — flex office</span></div>
+    <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Style" data-en="Style">Style</span><span class="proj-meta-value">Industriel tempéré</span></div>
+</div>
+
+<!-- Description -->
+<p class="proj-desc" data-fr="Un appartement aux ossatures style Eiffel, mandat : le transformer en open space pour une agence de communication sans perdre son âme. Les câbles disparaissent dans la structure. L'intimité existe sans murs. La chaleur tient malgré le plateau. Flex office sans place attitrée — l'espace s'adapte à chaque présence, budget serré, résultat sans compromis." data-en="An apartment with Eiffel-style industrial bones, brief: turn it into an open-plan workspace for a communications agency without losing its soul. Cables disappear into the structure. Intimacy exists without walls. Warmth holds across the floor plate. Flex office, no assigned desks — the space adapts to whoever shows up. Tight budget, zero compromise.">Un appartement aux ossatures style Eiffel, mandat : le transformer en open space pour une agence de communication sans perdre son âme. Les câbles disparaissent dans la structure. L'intimité existe sans murs. La chaleur tient malgré le plateau. Flex office sans place attitrée — l'espace s'adapte à chaque présence, budget serré, résultat sans compromis.</p>
+
+<!-- Galerie -->
+<div class="proj-gallery">
+  <img src="img/id/bureau-cowork-1.jpg" alt="" loading="eager">
+    <img src="img/id/bureau-cowork-2.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-3.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-4.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-5.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-6.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-7.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-8.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-9.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-10.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-11.jpg" alt="" loading="lazy">
+    <img src="img/id/bureau-cowork-12.jpg" alt="" loading="lazy">
+</div>
+
+<!-- Prev / Next -->
+<div class="proj-nav">
+  <a href="pigalle.html" class="proj-nav-item proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="Précédent" data-en="Previous">Précédent</span>
+        <span class="proj-nav-name">Pigalle</span>
+      </a>
+  <a href="st-paul.html" class="proj-nav-item proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant" data-en="Next">Suivant</span>
+        <span class="proj-nav-name">St Paul</span>
+      </a>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="reveal">
+    <p class="section-label" data-fr="Un projet ?" data-en="A project?">Un projet ?</p>
+    <h2 class="section-title" data-fr="Parlons." data-en="Let&#39;s talk.">Parlons.</h2>
+    <p class="section-text" data-fr="Chaque projet commence par une conversation. Partagez votre vision — je m&#39;occupe du reste." data-en="Every project begins with a conversation. Share your vision — I&#39;ll take care of the rest.">Chaque projet commence par une conversation. Partagez votre vision — je m&#39;occupe du reste.</p>
+    <a href="contact.html" class="btn" data-fr="Prendre contact" data-en="Get in touch">Prendre contact</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <img src="img/signature-jr.png" alt="John Rozenblum" class="footer-signature">
+    <p class="footer-tagline" data-fr="Design d&#39;intérieur · Paris" data-en="Interior Design · Paris">Design d&#39;intérieur · Paris</p>
+  </div>
+  <nav class="footer-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
+    <a href="bonnard.html">Bonnard Music</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </nav>
+  <div class="footer-copy">
+    <p>© 2026 John Rozenblum</p>
+    <p style="margin-top:8px"><a href="mailto:hello@johnrozenblum.com" style="color:var(--gray)">hello@johnrozenblum.com</a></p>
+  </div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
