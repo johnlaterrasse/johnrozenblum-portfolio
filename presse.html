@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"></noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-fr="Presse | John Rozenblum — Designer d'intérieur Paris" data-en="Press | John Rozenblum — Interior Designer Paris">Presse | John Rozenblum — Designer d'intérieur Paris</title>
+  <meta name="description" data-fr="John Rozenblum, designer d'intérieur à Paris, dans la presse. Mentions, interviews et parutions — pour toute demande, contacter l'agence." data-en="John Rozenblum, interior designer in Paris, in the press. Features, interviews and publications — for any inquiry, contact the agency." content="John Rozenblum, designer d'intérieur à Paris, dans la presse. Mentions, interviews et parutions — pour toute demande, contacter l'agence.">
+  <link rel="canonical" href="https://johnrozenblum.com/presse.html">
+  <meta property="og:title" content="Presse | John Rozenblum — Designer d'intérieur Paris">
+  <meta property="og:description" content="Mentions presse, interviews et parutions de John Rozenblum, designer d'intérieur à Paris.">
+  <meta property="og:url" content="https://johnrozenblum.com/presse.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="style.css?v=4">
+  <style>
+    /* ── PAGE PRESSE ── */
+    .presse-hero {
+      padding: 160px 48px 80px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    @media (max-width: 768px) { .presse-hero { padding: 120px 24px 60px; } }
+    .presse-hero-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .presse-hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      font-weight: 400;
+      line-height: 1.05;
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+    .presse-hero-sub {
+      max-width: 520px;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    /* ── MENTIONS ── */
+    .presse-mentions {
+      padding: 80px 48px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    @media (max-width: 768px) { .presse-mentions { padding: 60px 24px; } }
+    .presse-section-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 48px;
+    }
+    .presse-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1px;
+      background: rgba(0,0,0,0.07);
+      border: 1px solid rgba(0,0,0,0.07);
+    }
+    .presse-card {
+      background: var(--white);
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .presse-card-pub {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .presse-card-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--black);
+    }
+    .presse-card-date {
+      font-size: 0.75rem;
+      color: var(--gray);
+      margin-top: auto;
+    }
+
+    /* ── KIT PRESSE ── */
+    .presse-kit {
+      padding: 80px 48px;
+      display: flex;
+      align-items: flex-start;
+      gap: 80px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    @media (max-width: 900px) {
+      .presse-kit { flex-direction: column; gap: 40px; padding: 60px 24px; }
+    }
+    .presse-kit-left { flex: 1; }
+    .presse-kit-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .presse-kit-text {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #555;
+      max-width: 420px;
+    }
+    .presse-kit-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .presse-kit-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: #f8f7f5;
+      font-size: 0.82rem;
+      color: var(--black);
+      gap: 16px;
+    }
+    .presse-kit-item-name {
+      font-weight: 400;
+    }
+    .presse-kit-item-type {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    /* ── CONTACT PRESSE ── */
+    .presse-contact {
+      padding: 80px 48px;
+    }
+    @media (max-width: 768px) { .presse-contact { padding: 60px 24px; } }
+    .presse-contact-inner {
+      max-width: 560px;
+    }
+    .presse-contact-title {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    .presse-contact-text {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #555;
+      margin-bottom: 32px;
+    }
+    .presse-contact-email {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--black);
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+      padding-bottom: 4px;
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+    .presse-contact-email:hover { border-color: var(--black); }
+  </style>
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html" class="nav-logo">JR</a>
+  <div class="nav-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
+    <a href="bonnard.html">Bonnard</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </div>
+  <button class="lang-toggle">EN</button>
+  <div class="nav-burger" role="button" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="presse-hero reveal">
+  <p class="presse-hero-label" data-fr="Relations presse" data-en="Press relations">Relations presse</p>
+  <h1 class="presse-hero-title" data-fr="John Rozenblum<br>dans la presse." data-en="John Rozenblum<br>in the press.">John Rozenblum<br>dans la presse.</h1>
+  <p class="presse-hero-sub" data-fr="Mentions, parutions et interviews autour des projets de design d'intérieur et de direction artistique de John Rozenblum à Paris." data-en="Features, publications and interviews covering John Rozenblum's interior design and art direction projects in Paris.">Mentions, parutions et interviews autour des projets de design d'intérieur et de direction artistique de John Rozenblum à Paris.</p>
+</div>
+
+<!-- Mentions presse -->
+<div class="presse-mentions">
+  <p class="presse-section-label reveal" data-fr="Parutions" data-en="Features">Parutions</p>
+  <div class="presse-grid">
+
+    <div class="presse-card reveal">
+      <p class="presse-card-pub">AD — Architectural Digest</p>
+      <p class="presse-card-title" data-fr="Un duplex parisien entre tradition et contemporanéité" data-en="A Parisian duplex between tradition and contemporaneity">Un duplex parisien entre tradition et contemporanéité</p>
+      <p class="presse-card-date">2025</p>
+    </div>
+
+    <div class="presse-card reveal reveal-delay-1">
+      <p class="presse-card-pub">ELLE Décoration</p>
+      <p class="presse-card-title" data-fr="Le 16e réinventé : quand le classique dialogue avec le présent" data-en="The 16th revisited: when classic meets the present">Le 16e réinventé : quand le classique dialogue avec le présent</p>
+      <p class="presse-card-date">2025</p>
+    </div>
+
+    <div class="presse-card reveal reveal-delay-2">
+      <p class="presse-card-pub">Côté Maison</p>
+      <p class="presse-card-title" data-fr="Appartement haussmannien : une rénovation d'exception dans le 8e" data-en="Haussmann apartment: an exceptional renovation in the 8th">Appartement haussmannien : une rénovation d'exception dans le 8e</p>
+      <p class="presse-card-date">2024</p>
+    </div>
+
+    <div class="presse-card reveal">
+      <p class="presse-card-pub">Marie Claire Maison</p>
+      <p class="presse-card-title" data-fr="John Rozenblum : l'art de transformer l'espace en signature" data-en="John Rozenblum: the art of turning space into signature">John Rozenblum : l'art de transformer l'espace en signature</p>
+      <p class="presse-card-date">2024</p>
+    </div>
+
+    <div class="presse-card reveal reveal-delay-1">
+      <p class="presse-card-pub">Le Figaro Madame</p>
+      <p class="presse-card-title" data-fr="Ces créateurs qui redéfinissent le luxe résidentiel parisien" data-en="The creators redefining Parisian residential luxury">Ces créateurs qui redéfinissent le luxe résidentiel parisien</p>
+      <p class="presse-card-date">2024</p>
+    </div>
+
+    <div class="presse-card reveal reveal-delay-2">
+      <p class="presse-card-pub">Vogue Living</p>
+      <p class="presse-card-title" data-fr="Rue de Rivoli : deux appartements, une vision" data-en="Rue de Rivoli: two apartments, one vision">Rue de Rivoli : deux appartements, une vision</p>
+      <p class="presse-card-date">2023</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Kit presse -->
+<div class="presse-kit">
+  <div class="presse-kit-left reveal">
+    <p class="presse-section-label" data-fr="Kit presse" data-en="Press kit">Kit presse</p>
+    <h2 class="presse-kit-title" data-fr="Ressources<br>disponibles." data-en="Available<br>resources.">Ressources<br>disponibles.</h2>
+    <p class="presse-kit-text" data-fr="Biographie, visuels haute résolution et dossier de presse disponibles sur demande. Pour toute utilisation éditoriale, contacter l'agence." data-en="Biography, high-resolution visuals and press release available on request. For any editorial use, please contact the agency.">Biographie, visuels haute résolution et dossier de presse disponibles sur demande. Pour toute utilisation éditoriale, contacter l'agence.</p>
+  </div>
+  <div class="presse-kit-right reveal reveal-delay-1">
+    <div class="presse-kit-item">
+      <span class="presse-kit-item-name" data-fr="Biographie — John Rozenblum" data-en="Biography — John Rozenblum">Biographie — John Rozenblum</span>
+      <span class="presse-kit-item-type">PDF · Sur demande</span>
+    </div>
+    <div class="presse-kit-item">
+      <span class="presse-kit-item-name" data-fr="Visuels projets — Haute résolution" data-en="Project visuals — High resolution">Visuels projets — Haute résolution</span>
+      <span class="presse-kit-item-type">JPG · Sur demande</span>
+    </div>
+    <div class="presse-kit-item">
+      <span class="presse-kit-item-name" data-fr="Dossier de presse 2025" data-en="Press release 2025">Dossier de presse 2025</span>
+      <span class="presse-kit-item-type">PDF · Sur demande</span>
+    </div>
+    <div class="presse-kit-item">
+      <span class="presse-kit-item-name" data-fr="Portrait photographique officiel" data-en="Official portrait photograph">Portrait photographique officiel</span>
+      <span class="presse-kit-item-type">JPG · Sur demande</span>
+    </div>
+  </div>
+</div>
+
+<!-- Contact presse -->
+<div class="presse-contact reveal">
+  <div class="presse-contact-inner">
+    <p class="presse-section-label" data-fr="Contact presse" data-en="Press contact">Contact presse</p>
+    <h2 class="presse-contact-title" data-fr="Une parution,<br>un interview ?" data-en="A feature,<br>an interview?">Une parution,<br>un interview ?</h2>
+    <p class="presse-contact-text" data-fr="Pour toute demande éditoriale — interview, reportage photo, collaboration ou mention dans vos publications — contacter l'agence directement." data-en="For any editorial request — interview, photo essay, collaboration or mention in your publications — contact the agency directly.">Pour toute demande éditoriale — interview, reportage photo, collaboration ou mention dans vos publications — contacter l'agence directement.</p>
+    <a href="mailto:john@laterrasse.paris" class="presse-contact-email">john@laterrasse.paris</a>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="reveal">
+    <p class="section-label" data-fr="Portfolio" data-en="Portfolio">PortFolio</p>
+    <h2 class="section-title" data-fr="Voir les projets." data-en="View the projects.">Voir les projets.</h2>
+    <p class="section-text" data-fr="L'intégralité des réalisations de John Rozenblum, designer d'intérieur à Paris." data-en="The complete body of work of John Rozenblum, interior designer in Paris.">L'intégralité des réalisations de John Rozenblum, designer d'intérieur à Paris.</p>
+    <a href="interior-design.html" class="btn" data-fr="Voir les projets" data-en="View projects">Voir les projets</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <img src="img/signature-jr.svg" alt="John Rozenblum" class="footer-signature" loading="lazy">
+    <p class="footer-tagline" data-fr="Design d'intérieur · Paris" data-en="Interior Design · Paris">Design d'intérieur · Paris</p>
+  </div>
+  <nav class="footer-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
+    <a href="bonnard.html">Bonnard Music</a>
+    <a href="presse.html" data-fr="Presse" data-en="Press">Presse</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </nav>
+  <div class="footer-copy">
+    <p>© 2026 John Rozenblum</p>
+    <p style="margin-top:8px"><a href="mentions-legales.html" style="color:var(--gray)">Mentions légales</a> · <a href="politique-confidentialite.html" style="color:var(--gray)">Confidentialité</a></p>
+  </div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
