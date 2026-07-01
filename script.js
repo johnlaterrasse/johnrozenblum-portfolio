@@ -53,15 +53,20 @@ window.addEventListener('scroll', () => {
 const burger = document.querySelector('.nav-burger');
 const navLinks = document.querySelector('.nav-links');
 if (burger && navLinks) {
+  if (!burger.getAttribute('role')) burger.setAttribute('role', 'button');
+  if (!burger.getAttribute('aria-label')) burger.setAttribute('aria-label', 'Menu');
+  if (!burger.getAttribute('aria-expanded')) burger.setAttribute('aria-expanded', 'false');
   burger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
     burger.classList.toggle('open');
+    burger.setAttribute('aria-expanded', navLinks.classList.contains('open') ? 'true' : 'false');
   });
   // Close on link click
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       navLinks.classList.remove('open');
       burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
     });
   });
 }
@@ -110,7 +115,10 @@ function applyLang(lang) {
 document.addEventListener('DOMContentLoaded', () => {
   applyLang(currentLang);
   const toggle = document.querySelector('.lang-toggle');
-  if (toggle) toggle.addEventListener('click', () => applyLang(currentLang === 'fr' ? 'en' : 'fr'));
+  if (toggle) {
+    toggle.setAttribute('aria-label', 'Changer la langue / Switch language');
+    toggle.addEventListener('click', () => applyLang(currentLang === 'fr' ? 'en' : 'fr'));
+  }
 });
 
 /* ---- LIGHTBOX PROJETS ---- */
