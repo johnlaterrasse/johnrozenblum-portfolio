@@ -9,6 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — John Rozenblum Design Paris</title>
   <meta name="description" content="Contactez John Rozenblum pour votre projet de design d'intérieur à Paris. Rénovation, aménagement, direction artistique — partagez votre vision.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://johnrozenblum.com/contact.html">
+  <meta property="og:title" data-fr="Contact — John Rozenblum Design Paris" data-en="Contact — John Rozenblum Design Paris" content="Contact — John Rozenblum Design Paris">
+  <meta property="og:description" data-fr="Parlons de votre projet. Designer d'intérieur à Paris, John Rozenblum répond sous 48h." data-en="Let's talk about your project. Interior designer in Paris, John Rozenblum replies within 48h." content="Parlons de votre projet. Designer d'intérieur à Paris, John Rozenblum répond sous 48h.">
+  <meta property="og:image" content="https://johnrozenblum.com/img/id/marbeuf.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="canonical" href="https://johnrozenblum.com/contact.html">
   <link rel="stylesheet" href="style.css?v=4">
@@ -81,6 +87,14 @@
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required
                  autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="telephone" data-fr="Téléphone / WhatsApp (optionnel)" data-en="Phone / WhatsApp (optional)">Téléphone / WhatsApp (optionnel)</label>
+          <input type="tel" id="telephone" name="telephone"
+                 autocomplete="tel"
+                 data-fr-placeholder="+33 6 00 00 00 00"
+                 data-en-placeholder="+33 6 00 00 00 00"
+                 placeholder="+33 6 00 00 00 00">
         </div>
         <div class="form-group">
           <label for="type" data-fr="Type de projet" data-en="Project type">Type de projet</label>
@@ -162,7 +176,7 @@
       <img src="img/john-portrait.jpg"
            alt="John Rozenblum"
            style="width:100%; aspect-ratio:3/4; object-fit:cover; object-position:top;"
-           onerror="this.style.display='none'">
+           onerror="this.style.display='none'" loading="lazy">
     </div>
 
     <!-- Texte -->
@@ -213,22 +227,10 @@
 <!-- Footer -->
 <footer>
   <div>
-    <img src="img/signature-jr.png" alt="John Rozenblum" class="footer-signature">
+    <img src="img/signature-jr.svg" alt="John Rozenblum" class="footer-signature" loading="lazy">
     <p class="footer-tagline" data-fr="Design d'intérieur · Paris" data-en="Interior Design · Paris">Design d'intérieur · Paris</p>
   </div>
   <nav class="footer-links">
     <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
     <a href="meubles.html" data-fr="Meubles & Objets" data-en="Furniture & Objects">Meubles & Objets</a>
-    <a href="bonnard.html">Bonnard Music</a>
-    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
-  </nav>
-  <div class="footer-copy">
-    <p>© 2026 John Rozenblum</p>
-    <p style="margin-top:8px"><a href="mentions-legales.html" style="color:var(--gray)">Mentions légales</a> · <a href="politique-confidentialite.html" style="color:var(--gray)">Confidentialité</a></p>
-  </div>
-</footer>
-
-<script src="projects-data.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+    <a href="bonnard.html">Bonnard Music

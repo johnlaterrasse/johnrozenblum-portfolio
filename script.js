@@ -3,15 +3,27 @@
    Cursor · Scroll animations · Language · Nav
    ============================================ */
 
-/* ---- CURSEUR RÉTICULE ---- */
+/* ---- CURSEUR ANNEAU + POINT ---- */
 (function() {
-  const r = document.createElement('div');
-  r.className = 'cursor-reticle';
-  document.body.appendChild(r);
+  const ring = document.createElement('div');
+  const dot  = document.createElement('div');
+  ring.className = 'cursor-ring';
+  dot.className  = 'cursor-dot';
+  document.body.appendChild(ring);
+  document.body.appendChild(dot);
+  let rx = 0, ry = 0, mx = 0, my = 0;
   document.addEventListener('mousemove', e => {
-    r.style.left = e.clientX + 'px';
-    r.style.top  = e.clientY + 'px';
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
   });
+  (function lerp() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(lerp);
+  })();
 })();
 
 /* ---- HERO ANIMATION ---- */
@@ -87,6 +99,15 @@ function applyLang(lang) {
   const toggle = document.querySelector('.lang-toggle');
   if (toggle) toggle.textContent = lang === 'fr' ? 'EN' : 'FR';
   document.documentElement.lang = lang;
+  // Meta tags bilingues (title, description, og)
+  const titleEl = document.querySelector('title[data-fr]');
+  if (titleEl) document.title = lang === 'fr' ? titleEl.dataset.fr : titleEl.dataset.en;
+  const metaDesc = document.querySelector('meta[name="description"][data-fr]');
+  if (metaDesc) metaDesc.content = lang === 'fr' ? metaDesc.dataset.fr : metaDesc.dataset.en;
+  const ogTitle = document.querySelector('meta[property="og:title"][data-fr]');
+  if (ogTitle) ogTitle.content = lang === 'fr' ? ogTitle.dataset.fr : ogTitle.dataset.en;
+  const ogDesc = document.querySelector('meta[property="og:description"][data-fr]');
+  if (ogDesc) ogDesc.content = lang === 'fr' ? ogDesc.dataset.fr : ogDesc.dataset.en;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
