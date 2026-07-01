@@ -3,8 +3,7 @@
    Charte : blanc · noir · marine · or
    ============================================ */
 
-/* ---- Google Fonts ---- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+/* ---- Google Fonts — chargées via <link> dans le HTML (non-bloquant) ---- */
 
 /* ---- Reset ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1178,4 +1177,10 @@ footer {
   /* ---- CTA ---- */
   .cta-section { padding: 80px 24px; }
   .cta-email { font-size: 1.2rem; word-break: break-all; }
+}
+                                                                                              
+/* ---- Curseur custom : uniquement sur appareils avec souris ---- */
+@media not all and (pointer: fine) {
+  body, .univers-card, .project-card, .btn, input, textarea, button { cursor: auto; }
+  .cursor-dot, .cursor-ring { display: none; }
 }
