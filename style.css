@@ -261,6 +261,22 @@ nav.dark-page.scrolled .lang-toggle { color: var(--white); }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
 /* ============================================
+   SEO TEXT BLOCKS (pages projets)
+   ============================================ */
+.proj-seo-text {
+  max-width: 680px;
+  margin: 0 48px 52px;
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: var(--gray);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 28px;
+}
+@media (max-width: 768px) {
+  .proj-seo-text { margin: 0 24px 40px; }
+}
+
+/* ============================================
    SECTIONS COMMUNES
    ============================================ */
 section { padding: 120px 48px; }
@@ -1179,11 +1195,4 @@ footer {
 
   /* ---- CTA ---- */
   .cta-section { padding: 80px 24px; }
-  .cta-email { font-size: 1.2rem; word-break: break-all; }
-}
-                                                                                              
-/* ---- Curseur custom : uniquement sur appareils avec souris ---- */
-@media not all and (pointer: fine) {
-  body, .univers-card, .project-card, .btn, input, textarea, button { cursor: auto; }
-  .cursor-dot, .cursor-ring { display: none; }
-}
+  
