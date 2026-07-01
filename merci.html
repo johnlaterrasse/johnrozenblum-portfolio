@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"></noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message envoyé — John Rozenblum Design</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://johnrozenblum.com/merci.html">
+  <link rel="stylesheet" href="style.css?v=4">
+  <style>
+    .merci-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 24px;
+      background: var(--white);
+    }
+    .merci-icon {
+      width: 56px;
+      height: 56px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 36px;
+    }
+    .merci-icon::after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 8px;
+      border-left: 1.5px solid var(--gold);
+      border-bottom: 1.5px solid var(--gold);
+      transform: rotate(-45deg) translateY(-2px);
+    }
+    .merci-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .merci-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 400;
+      color: var(--black);
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .merci-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--gray);
+      max-width: 480px;
+      margin: 0 auto 48px;
+    }
+    .merci-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 48px;
+    }
+    .merci-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--black);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+    .merci-back:hover { opacity: 0.6; }
+    @media (max-width: 768px) {
+      .merci-page { padding: 100px 24px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">JR</a>
+  <div class="nav-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
+    <a href="bonnard.html">Bonnard</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </div>
+  <button class="lang-toggle">EN</button>
+  <div class="nav-burger" role="button" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="merci-page">
+  <div class="merci-icon"></div>
+  <p class="merci-label" data-fr="Message reçu" data-en="Message received">Message reçu</p>
+  <h1 class="merci-title" data-fr="Merci pour<br>votre message." data-en="Thank you<br>for your message.">Merci pour<br>votre message.</h1>
+  <div class="merci-divider"></div>
+  <p class="merci-text" data-fr="Je vous répondrai dans les 48 heures. En attendant, n'hésitez pas à explorer mes projets." data-en="I will reply within 48 hours. In the meantime, feel free to explore my projects.">Je vous répondrai dans les 48 heures. En attendant, n'hésitez pas à explorer mes projets.</p>
+  <a href="interior-design.html" class="merci-back" data-fr="Voir les projets" data-en="View projects">Voir les projets</a>
+</div>
+
+<script src="projects-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

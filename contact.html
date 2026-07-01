@@ -77,7 +77,11 @@
   <div class="contact-right">
     <div class="reveal">
       <p class="section-label" data-fr="Votre projet" data-en="Your project">Votre projet</p>
-      <form class="contact-form" name="contact">
+      <form class="contact-form" action="https://formsubmit.co/john@laterrasse.paris" method="POST">
+        <input type="hidden" name="_next" value="https://johnrozenblum.com/merci.html">
+        <input type="hidden" name="_subject" value="Nouveau message — johnrozenblum.com">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
         <div class="form-group">
           <label for="nom" data-fr="Nom complet" data-en="Full name">Nom complet</label>
           <input type="text" id="nom" name="nom" required
