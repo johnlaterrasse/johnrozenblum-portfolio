@@ -1195,4 +1195,11 @@ footer {
 
   /* ---- CTA ---- */
   .cta-section { padding: 80px 24px; }
-  
+  .cta-email { font-size: 1.2rem; word-break: break-all; }
+}
+                                                                                              
+/* ---- Curseur custom : uniquement sur appareils avec souris ---- */
+@media not all and (pointer: fine) {
+  body, .univers-card, .project-card, .btn, input, textarea, button { cursor: auto; }
+  .cursor-dot, .cursor-ring { display: none; }
+}

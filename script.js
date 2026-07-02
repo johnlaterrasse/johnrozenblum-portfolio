@@ -53,6 +53,7 @@ window.addEventListener('scroll', () => {
 const burger = document.querySelector('.nav-burger');
 const navLinks = document.querySelector('.nav-links');
 if (burger && navLinks) {
+  // Accessibilité : attributs manquants sur certaines pages
   if (!burger.getAttribute('role')) burger.setAttribute('role', 'button');
   if (!burger.getAttribute('aria-label')) burger.setAttribute('aria-label', 'Menu');
   if (!burger.getAttribute('aria-expanded')) burger.setAttribute('aria-expanded', 'false');
@@ -116,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applyLang(currentLang);
   const toggle = document.querySelector('.lang-toggle');
   if (toggle) {
+    // Accessibilité : aria-label sur le bouton langue
     toggle.setAttribute('aria-label', 'Changer la langue / Switch language');
     toggle.addEventListener('click', () => applyLang(currentLang === 'fr' ? 'en' : 'fr'));
   }
