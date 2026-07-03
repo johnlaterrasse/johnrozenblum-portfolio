@@ -32,6 +32,18 @@
     <priority>0.8</priority>
     <changefreq>yearly</changefreq>
   </url>
+  <url>
+    <loc>https://johnrozenblum.com/a-propos.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://johnrozenblum.com/faq-designer-interieur-paris.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 
   <!-- Pages projets Interior Design -->
   <url>
