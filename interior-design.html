@@ -76,7 +76,6 @@
     <a href="bonnard.html">Bonnard</a>
     <a href="a-propos.html" data-fr="À propos" data-en="About">À propos</a>
     <a href="presse.html" data-fr="Presse" data-en="Press">Presse</a>
-    <a href="a-propos.html" data-fr="À propos" data-en="About">À propos</a>
     <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
   </div>
   <button class="lang-toggle">EN</button>
@@ -88,7 +87,7 @@
   <div class="page-hero-bg" style="background-image: url('img/id/duplex-madeleine.jpg')"></div>
   <div class="page-hero-content">
     <h1 class="page-hero-title" data-fr="Interior<br>Design" data-en="Interior<br>Design">Interior<br>Design</h1>
-    <p class="page-hero-sub" data-fr="25 projets · Paris & France" data-en="19 projects · Paris & France">25 projets · Paris & France</p>
+    <p class="page-hero-sub" data-fr="25 projets · Paris & France" data-en="25 projects · Paris & France">25 projets · Paris & France</p>
   </div>
 </div>
 
@@ -440,5 +439,24 @@
 
 <script src="projects-data.js"></script>
 <script src="script.js"></script>
+<script>
+// ── Filtre des projets par catégorie ──
+(function () {
+  var btns = document.querySelectorAll('.pf-btn');
+  var cards = document.querySelectorAll('.project-card[data-category]');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      cards.forEach(function (card) {
+        var show = (f === 'all') || (card.getAttribute('data-category') === f);
+        card.style.display = show ? '' : 'none';
+        if (show) card.classList.add('visible');
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
