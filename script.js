@@ -114,6 +114,8 @@ function applyLang(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Pages statiques EN (/en/) : contenu figé, le toggle est un simple lien — ne rien faire
+  if (document.documentElement.dataset.staticLang) return;
   applyLang(currentLang);
   const toggle = document.querySelector('.lang-toggle');
   if (toggle) {
