@@ -51,6 +51,13 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://johnrozenblum.com/consultation.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
   <!-- Pages anglaises -->
   <url>
     <loc>https://johnrozenblum.com/en/</loc>
