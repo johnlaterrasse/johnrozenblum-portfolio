@@ -44,12 +44,6 @@
     <priority>0.8</priority>
     <changefreq>yearly</changefreq>
   </url>
-  <url>
-    <loc>https://johnrozenblum.com/presse.html</loc>
-    <lastmod>2026-07-08</lastmod>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
 
   <url>
     <loc>https://johnrozenblum.com/consultation.html</loc>
