@@ -518,14 +518,14 @@ footer {
   margin-bottom: 12px;
 }
 .footer-signature {
-  height: 38px;
+  height: 76px;
   width: auto;
   opacity: 0.80;
   display: block;
   margin-bottom: 10px;
 }
 .hero-signature {
-  height: 44px;
+  height: 88px;
   width: auto;
   opacity: 0.60;
   display: block;
@@ -1197,7 +1197,7 @@ footer {
   .cta-section { padding: 80px 24px; }
   .cta-email { font-size: 1.2rem; word-break: break-all; }
 }
-                                                                                              
+
 /* ---- Curseur custom : uniquement sur appareils avec souris ---- */
 @media not all and (pointer: fine) {
   body, .univers-card, .project-card, .btn, input, textarea, button { cursor: auto; }
