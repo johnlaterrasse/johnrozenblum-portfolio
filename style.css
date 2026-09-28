@@ -1203,3 +1203,15 @@ footer {
   body, .univers-card, .project-card, .btn, input, textarea, button { cursor: auto; }
   .cursor-dot, .cursor-ring { display: none; }
 }
+
+/* Texte long des pages projets (ajoute le 28/09/2026) */
+.proj-seo-text h3 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin: 32px 0 10px;
+  letter-spacing: 0.01em;
+}
+.proj-seo-text p { margin: 0 0 14px; }
+.proj-seo-text p:last-child { margin-top: 26px; font-style: italic; }
