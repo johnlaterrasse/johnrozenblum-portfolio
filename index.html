@@ -22,46 +22,161 @@
   <link rel="alternate" hreflang="x-default" href="https://johnrozenblum.com/">
   <link rel="stylesheet" href="style.css?v=4">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "name": "JR Design — John Rozenblum",
-        "description": "Designer d'intérieur et directeur artistique à Paris. Rénovation et aménagement sur mesure pour appartements et résidences d'exception. Interventions à Paris et à l'international.",
-        "url": "https://johnrozenblum.com",
-        "telephone": "+33768889265",
-        "email": "hello@johnrozenblum.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Paris",
-          "addressCountry": "FR"
-        },
-        "areaServed": ["Paris", "Île-de-France"],
-        "priceRange": "€€€€",
-        "sameAs": [
-          "https://www.instagram.com/johnrozenblum"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "ProfessionalService",
+        "LocalBusiness"
+      ],
+      "@id": "https://johnrozenblum.com/#agence",
+      "name": "JR Design — John Rozenblum",
+      "alternateName": "John Rozenblum Design",
+      "description": "Designer d'intérieur et directeur artistique à Paris. Rénovation et aménagement sur mesure pour appartements et résidences d'exception. Interventions à Paris et à l'international.",
+      "url": "https://johnrozenblum.com",
+      "telephone": "+33768889265",
+      "email": "hello@johnrozenblum.com",
+      "image": "https://johnrozenblum.com/img/id/duplex-madeleine.jpg",
+      "logo": "https://johnrozenblum.com/img/signature-jr.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
       },
-      {
-        "@type": "Person",
-        "name": "John Rozenblum",
-        "jobTitle": "Designer d'intérieur & Directeur artistique",
-        "url": "https://johnrozenblum.com",
-        "email": "hello@johnrozenblum.com",
-        "telephone": "+33768889265",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Paris",
-          "addressCountry": "FR"
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Paris"
         },
-        "description": "Designer d'intérieur et directeur artistique. Basé à Paris, John Rozenblum intervient sur des projets résidentiels d'exception à Paris et à l'international.",
-        "sameAs": [
-          "https://www.instagram.com/johnrozenblum"
+        {
+          "@type": "AdministrativeArea",
+          "name": "Île-de-France"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "knowsLanguage": [
+        "fr",
+        "en",
+        "es"
+      ],
+      "priceRange": "€€€€",
+      "currenciesAccepted": "EUR",
+      "founder": {
+        "@id": "https://johnrozenblum.com/#john"
+      },
+      "sameAs": [
+        "https://www.instagram.com/johnrozenblum"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Prestations de design d'intérieur",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rénovation complète d'appartement",
+              "serviceType": "Architecture d'intérieur",
+              "provider": {
+                "@id": "https://johnrozenblum.com/#agence"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Décoration et aménagement sur mesure",
+              "serviceType": "Décoration d'intérieur",
+              "provider": {
+                "@id": "https://johnrozenblum.com/#agence"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conception de mobilier sur mesure",
+              "serviceType": "Design de mobilier",
+              "provider": {
+                "@id": "https://johnrozenblum.com/#agence"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aménagement d'espaces professionnels et commerciaux",
+              "serviceType": "Design d'espaces tertiaires",
+              "provider": {
+                "@id": "https://johnrozenblum.com/#agence"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Consultation vidéo — 45 minutes",
+            "price": "150",
+            "priceCurrency": "EUR",
+            "url": "https://johnrozenblum.com/consultation.html",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consultation vidéo en design d'intérieur",
+              "serviceType": "Consultation en design d'intérieur",
+              "provider": {
+                "@id": "https://johnrozenblum.com/#agence"
+              }
+            }
+          }
         ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://johnrozenblum.com/#john",
+      "name": "John Rozenblum",
+      "jobTitle": "Designer d'intérieur & Directeur artistique",
+      "url": "https://johnrozenblum.com/a-propos.html",
+      "email": "hello@johnrozenblum.com",
+      "telephone": "+33768889265",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "description": "Designer d'intérieur et directeur artistique. Basé à Paris, John Rozenblum intervient sur des projets résidentiels d'exception à Paris et à l'international.",
+      "knowsAbout": [
+        "Design d'intérieur",
+        "Architecture d'intérieur",
+        "Décoration",
+        "Rénovation d'appartement",
+        "Mobilier sur mesure"
+      ],
+      "worksFor": {
+        "@id": "https://johnrozenblum.com/#agence"
+      },
+      "sameAs": [
+        "https://www.instagram.com/johnrozenblum"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://johnrozenblum.com/#site",
+      "url": "https://johnrozenblum.com",
+      "name": "JR Design — John Rozenblum",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://johnrozenblum.com/#agence"
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
