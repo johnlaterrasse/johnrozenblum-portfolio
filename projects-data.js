@@ -48,7 +48,7 @@ const PROJECTS = {
   "berri": {
     name: "Berri",
     loc: "Paris 8e",
-    type: "Rénovation & aménagement",
+    type: "Résidence secondaire · rénovation",
     surface: "—",
     style: "Contemporain chaleureux · pierre & laiton",
     fr: "Rue de Berri, à deux pas des Champs-Élysées : un appartement sur deux niveaux, redessiné pour la lumière. Pièces d'eau gainées de grands formats veinés, cuisine taupe, bibliothèque sculptée en laiton. Une palette courte, tenue d'une pièce à l'autre.",
@@ -80,8 +80,8 @@ const PROJECTS = {
     style: "Contemporain raffiné",
     fr: "Un appartement qui portait en lui sa propre solution. Marbre gris, chêne clair, laiton brossé — la matière révélée plutôt qu'ajoutée.",
     en: "An apartment that carried its own solution within it. Grey marble, light oak, brushed brass — material revealed rather than added.",
-    cover: "img/id/arcade.jpg",
-    images: ["img/id/arcade.jpg", "img/id/arcade-2.jpg", "img/id/arcade-3.jpg", "img/id/arcade-4.jpg", "img/id/arcade-5.jpg", "img/id/arcade-6.jpg"]
+    cover: "img/id/arcade-7.jpg",
+    images: ["img/id/arcade.jpg", "img/id/arcade-2.jpg", "img/id/arcade-3.jpg", "img/id/arcade-4.jpg", "img/id/arcade-5.jpg", "img/id/arcade-6.jpg","img/id/arcade-7.jpg","img/id/arcade-8.jpg","img/id/arcade-9.jpg","img/id/arcade-10.jpg","img/id/arcade-11.jpg","img/id/arcade-12.jpg","img/id/arcade-13.jpg","img/id/arcade-14.jpg","img/id/arcade-15.jpg","img/id/arcade-16.jpg","img/id/arcade-17.jpg","img/id/arcade-18.jpg","img/id/arcade-19.jpg","img/id/arcade-20.jpg","img/id/arcade-21.jpg","img/id/arcade-22.jpg"]
   },
 
   "sous-les-toits": {
@@ -194,14 +194,14 @@ const PROJECTS = {
 
   "deux-pieces": {
     name: "Deux Pièces Chic",
-    loc: "Paris",
+    loc: "Paris 8e",
     type: "Optimisation d'espace",
     surface: "45 m²",
     style: "Minimaliste chic",
     fr: "Quarante-cinq mètres carrés. Assez pour tout ce qui compte. Un espace repensé jusqu'au moindre centimètre — et qui donne l'impression de ne manquer de rien.",
     en: "Forty-five square metres. Enough for everything that matters. A space rethought to the last centimetre — and one that feels like nothing is missing.",
     cover: "img/id/deux-pieces.jpg",
-    images: ["img/id/deux-pieces.jpg", "img/id/deux-pieces-2.jpg", "img/id/deux-pieces-3.jpg", "img/id/deux-pieces-4.jpg", "img/id/deux-pieces-5.jpg", "img/id/deux-pieces-6.jpg"]
+    images: ["img/id/deux-pieces.jpg", "img/id/deux-pieces-2.jpg", "img/id/deux-pieces-3.jpg", "img/id/deux-pieces-4.jpg", "img/id/deux-pieces-5.jpg", "img/id/deux-pieces-6.jpg","img/id/deux-pieces-7.jpg","img/id/deux-pieces-8.jpg","img/id/deux-pieces-9.jpg","img/id/deux-pieces-10.jpg","img/id/deux-pieces-11.jpg","img/id/deux-pieces-12.jpg","img/id/deux-pieces-13.jpg"]
   },
 
   "cannes": {
