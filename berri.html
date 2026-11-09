@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"></noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berri, Paris 8e — John Rozenblum Design Paris</title>
+  <meta name="description" content="Rue de Berri, Paris 8e : un appartement sur deux niveaux redessiné pour la lumière — John Rozenblum, designer d'intérieur Paris.">
+  <link rel="canonical" href="https://johnrozenblum.com/berri.html">
+  <meta property="og:title" content="Berri — John Rozenblum Design">
+  <meta property="og:description" content="Rue de Berri, à deux pas des Champs-Élysées : un appartement sur deux niveaux, redessiné pour la lumière. Pièces d'eau gainées de grands formats veinés, cuisine taupe, bibliothèque sculptée en laiton. Une palette courte, tenue d'une pièce à l'autre.">
+  <meta property="og:image" content="https://johnrozenblum.com/img/id/berri-1.jpg">
+  <meta property="og:url" content="https://johnrozenblum.com/berri.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="style.css?v=5">
+  <style>
+    /* ── PAGE PROJET ───────────────────────────────────────── */
+    .proj-hero {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 64px 48px;
+    }
+    @media (max-width: 768px) {
+      .proj-hero { height: 70vh; padding: 40px 24px; }
+    }
+    .proj-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    .proj-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 55%, transparent 100%);
+    }
+    .proj-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .proj-hero-loc {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .proj-hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.05;
+    }
+
+    /* ── BACK LINK ─────────────────────────────────────────── */
+    .proj-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      padding: 32px 48px 0;
+      transition: color 0.2s;
+    }
+    .proj-back:hover { color: var(--black); }
+    .proj-back::before { content: '←'; font-size: 0.9rem; }
+    @media (max-width: 768px) { .proj-back { padding: 24px 24px 0; } }
+
+    /* ── META ROW ──────────────────────────────────────────── */
+    .proj-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      margin: 40px 48px 0;
+    }
+    @media (max-width: 768px) { .proj-meta { margin: 32px 24px 0; } }
+    .proj-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 20px 32px;
+      border-right: 1px solid rgba(0,0,0,0.08);
+      flex: 1;
+      min-width: 140px;
+    }
+    .proj-meta-item:last-child { border-right: none; }
+    @media (max-width: 600px) {
+      .proj-meta-item { padding: 16px 20px; min-width: 120px; }
+    }
+    .proj-meta-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .proj-meta-value {
+      font-size: 0.88rem;
+      color: var(--black);
+      font-weight: 400;
+    }
+
+    /* ── DESCRIPTION ───────────────────────────────────────── */
+    .proj-desc {
+      max-width: 680px;
+      margin: 52px 48px;
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      line-height: 1.75;
+      color: #2a2a2a;
+    }
+    @media (max-width: 768px) { .proj-desc { margin: 36px 24px; } }
+
+    /* ── GALLERY ───────────────────────────────────────────── */
+    .proj-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      margin: 0;
+    }
+    .proj-gallery img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s;
+    }
+    .proj-gallery img:hover { opacity: 0.92; }
+    /* First image full-width */
+    .proj-gallery img:first-child {
+      grid-column: 1 / -1;
+      aspect-ratio: 16/9;
+    }
+    @media (max-width: 600px) {
+      .proj-gallery { grid-template-columns: 1fr; gap: 2px; }
+      .proj-gallery img:first-child { aspect-ratio: 4/3; }
+    }
+
+    /* ── PREV / NEXT ───────────────────────────────────────── */
+    .proj-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 64px 48px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin-top: 80px;
+      gap: 24px;
+    }
+    @media (max-width: 768px) { .proj-nav { padding: 40px 24px; flex-direction: column; align-items: flex-start; gap: 24px; } }
+    .proj-nav-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      color: var(--black);
+      transition: opacity 0.2s;
+    }
+    .proj-nav-item:hover { opacity: 0.5; }
+    .proj-nav-next { text-align: right; margin-left: auto; }
+    @media (max-width: 768px) { .proj-nav-next { text-align: left; margin-left: 0; } }
+    .proj-nav-dir {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .proj-nav-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+    }
+    .proj-nav-prev .proj-nav-name::before { content: '← '; }
+    .proj-nav-next .proj-nav-name::after  { content: ' →'; }
+  </style>
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html" class="nav-logo">JR</a>
+  <div class="nav-links">
+    <a href="interior-design.html" class="active" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
+    <a href="bonnard.html">Bonnard</a>
+    <a href="a-propos.html" data-fr="À propos" data-en="About">À propos</a>
+    <a href="consultation.html" data-fr="Consultation" data-en="Consultation">Consultation</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </div>
+  <button class="lang-toggle">EN</button>
+  <div class="nav-burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Hero -->
+<div class="proj-hero">
+  <div class="proj-hero-bg" style="background-image: url('img/id/berri-1.jpg')"></div>
+  <div class="proj-hero-content">
+    <p class="proj-hero-loc">Paris 8e</p>
+    <h1 class="proj-hero-title">Berri</h1>
+  </div>
+</div>
+
+<!-- Retour -->
+<a href="interior-design.html" class="proj-back" data-fr="Tous les projets" data-en="All projects">Tous les projets</a>
+
+<!-- Meta -->
+<div class="proj-meta">
+  <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Lieu" data-en="Location">Lieu</span><span class="proj-meta-value">Paris 8e</span></div>
+    <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Type" data-en="Type">Type</span><span class="proj-meta-value">Rénovation &amp; aménagement</span></div>
+    <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Style" data-en="Style">Style</span><span class="proj-meta-value">Contemporain chaleureux · pierre &amp; laiton</span></div>
+</div>
+
+<!-- Description -->
+<p class="proj-desc" data-fr="Rue de Berri, à deux pas des Champs-Élysées : un appartement sur deux niveaux, redessiné pour la lumière. Pièces d'eau gainées de grands formats veinés, cuisine taupe, bibliothèque sculptée en laiton. Une palette courte, tenue d'une pièce à l'autre." data-en="Rue de Berri, a few steps from the Champs-Élysées: a two-level apartment redrawn for the light. Bathrooms clad in large veined panels, a taupe kitchen, a sculpted brass bookcase. A short palette, held from one room to the next.">Rue de Berri, à deux pas des Champs-Élysées : un appartement sur deux niveaux, redessiné pour la lumière. Pièces d'eau gainées de grands formats veinés, cuisine taupe, bibliothèque sculptée en laiton. Une palette courte, tenue d'une pièce à l'autre.</p>
+
+<!-- Galerie -->
+<div class="proj-gallery">
+    <img src="img/id/berri-1.jpg" alt="Séjour lumineux, canapés taupe, bibliothèque sculptée en laiton et suspension en anneau - rue de Berri, Paris 8e" loading="eager">
+    <img src="img/id/berri-2.jpg" alt="Séjour ouvert vers l&#x27;escalier en chêne, meuble TV en bois et parquet en bâtons rompus" loading="lazy">
+    <img src="img/id/berri-3.jpg" alt="Salle à manger et comptoir de bar en pierre, suspensions cylindriques en laiton" loading="lazy">
+    <img src="img/id/berri-4.jpg" alt="Table de repas, chaises en velours prune et lustre ovale en métal ciselé" loading="lazy">
+    <img src="img/id/berri-5.jpg" alt="Salle à manger en enfilade vers le salon, voilages et hautes fenêtres" loading="lazy">
+    <img src="img/id/berri-6.jpg" alt="Cuisine taupe en U, plan de travail en pierre et réfrigérateur américain intégré" loading="lazy">
+    <img src="img/id/berri-7.jpg" alt="Chambre, tête de lit capitonnée à motif géométrique et placard à portes miroir" loading="lazy">
+    <img src="img/id/berri-8.jpg" alt="Chambre ouverte sur les fenêtres, suspension en anneau et tables de chevet en laiton" loading="lazy">
+    <img src="img/id/berri-9.jpg" alt="Salle de bains gainée de grands formats veinés, double vasque et paroi vitrée" loading="lazy">
+    <img src="img/id/berri-10.jpg" alt="Salle de bains, plan double vasque veiné et douche à l&#x27;italienne" loading="lazy">
+    <img src="img/id/berri-11.jpg" alt="Salle d&#x27;eau, douche vitrée à profils noirs et vasque posée sur meuble arrondi" loading="lazy">
+    <img src="img/id/berri-12.jpg" alt="Détail de la douche, mitigeur doré et parois veinées grand format" loading="lazy">
+    <img src="img/id/berri-13.jpg" alt="Escalier en chêne vers l&#x27;étage, limon blanc découpé et parquet en bâtons rompus" loading="lazy">
+</div>
+
+<!-- Prev / Next -->
+<div class="proj-nav">
+  <a href="marbeuf.html" class="proj-nav-item proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="Précédent" data-en="Previous">Précédent</span>
+        <span class="proj-nav-name">Marbeuf</span>
+      </a>
+  <a href="triplex-spa.html" class="proj-nav-item proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant" data-en="Next">Suivant</span>
+        <span class="proj-nav-name">Triplex avec Spa</span>
+      </a>
+</div>
+
+<div class="proj-seo-text">
+<h3 data-fr="Rue de Berri, entre les Champs-Élysées et le faubourg Saint-Honoré" data-en="Rue de Berri, between the Champs-Élysées and the Faubourg Saint-Honoré">Rue de Berri, entre les Champs-Élysées et le faubourg Saint-Honoré</h3>
+<p data-fr="La rue de Berri relie l'avenue des Champs-Élysées au faubourg Saint-Honoré, dans le 8e arrondissement. L'appartement s'y développe sur deux niveaux, reliés par un escalier en chêne au limon blanc découpé, traité comme une sculpture plutôt que comme un simple passage. Les hautes fenêtres et les voilages filtrants donnent le ton : tout le projet est pensé pour garder la lumière et la faire circuler d'une pièce à l'autre." data-en="Rue de Berri links the Champs-Élysées to the Faubourg Saint-Honoré, in the 8th arrondissement. The apartment unfolds over two levels, joined by an oak staircase with a cut-out white stringer, treated as a sculpture rather than a mere passage. The tall windows and filtering sheers set the tone: the whole project is designed to keep the light and let it move from room to room.">La rue de Berri relie l'avenue des Champs-Élysées au faubourg Saint-Honoré, dans le 8e arrondissement. L'appartement s'y développe sur deux niveaux, reliés par un escalier en chêne au limon blanc découpé, traité comme une sculpture plutôt que comme un simple passage. Les hautes fenêtres et les voilages filtrants donnent le ton : tout le projet est pensé pour garder la lumière et la faire circuler d'une pièce à l'autre.</p>
+<h3 data-fr="Une bibliothèque sculptée plutôt qu'un mur" data-en="A sculpted bookcase rather than a wall">Une bibliothèque sculptée plutôt qu'un mur</h3>
+<p data-fr="Dans le séjour, la bibliothèque est composée de blocs en relief, crème et laiton, qui jouent avec la lumière du jour selon l'heure. Elle structure le salon sans le fermer, et répond aux grandes suspensions en anneau qui tiennent la hauteur sous plafond. Les canapés taupe, le tapis aux reflets dorés et le parquet en bâtons rompus composent une palette courte et chaude, tenue d'un bout à l'autre de l'appartement." data-en="In the living room, the bookcase is made of relief blocks in cream and brass that play with the daylight through the hours. It structures the room without closing it, and answers the large ring pendants that hold the ceiling height. Taupe sofas, a rug with golden glints and herringbone parquet make up a short, warm palette, held from one end of the apartment to the other.">Dans le séjour, la bibliothèque est composée de blocs en relief, crème et laiton, qui jouent avec la lumière du jour selon l'heure. Elle structure le salon sans le fermer, et répond aux grandes suspensions en anneau qui tiennent la hauteur sous plafond. Les canapés taupe, le tapis aux reflets dorés et le parquet en bâtons rompus composent une palette courte et chaude, tenue d'un bout à l'autre de l'appartement.</p>
+<h3 data-fr="Recevoir autour d'une table et d'un comptoir" data-en="Entertaining around a table and a counter">Recevoir autour d'une table et d'un comptoir</h3>
+<p data-fr="La salle à manger s'organise autour d'une longue table entourée de chaises en velours prune, sous un lustre ovale en métal ciselé. Elle se prolonge par un comptoir de bar en pierre éclairé par des suspensions cylindriques en laiton. La cuisine taupe en U, au plan de travail de pierre, intègre l'électroménager dans la menuiserie pour que rien ne vienne rompre la continuité des façades." data-en="The dining room is organised around a long table surrounded by plum velvet chairs, beneath an oval chiselled-metal chandelier. It extends into a stone bar counter lit by cylindrical brass pendants. The taupe U-shaped kitchen, with its stone worktop, builds the appliances into the joinery so that nothing breaks the continuity of the fronts.">La salle à manger s'organise autour d'une longue table entourée de chaises en velours prune, sous un lustre ovale en métal ciselé. Elle se prolonge par un comptoir de bar en pierre éclairé par des suspensions cylindriques en laiton. La cuisine taupe en U, au plan de travail de pierre, intègre l'électroménager dans la menuiserie pour que rien ne vienne rompre la continuité des façades.</p>
+<h3 data-fr="Des pièces d'eau gainées de grands formats" data-en="Bathrooms clad in large-format panels">Des pièces d'eau gainées de grands formats</h3>
+<p data-fr="Les salles de bains sont entièrement habillées de grands formats veinés de gris, du sol au plafond, pour réduire les joints au strict minimum. Doubles vasques, douches à l'italienne vitrées, robinetterie dorée ou noire selon la pièce : chaque salle d'eau a son caractère, mais toutes parlent la même langue que le reste de l'appartement." data-en="The bathrooms are entirely clad in large grey-veined panels, floor to ceiling, to keep joints to a strict minimum. Double basins, glazed walk-in showers, gold or black fittings depending on the room: each bathroom has its own character, yet all speak the same language as the rest of the apartment.">Les salles de bains sont entièrement habillées de grands formats veinés de gris, du sol au plafond, pour réduire les joints au strict minimum. Doubles vasques, douches à l'italienne vitrées, robinetterie dorée ou noire selon la pièce : chaque salle d'eau a son caractère, mais toutes parlent la même langue que le reste de l'appartement.</p>
+<h3 data-fr="Dans le même quartier" data-en="In the same district">Dans le même quartier</h3>
+<p data-fr="Berri rejoint les rénovations conduites par John Rozenblum dans le 8e arrondissement de Paris, aux côtés de <a href=&quot;marbeuf.html&quot;>Marbeuf</a>, de <a href=&quot;champs-elysees.html&quot;>Champs Élysées</a> et de la <a href=&quot;daru.html&quot;>rue Daru</a>." data-en="Berri joins the renovations carried out by John Rozenblum in the 8th arrondissement of Paris, alongside <a href=&quot;marbeuf.html&quot;>Marbeuf</a>, <a href=&quot;champs-elysees.html&quot;>Champs Élysées</a> and <a href=&quot;daru.html&quot;>rue Daru</a>.">Berri rejoint les rénovations conduites par John Rozenblum dans le 8e arrondissement de Paris, aux côtés de <a href="marbeuf.html">Marbeuf</a>, de <a href="champs-elysees.html">Champs Élysées</a> et de la <a href="daru.html">rue Daru</a>.</p>
+<p data-fr="Ce projet fait partie des <a href=&quot;interior-design.html&quot;>réalisations de design d'intérieur à Paris</a> de John Rozenblum. Pour discuter d'un projet similaire ou d'une rénovation sur mesure, <a href=&quot;contact.html&quot;>prenez contact</a>." data-en="This project is part of John Rozenblum's <a href=&quot;interior-design.html&quot;>interior design portfolio in Paris</a>. To discuss a similar project or bespoke renovation, <a href=&quot;contact.html&quot;>get in touch</a>.">Ce projet fait partie des <a href="interior-design.html">réalisations de design d'intérieur à Paris</a> de John Rozenblum. Pour discuter d'un projet similaire ou d'une rénovation sur mesure, <a href="contact.html">prenez contact</a>.</p>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="reveal">
+    <p class="section-label" data-fr="Un projet ?" data-en="A project?">Un projet ?</p>
+    <h2 class="section-title" data-fr="Parlons." data-en="Let&#39;s talk.">Parlons.</h2>
+    <p class="section-text" data-fr="Chaque projet commence par une conversation. Partagez votre vision — je m&#39;occupe du reste." data-en="Every project begins with a conversation. Share your vision — I&#39;ll take care of the rest.">Chaque projet commence par une conversation. Partagez votre vision — je m&#39;occupe du reste.</p>
+    <a href="contact.html" class="btn" data-fr="Prendre contact" data-en="Get in touch">Prendre contact</a>
+    <p style="margin-top:28px"><a href="consultation.html" data-fr="Ou réservez une consultation vidéo — 45 min avec John" data-en="Or book a video consultation — 45 min with John" style="color:var(--gold); font-size:0.9rem; letter-spacing:0.06em; border-bottom:1px solid var(--gold); padding-bottom:3px;">Ou réservez une consultation vidéo — 45 min avec John</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <img src="img/signature-jr.svg" alt="John Rozenblum" class="footer-signature" loading="lazy">
+    <p class="footer-tagline" data-fr="Design d&#39;intérieur · Paris" data-en="Interior Design · Paris">Design d&#39;intérieur · Paris</p>
+  </div>
+  <nav class="footer-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
+    <a href="bonnard.html">Bonnard Music</a>
+    <a href="consultation.html" data-fr="Consultation" data-en="Consultation">Consultation</a>
+    <a href="missions.html" data-fr="Missions" data-en="Services">Missions</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </nav>
+  <div class="footer-copy">
+    <p>© 2026 John Rozenblum</p>
+    <p style="margin-top:8px"><a href="mentions-legales.html" style="color:var(--gray)">Mentions légales</a> · <a href="politique-confidentialite.html" style="color:var(--gray)">Confidentialité</a></p>
+  </div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -38,9 +38,25 @@ const PROJECTS = {
     style: "Haussmannien contemporain",
     fr: "Les moulures d'époque, le luminaire conçu pour cet espace seul, chaque meuble pensé pour ce mur précis. Marbeuf est un intérieur où rien n'aurait pu être différent.",
     en: "Period mouldings, lighting conceived for this space alone, each piece of furniture thought for this precise wall. Marbeuf is an interior where nothing could have been otherwise.",
-    cover: "img/id/marbeuf.jpg",
-    images: ["img/id/marbeuf.jpg", "img/id/marbeuf-2.jpg", "img/id/marbeuf-4.jpg", "img/id/marbeuf-6.jpg", "img/id/marbeuf-5.jpg", "img/id/marbeuf-3.jpg"]
+    cover: "img/id/marbeuf-7.jpg",
+    images: [
+      "img/id/marbeuf-7.jpg","img/id/marbeuf-2.jpg","img/id/marbeuf-8.jpg","img/id/marbeuf-10.jpg","img/id/marbeuf-11.jpg","img/id/marbeuf-12.jpg","img/id/marbeuf-9.jpg","img/id/marbeuf-4.jpg","img/id/marbeuf-6.jpg","img/id/marbeuf-16.jpg","img/id/marbeuf-13.jpg","img/id/marbeuf-14.jpg","img/id/marbeuf-15.jpg","img/id/marbeuf-5.jpg","img/id/marbeuf-3.jpg"
+    ]
     // Ordre logique : v2-07(séjour), v2-08, v2-14, v2-15, v2-16, v2-32(fin)
+  },
+
+  "berri": {
+    name: "Berri",
+    loc: "Paris 8e",
+    type: "Rénovation & aménagement",
+    surface: "—",
+    style: "Contemporain chaleureux · pierre & laiton",
+    fr: "Rue de Berri, à deux pas des Champs-Élysées : un appartement sur deux niveaux, redessiné pour la lumière. Pièces d'eau gainées de grands formats veinés, cuisine taupe, bibliothèque sculptée en laiton. Une palette courte, tenue d'une pièce à l'autre.",
+    en: "Rue de Berri, a few steps from the Champs-Élysées: a two-level apartment redrawn for the light. Bathrooms clad in large veined panels, a taupe kitchen, a sculpted brass bookcase. A short palette, held from one room to the next.",
+    cover: "img/id/berri-1.jpg",
+    images: [
+      "img/id/berri-1.jpg","img/id/berri-2.jpg","img/id/berri-3.jpg","img/id/berri-4.jpg","img/id/berri-5.jpg","img/id/berri-6.jpg","img/id/berri-7.jpg","img/id/berri-8.jpg","img/id/berri-9.jpg","img/id/berri-10.jpg","img/id/berri-11.jpg","img/id/berri-12.jpg","img/id/berri-13.jpg"
+    ]
   },
 
   "triplex-spa": {
@@ -137,7 +153,7 @@ const PROJECTS = {
     fr: "Un bien de caractère aux Halles, repensé jusqu'à la structure. Ce qu'on a gardé est aussi précieux que ce qu'on a créé.",
     en: "A character property at Les Halles, reconceived to its very structure. What was kept is as precious as what was created.",
     cover: "img/id/dechargeurs.jpg",
-    images: ["img/id/dechargeurs.jpg", "img/id/dechargeurs-2.jpg", "img/id/dechargeurs-3.jpg", "img/id/dechargeurs-4.jpg", "img/id/dechargeurs-5.jpg", "img/id/dechargeurs-6.jpg"]
+    images: ["img/id/dechargeurs.jpg", "img/id/dechargeurs-2.jpg", "img/id/dechargeurs-3.jpg", "img/id/dechargeurs-4.jpg", "img/id/dechargeurs-5.jpg", "img/id/dechargeurs-6.jpg","img/id/dechargeurs-7.jpg","img/id/dechargeurs-8.jpg","img/id/dechargeurs-9.jpg"]
   },
 
   "madeleine": {

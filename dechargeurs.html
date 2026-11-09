@@ -181,6 +181,11 @@
     }
     .proj-nav-prev .proj-nav-name::before { content: '← '; }
     .proj-nav-next .proj-nav-name::after  { content: ' →'; }
+    .proj-ba { display:grid; grid-template-columns:1fr 1fr; gap:4px; margin:28px 0 8px; }
+    .proj-ba figure { margin:0; }
+    .proj-ba img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+    .proj-ba figcaption { font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gray); padding:10px 0 0; }
+    @media (max-width:768px) { .proj-ba { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -234,6 +239,9 @@
     <img src="img/id/dechargeurs-4.jpg" alt="Séjour ouvert sur la cuisine, suspension sculpturale et parquet en chêne" loading="lazy">
     <img src="img/id/dechargeurs-5.jpg" alt="Chambre en boiseries de chêne cannelé, literie blanche et jete terracotta" loading="lazy">
     <img src="img/id/dechargeurs-6.jpg" alt="Salon en enfilade vers la cuisine, fauteuils bouclés et rideaux clairs" loading="lazy">
+    <img src="img/id/dechargeurs-7.jpg" alt="Salon livré, canapé bouclé crème, fauteuil enveloppant et suspension en anneau - Les Halles, Paris 1er" loading="lazy">
+    <img src="img/id/dechargeurs-8.jpg" alt="Séjour ouvert sur la cuisine en chêne arrondie, grande toile abstraite terracotta" loading="lazy">
+    <img src="img/id/dechargeurs-9.jpg" alt="Séjour sous la toile abstraite, table basse en bois sombre et banquette en fond" loading="lazy">
 </div>
 
 <!-- Prev / Next -->
@@ -259,6 +267,14 @@
 <p data-fr="Dans un plan étroit, l'angle droit se paie. La cuisine adopte donc une façade arrondie, doublée d'une banquette sur mesure qui épouse le même galbe : on la contourne au lieu de la heurter. Le mobilier du séjour suit la même logique — assises rondes en tissu bouclé, tables basses sans arête — et l'appartement se parcourt sans jamais buter sur un coin." data-en="In a narrow plan, the right angle comes at a cost. The kitchen therefore takes a curved front, doubled by a bespoke banquette following the same sweep: you go round it instead of colliding with it. The living-room furniture follows the same logic — rounded bouclé seating, coffee tables with no sharp edge — and the apartment is crossed without ever meeting a corner.">Dans un plan étroit, l'angle droit se paie. La cuisine adopte donc une façade arrondie, doublée d'une banquette sur mesure qui épouse le même galbe : on la contourne au lieu de la heurter. Le mobilier du séjour suit la même logique — assises rondes en tissu bouclé, tables basses sans arête — et l'appartement se parcourt sans jamais buter sur un coin.</p>
 <h3 data-fr="Le chêne et la terracotta" data-en="Oak and terracotta">Le chêne et la terracotta</h3>
 <p data-fr="La palette est courte : chêne clair pour les boiseries et la cuisine, crème pour les tissus, terracotta pour les jetés de lit et une grande toile abstraite au-dessus du canapé. Ces trois valeurs suffisent à donner de la chaleur à un appartement orienté sur une rue étroite, et la peinture sert de source de couleur là où la fenêtre ne peut pas en apporter." data-en="The palette is short: light oak for the joinery and the kitchen, cream for the textiles, terracotta for the bed throws and a large abstract canvas above the sofa. Those three values are enough to warm an apartment facing a narrow street, and the painting serves as a source of colour where the window cannot provide one.">La palette est courte : chêne clair pour les boiseries et la cuisine, crème pour les tissus, terracotta pour les jetés de lit et une grande toile abstraite au-dessus du canapé. Ces trois valeurs suffisent à donner de la chaleur à un appartement orienté sur une rue étroite, et la peinture sert de source de couleur là où la fenêtre ne peut pas en apporter.</p>
+<h3 data-fr="Trois immeubles, repris jusqu'à la structure" data-en="Three buildings, taken back to the structure">Trois immeubles, repris jusqu'à la structure</h3>
+<p data-fr="Ce logement fait partie d'une opération plus large : trois immeubles de la rue des Déchargeurs, entièrement rénovés. Les photos de chantier montrent jusqu'où l'intervention est descendue — planchers ouverts jusqu'aux solives, murs mis à nu, réseaux déposés — avant que les volumes ne soient redessinés. C'est dans cet état que se décident les choses importantes : la place de la cuisine, le passage des réseaux, la hauteur des boiseries." data-en="This home is part of a larger operation: three buildings on rue des Déchargeurs, entirely renovated. The site photographs show how far the work went — floors opened down to the joists, walls stripped bare, services removed — before the volumes were redrawn. It is in this state that the important decisions are made: where the kitchen goes, how the services run, how high the panelling rises.">Ce logement fait partie d'une opération plus large : trois immeubles de la rue des Déchargeurs, entièrement rénovés. Les photos de chantier montrent jusqu'où l'intervention est descendue — planchers ouverts jusqu'aux solives, murs mis à nu, réseaux déposés — avant que les volumes ne soient redessinés. C'est dans cet état que se décident les choses importantes : la place de la cuisine, le passage des réseaux, la hauteur des boiseries.</p>
+<div class="proj-ba">
+  <figure><img src="img/id/dechargeurs-avant-1.jpg" alt="Chantier rue des Déchargeurs : plancher ouvert jusqu'aux solives et murs mis à nu" loading="lazy"><figcaption data-fr="Pendant — le plancher ouvert jusqu'aux solives" data-en="During — the floor opened down to the joists">Pendant — le plancher ouvert jusqu'aux solives</figcaption></figure>
+  <figure><img src="img/id/dechargeurs-8.jpg" alt="Le même séjour livré, cuisine en chêne arrondie et grande toile abstraite" loading="lazy"><figcaption data-fr="Après — le séjour livré" data-en="After — the finished living room">Après — le séjour livré</figcaption></figure>
+  <figure><img src="img/id/dechargeurs-avant-2.jpg" alt="Chantier rue des Déchargeurs : pièce mise à nu avant les travaux de finition" loading="lazy"><figcaption data-fr="Avant — la pièce mise à nu" data-en="Before — the room stripped bare">Avant — la pièce mise à nu</figcaption></figure>
+  <figure><img src="img/id/dechargeurs-7.jpg" alt="Salon livré, canapé bouclé crème et suspension en anneau" loading="lazy"><figcaption data-fr="Après — le salon livré" data-en="After — the finished sitting room">Après — le salon livré</figcaption></figure>
+</div>
 <h3 data-fr="Dans le même arrondissement" data-en="In the same arrondissement">Dans le même arrondissement</h3>
 <p data-fr="Déchargeurs rejoint les rénovations conduites dans le 1er arrondissement de Paris, aux côtés de <a href=&quot;chatelet.html&quot;>Châtelet</a> et de <a href=&quot;louvres.html&quot;>Louvres</a>." data-en="Déchargeurs joins the renovations carried out in the 1st arrondissement of Paris, alongside <a href=&quot;chatelet.html&quot;>Châtelet</a> and <a href=&quot;louvres.html&quot;>Louvres</a>.">Déchargeurs rejoint les rénovations conduites dans le 1er arrondissement de Paris, aux côtés de <a href="chatelet.html">Châtelet</a> et de <a href="louvres.html">Louvres</a>.</p>
 <p data-fr="Ce projet fait partie des <a href=&quot;interior-design.html&quot;>réalisations de design d'intérieur à Paris</a> de John Rozenblum. Pour discuter d'un projet similaire ou d'une rénovation sur mesure, <a href=&quot;contact.html&quot;>prenez contact</a>." data-en="This project is part of John Rozenblum's <a href=&quot;interior-design.html&quot;>interior design portfolio in Paris</a>. To discuss a similar project or bespoke renovation, <a href=&quot;contact.html&quot;>get in touch</a>.">Ce projet fait partie des <a href="interior-design.html">réalisations de design d'intérieur à Paris</a> de John Rozenblum. Pour discuter d'un projet similaire ou d'une rénovation sur mesure, <a href="contact.html">prenez contact</a>.</p>
@@ -286,6 +302,7 @@
     <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
     <a href="bonnard.html">Bonnard Music</a>
     <a href="consultation.html" data-fr="Consultation" data-en="Consultation">Consultation</a>
+    <a href="missions.html" data-fr="Missions" data-en="Services">Missions</a>
     <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
   </nav>
   <div class="footer-copy">
