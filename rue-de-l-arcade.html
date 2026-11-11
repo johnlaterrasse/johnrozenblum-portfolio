@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"></noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rue de l'Arcade, Paris 8e — un immeuble repensé appartement par appartement | John Rozenblum</title>
+  <meta name="description" content="Rue de l'Arcade, Paris 8e : un immeuble haussmannien repensé appartement par appartement, du deux-pièces au duplex — John Rozenblum, designer d'intérieur Paris.">
+  <link rel="canonical" href="https://johnrozenblum.com/rue-de-l-arcade.html">
+  <meta property="og:title" content="Rue de l'Arcade — John Rozenblum Design">
+  <meta property="og:description" content="Un immeuble de la rue de l'Arcade, entre la Madeleine et Saint-Lazare, repensé appartement par appartement. D'un étage à l'autre, les plans se répondent et les matières changent : chêne clair et marbre violet ici, noyer et marbre doré là.">
+  <meta property="og:image" content="https://johnrozenblum.com/img/id/rue-arcade-1.jpg">
+  <meta property="og:url" content="https://johnrozenblum.com/rue-de-l-arcade.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="style.css?v=5">
+  <style>
+    /* ── PAGE PROJET ───────────────────────────────────────── */
+    .proj-hero {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 64px 48px;
+    }
+    @media (max-width: 768px) {
+      .proj-hero { height: 70vh; padding: 40px 24px; }
+    }
+    .proj-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    .proj-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 55%, transparent 100%);
+    }
+    .proj-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .proj-hero-loc {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .proj-hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.05;
+    }
+
+    /* ── BACK LINK ─────────────────────────────────────────── */
+    .proj-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      padding: 32px 48px 0;
+      transition: color 0.2s;
+    }
+    .proj-back:hover { color: var(--black); }
+    .proj-back::before { content: '←'; font-size: 0.9rem; }
+    @media (max-width: 768px) { .proj-back { padding: 24px 24px 0; } }
+
+    /* ── META ROW ──────────────────────────────────────────── */
+    .proj-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      margin: 40px 48px 0;
+    }
+    @media (max-width: 768px) { .proj-meta { margin: 32px 24px 0; } }
+    .proj-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 20px 32px;
+      border-right: 1px solid rgba(0,0,0,0.08);
+      flex: 1;
+      min-width: 140px;
+    }
+    .proj-meta-item:last-child { border-right: none; }
+    @media (max-width: 600px) {
+      .proj-meta-item { padding: 16px 20px; min-width: 120px; }
+    }
+    .proj-meta-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .proj-meta-value {
+      font-size: 0.88rem;
+      color: var(--black);
+      font-weight: 400;
+    }
+
+    /* ── DESCRIPTION ───────────────────────────────────────── */
+    .proj-desc {
+      max-width: 680px;
+      margin: 52px 48px;
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      line-height: 1.75;
+      color: #2a2a2a;
+    }
+    @media (max-width: 768px) { .proj-desc { margin: 36px 24px; } }
+
+    /* ── GALLERY ───────────────────────────────────────────── */
+    .proj-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      margin: 0;
+    }
+    .proj-gallery img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s;
+    }
+    .proj-gallery img:hover { opacity: 0.92; }
+    /* First image full-width */
+    .proj-gallery img:first-child {
+      grid-column: 1 / -1;
+      aspect-ratio: 16/9;
+    }
+    @media (max-width: 600px) {
+      .proj-gallery { grid-template-columns: 1fr; gap: 2px; }
+      .proj-gallery img:first-child { aspect-ratio: 4/3; }
+    }
+
+    /* ── PREV / NEXT ───────────────────────────────────────── */
+    .proj-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 64px 48px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin-top: 80px;
+      gap: 24px;
+    }
+    @media (max-width: 768px) { .proj-nav { padding: 40px 24px; flex-direction: column; align-items: flex-start; gap: 24px; } }
+    .proj-nav-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      color: var(--black);
+      transition: opacity 0.2s;
+    }
+    .proj-nav-item:hover { opacity: 0.5; }
+    .proj-nav-next { text-align: right; margin-left: auto; }
+    @media (max-width: 768px) { .proj-nav-next { text-align: left; margin-left: 0; } }
+    .proj-nav-dir {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .proj-nav-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+    }
+    .proj-nav-prev .proj-nav-name::before { content: '← '; }
+    .proj-nav-next .proj-nav-name::after  { content: ' →'; }
+  </style>
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html" class="nav-logo">JR</a>
+  <div class="nav-links">
+    <a href="interior-design.html" class="active" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
+    <a href="bonnard.html">Bonnard</a>
+    <a href="a-propos.html" data-fr="À propos" data-en="About">À propos</a>
+    <a href="consultation.html" data-fr="Consultation" data-en="Consultation">Consultation</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </div>
+  <button class="lang-toggle">EN</button>
+  <div class="nav-burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Hero -->
+<div class="proj-hero">
+  <div class="proj-hero-bg" style="background-image: url('img/id/rue-arcade-1.jpg')"></div>
+  <div class="proj-hero-content">
+    <p class="proj-hero-loc">Paris 8e</p>
+    <h1 class="proj-hero-title">Rue de l'Arcade</h1>
+  </div>
+</div>
+
+<!-- Retour -->
+<a href="interior-design.html" class="proj-back" data-fr="Tous les projets" data-en="All projects">Tous les projets</a>
+
+<!-- Meta -->
+<div class="proj-meta">
+  <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Lieu" data-en="Location">Lieu</span><span class="proj-meta-value">Paris 8e</span></div>
+  <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Type" data-en="Type">Type</span><span class="proj-meta-value">Immeuble · plusieurs appartements</span></div>
+  <div class="proj-meta-item"><span class="proj-meta-label" data-fr="Style" data-en="Style">Style</span><span class="proj-meta-value">Haussmannien contemporain</span></div>
+</div>
+
+<!-- Description -->
+<p class="proj-desc" data-fr="Un immeuble de la rue de l'Arcade, entre la Madeleine et Saint-Lazare, repensé appartement par appartement. D'un étage à l'autre, les plans se répondent et les matières changent : chêne clair et marbre violet ici, noyer et marbre doré là." data-en="A building on rue de l'Arcade, between the Madeleine and Saint-Lazare, rethought apartment by apartment. From one floor to the next the plans echo each other and the materials change: light oak and violet marble here, walnut and golden marble there.">Un immeuble de la rue de l'Arcade, entre la Madeleine et Saint-Lazare, repensé appartement par appartement. D'un étage à l'autre, les plans se répondent et les matières changent : chêne clair et marbre violet ici, noyer et marbre doré là.</p>
+
+<!-- Galerie -->
+<div class="proj-gallery">
+    <img src="img/id/rue-arcade-1.jpg" alt="Séjour face à la cheminée de marbre rouge, canapé crème et tables basses en chêne - rue de l&#x27;Arcade, Paris 8e" loading="eager">
+    <img src="img/id/rue-arcade-2.jpg" alt="Séjour ouvert sur la cuisine en chêne clair, canapé d&#x27;angle crème" loading="lazy">
+    <img src="img/id/rue-arcade-3.jpg" alt="Coin repas devant les fenêtres, banquette cannée et table ronde" loading="lazy">
+    <img src="img/id/rue-arcade-4.jpg" alt="Cuisine en chêne clair aux angles arrondis et tabourets cannés" loading="lazy">
+    <img src="img/id/rue-arcade-5.jpg" alt="Salle de bains en marbre blanc veiné de violet, double miroir organique et baignoire îlot" loading="lazy">
+    <img src="img/id/rue-arcade-6.jpg" alt="Chambre, tête de lit en arche, niches en marbre et chevet suspendu" loading="lazy">
+    <img src="img/id/rue-arcade-7.jpg" alt="Chambre encadrée de colonnes de chêne, applique globe laiton" loading="lazy">
+    <img src="img/id/rue-arcade-8.jpg" alt="Chambre devant une cheminée de marbre blanc, coussins graphiques" loading="lazy">
+    <img src="img/id/rue-arcade-9.jpg" alt="Séjour crème, console en noyer et coin repas canné, cuisine en fond" loading="lazy">
+    <img src="img/id/rue-arcade-10.jpg" alt="Chambre, tête de lit capitonnée encadrée de noyer et suspensions laiton" loading="lazy">
+    <img src="img/id/rue-arcade-11.jpg" alt="Chambre ouverte sur la douche en marbre doré veiné, robinetterie laiton" loading="lazy">
+    <img src="img/id/rue-arcade-12.jpg" alt="Coin repas aux chaises cannées face au séjour et à la console en noyer" loading="lazy">
+    <img src="img/id/rue-arcade-13.jpg" alt="Chambre devant les portes-fenêtres, niche et bibliothèque en noyer" loading="lazy">
+</div>
+
+<!-- Prev / Next -->
+<div class="proj-nav">
+  <a href="arcade.html" class="proj-nav-item proj-nav-prev">
+        <span class="proj-nav-dir" data-fr="Précédent" data-en="Previous">Précédent</span>
+        <span class="proj-nav-name">Arcade</span>
+      </a>
+  <a href="madeleine.html" class="proj-nav-item proj-nav-next">
+        <span class="proj-nav-dir" data-fr="Suivant" data-en="Next">Suivant</span>
+        <span class="proj-nav-name">Madeleine</span>
+      </a>
+</div>
+
+<div class="proj-seo-text">
+<h3 data-fr="Un immeuble entre la Madeleine et Saint-Lazare" data-en="A building between the Madeleine and Saint-Lazare">Un immeuble entre la Madeleine et Saint-Lazare</h3>
+<p data-fr="La rue de l'Arcade relie la place de la Madeleine à la gare Saint-Lazare, dans le 8e arrondissement. L'immeuble a été repris logement par logement, du deux-pièces au duplex sous les toits. Chaque appartement a reçu un dessin propre, mais tous partagent la même exigence : menuiseries sur mesure, matières naturelles, pièces d'eau traitées en pierre." data-en="Rue de l'Arcade links the place de la Madeleine to Saint-Lazare station, in the 8th arrondissement. The building was taken on home by home, from two-room flats to the duplex under the roof. Each apartment received its own design, but all share the same standard: bespoke joinery, natural materials, bathrooms treated in stone.">La rue de l'Arcade relie la place de la Madeleine à la gare Saint-Lazare, dans le 8e arrondissement. L'immeuble a été repris logement par logement, du deux-pièces au duplex sous les toits. Chaque appartement a reçu un dessin propre, mais tous partagent la même exigence : menuiseries sur mesure, matières naturelles, pièces d'eau traitées en pierre.</p>
+<h3 data-fr="Le chêne et le marbre violet" data-en="Oak and violet marble">Le chêne et le marbre violet</h3>
+<p data-fr="Les grands appartements déclinent un même parti d'un étage à l'autre : cheminée de marbre rouge conservée dans le séjour, cuisine en chêne clair aux angles arrondis, têtes de lit en arche flanquées de niches en marbre, salle de bains en marbre blanc veiné de violet avec deux miroirs aux contours organiques. Le plus abouti est présenté en détail sur la page <a href=&quot;arcade.html&quot;>Arcade</a>." data-en="The large apartments repeat the same approach from floor to floor: the red marble fireplace kept in the living room, a light oak kitchen with rounded corners, arched headboards flanked by marble niches, a bathroom in white marble veined with violet and two organically shaped mirrors. The most complete is presented in detail on the <a href=&quot;arcade.html&quot;>Arcade</a> page.">Les grands appartements déclinent un même parti d'un étage à l'autre : cheminée de marbre rouge conservée dans le séjour, cuisine en chêne clair aux angles arrondis, têtes de lit en arche flanquées de niches en marbre, salle de bains en marbre blanc veiné de violet avec deux miroirs aux contours organiques. Le plus abouti est présenté en détail sur la page <a href="arcade.html">Arcade</a>.</p>
+<h3 data-fr="Le noyer et le marbre doré" data-en="Walnut and golden marble">Le noyer et le marbre doré</h3>
+<p data-fr="Les deux-pièces prennent l'autre registre : console et niches en noyer, tête de lit capitonnée encadrée de bois sombre, suspensions en laiton, douche en marbre doré veiné. À petite surface, ces appartements misent sur une seule pièce d'eau pleinement assumée plutôt que sur l'accumulation. Voir <a href=&quot;deux-pieces.html&quot;>Deux Pièces Chic</a>." data-en="The two-room flats take the other register: walnut console and niches, a quilted headboard framed in dark wood, brass pendants, a shower in veined golden marble. At a small size, these apartments bet on a single, fully assumed bathroom rather than accumulation. See <a href=&quot;deux-pieces.html&quot;>Deux Pièces Chic</a>.">Les deux-pièces prennent l'autre registre : console et niches en noyer, tête de lit capitonnée encadrée de bois sombre, suspensions en laiton, douche en marbre doré veiné. À petite surface, ces appartements misent sur une seule pièce d'eau pleinement assumée plutôt que sur l'accumulation. Voir <a href="deux-pieces.html">Deux Pièces Chic</a>.</p>
+<h3 data-fr="Les appartements de l'immeuble" data-en="The apartments in the building">Les appartements de l'immeuble</h3>
+<p data-fr="Dans cet immeuble, on retrouve : le <a href=&quot;duplex-madeleine.html&quot;>Duplex Madeleine</a>, au dernier étage ; <a href=&quot;arcade.html&quot;>Arcade</a>, un quatre-pièces en chêne et marbre ; <a href=&quot;madeleine.html&quot;>Madeleine</a>, un 65 m² aux beiges dorés ; <a href=&quot;arcade-faience.html&quot;>Faïence</a>, un deux-pièces organisé autour d'un poêle ancien ; et <a href=&quot;deux-pieces.html&quot;>Deux Pièces Chic</a>, un 45 m² en noyer et marbre doré." data-en="This building also houses the <a href=&quot;duplex-madeleine.html&quot;>Duplex Madeleine</a> on the top floor; <a href=&quot;arcade.html&quot;>Arcade</a>, a four-room apartment in oak and marble; <a href=&quot;madeleine.html&quot;>Madeleine</a>, a 65 m² flat in golden beiges; <a href=&quot;arcade-faience.html&quot;>Faïence</a>, a two-room flat arranged around an antique stove; and <a href=&quot;deux-pieces.html&quot;>Deux Pièces Chic</a>, a 45 m² flat in walnut and golden marble.">Dans cet immeuble, on retrouve : le <a href="duplex-madeleine.html">Duplex Madeleine</a>, au dernier étage ; <a href="arcade.html">Arcade</a>, un quatre-pièces en chêne et marbre ; <a href="madeleine.html">Madeleine</a>, un 65 m² aux beiges dorés ; <a href="arcade-faience.html">Faïence</a>, un deux-pièces organisé autour d'un poêle ancien ; et <a href="deux-pieces.html">Deux Pièces Chic</a>, un 45 m² en noyer et marbre doré.</p>
+<p data-fr="Ce projet fait partie des <a href=&quot;interior-design.html&quot;>réalisations de design d'intérieur à Paris</a> de John Rozenblum. Pour discuter d'un projet similaire ou d'une rénovation sur mesure, <a href=&quot;contact.html&quot;>prenez contact</a>." data-en="This project is part of John Rozenblum's <a href=&quot;interior-design.html&quot;>interior design portfolio in Paris</a>. To discuss a similar project or bespoke renovation, <a href=&quot;contact.html&quot;>get in touch</a>.">Ce projet fait partie des <a href="interior-design.html">réalisations de design d'intérieur à Paris</a> de John Rozenblum. Pour discuter d'un projet similaire ou d'une rénovation sur mesure, <a href="contact.html">prenez contact</a>.</p>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="reveal">
+    <p class="section-label" data-fr="Un projet ?" data-en="A project?">Un projet ?</p>
+    <h2 class="section-title" data-fr="Parlons." data-en="Let&#39;s talk.">Parlons.</h2>
+    <p class="section-text" data-fr="Chaque projet commence par une conversation. Partagez votre vision — je m&#39;occupe du reste." data-en="Every project begins with a conversation. Share your vision — I&#39;ll take care of the rest.">Chaque projet commence par une conversation. Partagez votre vision — je m&#39;occupe du reste.</p>
+    <a href="contact.html" class="btn" data-fr="Prendre contact" data-en="Get in touch">Prendre contact</a>
+    <p style="margin-top:28px"><a href="consultation.html" data-fr="Ou réservez une consultation vidéo — 45 min avec John" data-en="Or book a video consultation — 45 min with John" style="color:var(--gold); font-size:0.9rem; letter-spacing:0.06em; border-bottom:1px solid var(--gold); padding-bottom:3px;">Ou réservez une consultation vidéo — 45 min avec John</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <img src="img/signature-jr.svg" alt="John Rozenblum" class="footer-signature" loading="lazy">
+    <p class="footer-tagline" data-fr="Design d&#39;intérieur · Paris" data-en="Interior Design · Paris">Design d&#39;intérieur · Paris</p>
+  </div>
+  <nav class="footer-links">
+    <a href="interior-design.html" data-fr="Interior Design" data-en="Interior Design">Interior Design</a>
+    <a href="meubles.html" data-fr="Meubles &amp; Objets" data-en="Furniture &amp; Objects">Meubles &amp; Objets</a>
+    <a href="bonnard.html">Bonnard Music</a>
+    <a href="consultation.html" data-fr="Consultation" data-en="Consultation">Consultation</a>
+    <a href="missions.html" data-fr="Missions" data-en="Services">Missions</a>
+    <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+  </nav>
+  <div class="footer-copy">
+    <p>© 2026 John Rozenblum</p>
+    <p style="margin-top:8px"><a href="mentions-legales.html" style="color:var(--gray)">Mentions légales</a> · <a href="politique-confidentialite.html" style="color:var(--gray)">Confidentialité</a></p>
+  </div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -87,7 +87,7 @@
   <!-- Pages projets Interior Design -->
   <url>
     <loc>https://johnrozenblum.com/duplex-madeleine.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
   </url>
@@ -99,6 +99,18 @@
   </url>
   <url>
     <loc>https://johnrozenblum.com/berri.html</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://johnrozenblum.com/rue-de-l-arcade.html</loc>
+    <lastmod>2026-11-09</lastmod>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://johnrozenblum.com/arcade-faience.html</loc>
     <lastmod>2026-11-09</lastmod>
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>

@@ -6,7 +6,7 @@ const PROJECTS = {
 
   "duplex-madeleine": {
     name: "Duplex Madeleine",
-    loc: "Paris 9e",
+    loc: "Paris 8e",
     type: "Rénovation complète",
     surface: "180 m²",
     style: "Contemporain haussmannien",
@@ -202,6 +202,30 @@ const PROJECTS = {
     en: "Forty-five square metres. Enough for everything that matters. A space rethought to the last centimetre — and one that feels like nothing is missing.",
     cover: "img/id/deux-pieces.jpg",
     images: ["img/id/deux-pieces.jpg", "img/id/deux-pieces-2.jpg", "img/id/deux-pieces-3.jpg", "img/id/deux-pieces-4.jpg", "img/id/deux-pieces-5.jpg", "img/id/deux-pieces-6.jpg","img/id/deux-pieces-7.jpg","img/id/deux-pieces-8.jpg","img/id/deux-pieces-9.jpg","img/id/deux-pieces-10.jpg","img/id/deux-pieces-11.jpg","img/id/deux-pieces-12.jpg","img/id/deux-pieces-13.jpg"]
+  },
+
+  "arcade-faience": {
+    name: "Faïence",
+    loc: "Paris 8e",
+    type: "Rénovation & décoration",
+    surface: "—",
+    style: "Contemporain · pièce ancienne",
+    fr: "Un deux-pièces de la rue de l'Arcade, organisé autour d'un poêle ancien en faïence ornée.",
+    en: "A two-room flat on rue de l'Arcade, arranged around an antique ornate faience stove.",
+    cover: "img/id/faience-1.jpg",
+    images: ["img/id/faience-1.jpg","img/id/faience-2.jpg","img/id/faience-3.jpg","img/id/faience-4.jpg","img/id/faience-5.jpg","img/id/faience-6.jpg"]
+  },
+
+  "rue-de-l-arcade": {
+    name: "Rue de l'Arcade",
+    loc: "Paris 8e",
+    type: "Immeuble · plusieurs appartements",
+    surface: "—",
+    style: "Haussmannien contemporain",
+    fr: "Un immeuble de la rue de l'Arcade repensé appartement par appartement.",
+    en: "A building on rue de l'Arcade rethought apartment by apartment.",
+    cover: "img/id/rue-arcade-1.jpg",
+    images: ["img/id/rue-arcade-1.jpg","img/id/rue-arcade-2.jpg","img/id/rue-arcade-3.jpg","img/id/rue-arcade-4.jpg","img/id/rue-arcade-5.jpg","img/id/rue-arcade-6.jpg","img/id/rue-arcade-7.jpg","img/id/rue-arcade-8.jpg","img/id/rue-arcade-9.jpg","img/id/rue-arcade-10.jpg","img/id/rue-arcade-11.jpg","img/id/rue-arcade-12.jpg","img/id/rue-arcade-13.jpg"]
   },
 
   "cannes": {
